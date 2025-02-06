@@ -1,0 +1,103 @@
+:root {
+    /** Fonts */
+    --title: "Handlee", serif;
+    --main-font: "Comfortaa", serif;
+
+    /* Colours */
+    --light-green: #e8ecc9;
+    --mos-green: #cdd6af;
+    --whitish: #fdfae2;
+    --logo-green: #4d5f37;
+    --light-orange: #f7d9a4;
+    --dark-color: #0e170f;
+    --star-yellow: #faa907;
+    --star-gray: #27252594;
+    --white: #fff;
+    --black: #000;
+
+    /* Shadows */
+    --small-shadow: 1px -1px 7px rgba(31, 38, 19, 0.707);
+}
+
+html {
+    height: 100%;
+}
+body {
+    background: linear-gradient(to right, rgba(240, 249, 231, 0.8), rgba(240, 249, 231, 0.1)),
+    url('/media/succulents-and-air-plants-in-terrarium.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+    color: var(--logo-green);
+    font-family: var(--main-font);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.catch-copy {
+    color: var(--dark-color);
+    font-size: 28px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+h1 {
+    font-family: var(--title);
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+.shop-now-button {
+    background: var(--dark-color);
+    color: white;
+    min-width: 260px;
+}
+.btn-black {
+    background: var(--logo-green);
+    color: white;
+}
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: var(--dark-color);
+    color: white;
+}
+.text-black {
+    color: var(--dark-color) !important;
+}
+.border-black {
+    border: 1px solid var(--dark-color) !important;
+}
+/* -------------------------------- Media Queries */
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+    .header-container {
+        padding-top: 164px;
+    }
+}
