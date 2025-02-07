@@ -3,11 +3,12 @@
 {% load i18n %}
 {% load account %}
 
-{% block head_title %}{% trans "Confirm Email Address" %}{% endblock %}
+{% block extra_title %}{% trans "Confirm Email Address" %}{% endblock %}
 
+{% block inner_content %}
 
-{% block content %}
-<h1>{% trans "Confirm Email Address" %}</h1>
+<h2 class="mt-4 mb-4">{% trans "Confirm Email Address" %}</h2>
+<hr>
 
 {% if confirmation %}
 
@@ -18,7 +19,7 @@
 
 <form method="post" action="{% url 'account_confirm_email' confirmation.key %}">
 {% csrf_token %}
-    <button type="submit">{% trans 'Confirm' %}</button>
+    <button class="btn btn-secondary" type="submit">{% trans 'Confirm' %}</button>
 </form>
 {% else %}
 <p>{% blocktrans %}Unable to confirm {{ email }} because it is already confirmed by a different account.{% endblocktrans %}</p>

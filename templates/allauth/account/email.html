@@ -2,10 +2,13 @@
 
 {% load i18n %}
 
-{% block head_title %}{% trans "Email Addresses" %}{% endblock %}
+{% block extra_title %}{% trans "Email Addresses" %}{% endblock %}
 
-{% block content %}
-    <h1>{% trans "Email Addresses" %}</h1>
+{% block inner_content %}
+
+<h2 class="mt-4 mb-4">{% trans "Email Address" %}</h2>
+<hr>
+
 {% if emailaddresses %}
 <p>{% trans 'The following email addresses are associated with your account:' %}</p>
 
