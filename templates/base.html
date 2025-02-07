@@ -34,7 +34,7 @@
     <title>LITTLE PLANT shop {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
-    <header class="container-fluid  fixed-top">
+    <header class="container-fluid fixed-top">
         <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
@@ -114,7 +114,6 @@
         </div>            
     </div>
 
-
     {% if messages %}
         <div class="message-container"></div>
     {% endif %}
@@ -124,6 +123,33 @@
 
     {% block content %}
     {% endblock %}
+
+    <footer class="container-fluid bg-lgreen">
+        <div class="row p-3">
+            <div class="col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li>About us</li>
+                    <li>Contact us</li>
+                    <li>Privacy policy</li>
+                    <li>Reviews</li>
+                    <li>FAQ</li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h4>LITTLE PLANTS shop</h4>
+                <address>1234 Green St.<br>
+                Athlone<br>
+            Co.Westmeath</address>
+            </div>
+            <div class="col">
+                <h4>Newsletter</h4>
+                <p>Join for receiving letters about new arrivals and special offers!</p>
+                <form action=""><input type="text" placeholder="email"><button type="submit"></button></form>
+            </div>
+        </div>
+    </footer>
 
     {% block postloadjs %}
     {% endblock %}

@@ -40,6 +40,10 @@ header {
     box-shadow: var(--small-shadow);
 }
 
+main {
+    flex: 1 0 auto;
+}
+
 #delivery-banner {
     padding-top: 95px;
     background-color: var(--logo-green);
@@ -116,6 +120,15 @@ h1 {
 .navbar-light .navbar-toggler {
     background-color: var(--mos-green);
     border-color: var(--dark-color);
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    background-color: var(--mos-green);
+    color: var(--dark-color);
+    font-weight: 500;
 }
 
 /* -------------------------------- Media Queries */
