@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import PlantItem
+from .models import PlantItem, Category
 
 
 class PlantItemAdmin(admin.ModelAdmin):
@@ -11,7 +11,15 @@ class PlantItemAdmin(admin.ModelAdmin):
         'image',
     )
 
-    # ordering = ('category')
+    ordering = ('category',)
+
+
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = (
+        'friendly_name',
+        'name',
+    )
 
 
 admin.site.register(PlantItem, PlantItemAdmin)
+admin.site.register(Category, CategoryAdmin)
