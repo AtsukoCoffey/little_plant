@@ -31,6 +31,12 @@
     {% block extra_js %}
     {% endblock %}
 
+    <!-- Favicon 
+    <link rel="icon" type="image/png" href="{% static 'images/favicon-96x96.png' %}" sizes="96x96">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/favicon-192x192.png' %}">-->
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
+
+    <!-- Title -->
     <title>LITTLE PLANT shop {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
@@ -127,6 +133,14 @@
     <footer class="container-fluid bg-lgreen">
         <div class="row p-3">
             <div class="col">
+                <h4>Newsletter</h4>
+                <p>Join for receiving letters about new arrivals and special offers!</p>
+                <form action="">
+                    <input type="text" placeholder="email">
+                    <button class="btn btn-light btn-outline-success" type="submit">Join</button>
+                </form>
+            </div>
+            <div class="col">
                 <h4>Quick Links</h4>
                 <ul>
                     <li>About us</li>
@@ -142,11 +156,6 @@
                 <address>1234 Green St.<br>
                 Athlone<br>
             Co.Westmeath</address>
-            </div>
-            <div class="col">
-                <h4>Newsletter</h4>
-                <p>Join for receiving letters about new arrivals and special offers!</p>
-                <form action=""><input type="text" placeholder="email"><button class="btn btn-light" type="submit"></button></form>
             </div>
         </div>
     </footer>
