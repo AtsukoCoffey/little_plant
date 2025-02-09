@@ -178,6 +178,9 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
+.w-10 {
+    width: 10%;
+}
 /* -------------------------------- Media Queries */
 
 /* fixed top navbar only on medium and up */
