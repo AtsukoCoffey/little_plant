@@ -174,13 +174,13 @@ a.category-badge > span.badge:hover {
     bottom: 30px;
     right: 20px;
 }
-.btt-link {
+
+.btt-link,
+.update-link,
+.remove-item {
     cursor: pointer;
 }
 
-.w-10 {
-    width: 10%;
-}
 /* -------------------------------- Media Queries */
 
 /* fixed top navbar only on medium and up */
