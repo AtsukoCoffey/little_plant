@@ -8,7 +8,7 @@
     --mos-green: #cdd6af;
     --whitish: #fdfae2;
     --logo-green: #4d5f37;
-    --light-orange: #f7d9a4;
+    --light-orange: #fbf5ea;
     --dark-color: #0e170f;
     --star-yellow: #faa907;
     --star-gray: #27252594;
@@ -42,6 +42,26 @@ header {
 
 main {
     flex: 1 0 auto;
+}
+
+a {
+    color: var(--dark-color);
+    text-decoration: none;
+}
+
+/* text primary color */
+a:hover,
+a:active,
+a:focus {
+    color: #0a9186;
+    text-decoration: none;
+}
+
+.hover-color:hover,
+.hover-color:active,
+.hover-color:focus {
+    background-color: var(--light-orange);
+    box-shadow: 5px -5px 7px var(--logo-green);
 }
 
 #delivery-banner {
