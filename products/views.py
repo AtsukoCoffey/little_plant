@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
+from django.db.models.functions import Lower
 
 from .models import PlantItem, Category
 
@@ -17,8 +18,24 @@ def all_products(request):
     query = None
     category = None
     special_offer = None
+    sort = None
+    direction = None
 
     if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey  # store in the global variable
+            if sortkey == 'plant_name':
+                sortkey = 'lower_name'  # Assign into new field
+                products = products.annotate(lower_name=Lower('plant_name'))
+
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+
+            products = products.order_by(sortkey)
+
         if 'category' in request.GET:
             category = request.GET['category'].split(',')
             # Category is FK of products so access to Category name
@@ -46,10 +63,14 @@ def all_products(request):
             )
             products = products.filter(queries)
 
+    # return current sorting methodology to the template
+    current_sorting = f'{sort}_{direction}'
+
     context = {
         'products': products,
         'search_term': query,
         'current_category': category,
+        'current_sorting': current_sorting,
     }
 
     return render(request, 'products/products.html', context)

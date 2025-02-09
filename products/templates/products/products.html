@@ -20,6 +20,19 @@
         </div>
         <div class="row">
             <div class="product-container col-10 offset-1">
+                <div class="d-flex w-100 border">
+                    <span><small class="text-muted"> 0 product(s)</small></span>
+                    <div class="dropdown ml-auto">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                        Dropdown button
+                        </button>
+                        <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{% url 'products' %}?current_sorting&products&sort=price&direction=asc">By Standard Price</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?sort=average_rate&direction=dec">By Rating</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?sort=plant_name&direction=asc">By Name</a>
+                        </div>
+                    </div>
+                </div>
                 <div class="row mt-2 mb-2">
                     {% for product in products %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
