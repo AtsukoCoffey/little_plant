@@ -48,7 +48,6 @@ def all_products(request):
 
         if 'sale_price' in request.GET:
             special_offer = products.exclude(sale_price__icontains=0)
-            print(special_offer)
             products = special_offer
 
         if 'q' in request.GET:
@@ -75,7 +74,7 @@ def all_products(request):
         'current_category': category,
         'current_sorting': current_sorting,
     }
-    print("searchT", query, "carrentC", category)
+
     return render(request, 'products/products.html', context)
 
 
