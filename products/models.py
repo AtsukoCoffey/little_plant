@@ -16,7 +16,7 @@ class Category(models.Model):
 
 
 class PlantItem(models.Model):
-    plant_name = models.CharField(max_length=254)
+    name = models.CharField(max_length=254)
     scientific_name = models.CharField(max_length=254, null=True, blank=True)
     slug = models.SlugField(max_length=50, null=True, blank=True)
     category = models.ForeignKey(
@@ -27,8 +27,8 @@ class PlantItem(models.Model):
     img_alt = models.CharField(max_length=254, null=True, blank=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     sale_price = models.DecimalField(max_digits=6, decimal_places=2, default=0)
-    average_rate = models.DecimalField(
+    rating = models.DecimalField(
         max_digits=6, decimal_places=2, null=True, blank=True)
 
     def __str__(self):
-        return self.plant_name
+        return self.name

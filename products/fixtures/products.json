@@ -3,7 +3,7 @@
        "pk":1,
        "model":"products.plantitem",
        "fields":{
-          "plant_name":"Echeveria lilacina",
+          "name":"Echeveria lilacina",
           "scientific_name":"Echeveria lila china",
           "slug":"echeveria-lilacina",
           "category":1,
@@ -13,14 +13,14 @@
           "img_alt":"Echeveria lilacina",
           "price":5.20,
           "sale_price":0,
-          "average_rate":4.2
+          "rating":4.2
        }
     },
     {
        "pk":2,
        "model":"products.plantitem",
        "fields":{
-          "plant_name":"Tillandsia Stricta 'Green' Hybrid Air Plant - Collector's Variety",
+          "name":"Tillandsia Stricta 'Green' Hybrid Air Plant - Collector's Variety",
           "scientific_name":"Tillandsia stricta",
           "slug":"tillandsia-stricta-green-hybrid-air-plant-collectors-variety",
           "category":2,
@@ -30,14 +30,14 @@
           "img_alt":"Tillandsia Stricta 'Green' Hybrid Air Plant",
           "price":11.95,
           "sale_price":9.90,
-          "average_rate":4.8
+          "rating":4.8
        }
     },
     {
         "pk":3,
         "model":"products.plantitem",
         "fields":{
-           "plant_name":"Tillandsia Palacea X Tectorum 'Sweet Isabel' Air Plant Clump",
+           "name":"Tillandsia Palacea X Tectorum 'Sweet Isabel' Air Plant Clump",
            "scientific_name":"Tillandsia paleacea",
            "slug":"tillandsia-palacea-x-tectorum-sweet-isabel-air-plant-clump",
            "category":2,
@@ -47,14 +47,14 @@
            "img_alt":"Tillandsia Palacea X Tectorum 'Sweet Isabel'",
            "price":36.05,
            "sale_price":0,
-           "average_rate":3.5
+           "rating":3.5
         }
      },
      {
         "pk":4,
         "model":"products.plantitem",
         "fields":{
-           "plant_name":"Pachyveria corvus",
+           "name":"Pachyveria corvus",
            "scientific_name":"Pachyveria corvus",
            "slug":"pachyveria-corvus",
            "category":1,
@@ -64,14 +64,14 @@
            "img_alt":"Pachyveria corvus",
            "price":5.95,
            "sale_price":3.90,
-           "average_rate":3.8
+           "rating":3.8
         }
      },
      {
         "pk":5,
         "model":"products.plantitem",
         "fields":{
-           "plant_name":"Ficus benjamina Twilight",
+           "name":"Ficus benjamina Twilight",
            "scientific_name":"Ficus benjamina Twilight",
            "slug":"ficus-benjamina-twilight",
            "category":3,
@@ -81,14 +81,14 @@
            "img_alt":"Echeveria lilacina",
            "price":5.20,
            "sale_price":3.90,
-           "average_rate":4.2
+           "rating":4.2
         }
      },
      {
         "pk":6,
         "model":"products.plantitem",
         "fields":{
-           "plant_name":"Ficus elastica Rubber Plant Abijan",
+           "name":"Ficus elastica Rubber Plant Abijan",
            "scientific_name":"Ficus Elastica Abidjan",
            "slug":"ficus-elastica-abidjan",
            "category":3,
@@ -98,7 +98,7 @@
            "img_alt":"Ficus elastica Rubber Plant Abijan",
            "price":14.95,
            "sale_price":0,
-           "average_rate":3.5
+           "rating":3.5
         }
      }
 ]

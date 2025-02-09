@@ -25,9 +25,12 @@ def all_products(request):
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
             sort = sortkey  # store in the global variable
-            if sortkey == 'plant_name':
+            if sortkey == 'name':
                 sortkey = 'lower_name'  # Assign into new field
-                products = products.annotate(lower_name=Lower('plant_name'))
+                products = products.annotate(lower_name=Lower('name'))
+                # Added lower_name field in the Prouct
+            if sortkey == 'category':
+                sortkey = 'category__name'
 
             if 'direction' in request.GET:
                 direction = request.GET['direction']
@@ -57,7 +60,7 @@ def all_products(request):
                 return redirect(reverse('products'))
 
             queries = Q(
-                plant_name__icontains=query
+                name__icontains=query
             ) | Q(
                 description__icontains=query
             )
@@ -72,7 +75,7 @@ def all_products(request):
         'current_category': category,
         'current_sorting': current_sorting,
     }
-
+    print("searchT", query, "carrentC", category)
     return render(request, 'products/products.html', context)
 
 

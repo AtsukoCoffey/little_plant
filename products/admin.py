@@ -4,10 +4,10 @@ from .models import PlantItem, Category
 
 class PlantItemAdmin(admin.ModelAdmin):
     list_display = (
-        'plant_name',
+        'name',
         'category',
         'price',
-        'average_rate',
+        'rating',
         'image',
     )
 
