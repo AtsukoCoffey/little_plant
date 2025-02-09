@@ -86,9 +86,9 @@
                                     <td class="py-3">  
                                         <!--  pipe the price into calc_subtotal as the first argument and send item quantity as the second -->
                                         {% if item.product.sale_price != 0 %}
-                                        <p class="my-0">${{ item.product.sale_price | calc_subtotal:item.quantity }}</p>
+                                        <p class="my-0">€{{ item.product.sale_price | calc_subtotal:item.quantity }}</p>
                                         {% else %}
-                                        <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
+                                        <p class="my-0">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
                                         {% endif %}
                                     </td>
                                 </tr>
