@@ -16,6 +16,7 @@ def all_products(request):
     products = PlantItem.objects.all()
     query = None
     category = None
+    special_offer = None
 
     if request.GET:
         if 'category' in request.GET:
@@ -24,6 +25,11 @@ def all_products(request):
             products = products.filter(category__name__in=category)
             # For current category
             category = Category.objects.filter(name__in=category)
+
+        if 'sale_price' in request.GET:
+            special_offer = products.exclude(sale_price__icontains=0)
+            print(special_offer)
+            products = special_offer
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -43,7 +49,7 @@ def all_products(request):
     context = {
         'products': products,
         'search_term': query,
-        'current_category': category
+        'current_category': category,
     }
 
     return render(request, 'products/products.html', context)
