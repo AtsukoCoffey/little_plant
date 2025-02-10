@@ -25,7 +25,7 @@ def checkout(request):
         currency=settings.STRIPE_CURRENCY,
     )
     # Check the contents of intent
-    # print(intent)
+    print(intent)
 
     order_form = OrderForm()
 
