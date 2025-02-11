@@ -82,7 +82,8 @@ form.addEventListener('submit', function(ev) {
                 <span class="icon" role="alert">
                 <i class="fas fa-times"></i>
                 </span>
-                <span>${result.error.message}</span>`;
+                <span>${result.error.message}</span>
+            `;
             $(errorDiv).html(html);
             // We'll want to re-enable the card element and the submit button to allow the user to fix it.
             card.update({ 'disabled': false});
