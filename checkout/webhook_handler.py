@@ -5,7 +5,7 @@ class StripeWH_Handler:
     """
     Handle Stripe webhooks
     Make a copy of the Order for data redundancy
-
+    Received the request from webhook abd return the responses
     """
     # initialize everytime the object is created
     # made request is a class attributes

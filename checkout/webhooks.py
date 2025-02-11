@@ -12,10 +12,9 @@ import stripe
 @csrf_exempt
 def webhook(request):
     """
-    Listen for webhooks from Stripe
+    Listen for webhooks from Stripe and map it, send it to handlers
     Require POST request reject GET request
     CSRF exempt - stripe won't sent a CSRF token
-    Stripe > webhook > webhook_handler
     """
     # Setup
     wh_secret = settings.STRIPE_WH_SECRET
@@ -39,7 +38,7 @@ def webhook(request):
     except Exception as e:
         return HttpResponse(content=e, status=400)
 
-    # Set up a webhook handler
+    # Set up a webhook handler - create instance to pass to handler
     handler = StripeWH_Handler(request)
 
     # Map webhook events to relevant handler functions
@@ -53,8 +52,8 @@ def webhook(request):
     # Get the webhook type from Stripe
     event_type = event['type']
 
-    # If there's a handler for it, get it from the event map
-    # Use the generic one by default
+    # If there's a handler for it, get it from the event map, pulled out from
+    # the dictionary. Use the generic one by default
     event_handler = event_map.get(event_type, handler.handle_event)
 
     # Call the event handler with the event
