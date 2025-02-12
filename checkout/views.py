@@ -49,7 +49,13 @@ def checkout(request):
         }
         order_form = OrderForm(form_data)
         if order_form.is_valid():
-            order = order_form.save()
+            # Prevent multiple commit with .save(commit=False)
+            order = order_form.save(commit=False)
+            pid = request.POST.get('client_secret').split('_secret')[0]
+            order.stripe_pid = pid
+            # json.dump copy the bag contets
+            order.original_bag = json.dumps(bag)
+            order.save()
             for item_id, item_data in bag.items():
                 try:
                     product = PlantItem.objects.get(id=item_id)
@@ -116,18 +122,21 @@ def checkout(request):
 def checkout_success(request, order_number):
     """
     Handle successful checkouts
+    save_info: 'remember me' checkbox
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
     messages.success(
         request,
-        f"Order successfully processed! Your order number is "
-        f"{order_number} A confirmation email will be sent to {order.email}."
+        f"Order successfully processed! Your order number is \
+        {order_number} A confirmation email will be sent to {order.email}."
     )
     if 'bag' in request.session:
         del request.session['bag']
+
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
     }
+
     return render(request, template, context)
