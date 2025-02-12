@@ -38,6 +38,15 @@
     border: 1px solid #0e170f;
 }
 
+select,
+select option {
+    color: #0e170f;
+}
+select:invalid,
+select option[value=""] {
+    color: rgba(205, 214, 175, 0.7) !important;
+}
+
 #loading-overlay {
 	display: none;
 	position: fixed;
