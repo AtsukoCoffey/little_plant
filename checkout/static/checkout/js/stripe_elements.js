@@ -82,8 +82,9 @@ form.addEventListener('submit', function(ev) {
         'client_secret': clientSecret,
         'save_info': saveInfo,
     };
+    
+    // Get 'cache_checkout_data' view here
     var url = '/checkout/cache_checkout_data/';
-
     $.post(url, postData).done(function () {
 
         // Using python variables in JavaScript 
