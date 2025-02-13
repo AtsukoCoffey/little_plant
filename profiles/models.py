@@ -33,5 +33,7 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
     """
     if created:
         UserProfile.objects.create(user=instance)
-    # Existing users: just save the profile
+    # For users who registered before signals add:
+    # just force to save the profile with take out 'if' and login
+    
     instance.userprofile.save()
