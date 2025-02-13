@@ -181,6 +181,10 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
+input[name='q']::placeholder {
+    color: var(--light-green);
+}
+
 /* ------------------------------- bootstrap toasts */
 .message-container {
     position: fixed;
