@@ -1,4 +1,5 @@
 from django import forms
+from .widgets import CustomClearableFileInput
 from .models import PlantItem, Category
 
 
@@ -7,6 +8,9 @@ class ProductForm(forms.ModelForm):
         model = PlantItem
         fields = ('name', 'scientific_name', 'category', 'description',
                   'image_url', 'image', 'price', 'sale_price')
+
+    image = forms.ImageField(
+        label='Image', required=False, widget=CustomClearableFileInput)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
