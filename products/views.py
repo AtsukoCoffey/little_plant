@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
@@ -13,7 +14,10 @@ def all_products(request):
     model:`products.PlantItem`
 
     **Context**
-
+    'products': all products, or filtered products
+    'search_term': matched data that was included in name, description field
+    'current_category': send the category name that was used for the filter
+    'current_sorting': send the sorting type and direction (asc, dec)
     """
     products = PlantItem.objects.all()
     query = None
@@ -82,10 +86,10 @@ def all_products(request):
 def product_detail(request, slug):
     """
     A view to show individual product details
+    This page's url is constructed by slug to prevent to guess the other pages
     model:`products.PlantItem`
-
     **Context**
-
+    'product': indivisual product detail
     """
     product = get_object_or_404(PlantItem, slug=slug)
     context = {
@@ -95,14 +99,19 @@ def product_detail(request, slug):
     return render(request, 'products/product_detail.html', context)
 
 
+@login_required
 def add_product(request):
     """
     Add a product to the store. Site owner or administrator only
+    Non superuser is redirected to login page
     model:`products.PlantItem`
-
     **Context**
-
+    'form': `products.PlantItem`
     """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('account_login'))
+
     form = ProductForm()
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
@@ -129,8 +138,19 @@ def add_product(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_product(request, product_id):
-    """ Edit a product in the store """
+    """
+    Edit a product in the store. Site owner or administrator only
+    Non superuser is redirected to login page
+    model:`products.PlantItem`
+    **Context**
+    'form': `products.PlantItem`
+    """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('account_login'))
+
     product = get_object_or_404(PlantItem, pk=product_id)
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES, instance=product)
@@ -156,8 +176,17 @@ def edit_product(request, product_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_product(request, product_id):
-    """ Delete a product from the store """
+    """
+    Delete a product from the store. Site owner or administrator only
+    Non superuser is redirected to login page
+    model:`products.PlantItem` - indivisual product_id page
+    """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('account_login'))
+
     product = get_object_or_404(PlantItem, pk=product_id)
     product.delete()
     messages.success(request, 'Product deleted!')
