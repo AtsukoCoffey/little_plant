@@ -12,7 +12,7 @@
           "image":"succulent-echeveria-lilacina.webp",
           "price":5.20,
           "sale_price":0,
-          "rating":4.2
+          "rating":0
        }
     },
     {
@@ -28,7 +28,7 @@
           "image":"air-tillandsia_strict_green.webp",
           "price":11.95,
           "sale_price":9.90,
-          "rating":4.8
+          "rating":0
        }
     },
     {
@@ -44,7 +44,7 @@
            "image":"air-tillandsia_paleacea-sweet-isabel.webp",
            "price":36.05,
            "sale_price":0,
-           "rating":3.5
+           "rating":0
         }
      },
      {
@@ -60,7 +60,7 @@
            "image":"succulent-pachyveria-corvus.webp",
            "price":5.95,
            "sale_price":3.90,
-           "rating":3.8
+           "rating":0
         }
      },
      {
@@ -76,7 +76,7 @@
            "image":"ficus-benjamina-twilight.webp",
            "price":5.20,
            "sale_price":3.90,
-           "rating":4.2
+           "rating":0
         }
      },
      {
@@ -92,7 +92,7 @@
            "image":"ficus-elastica-abidjan.webp",
            "price":14.95,
            "sale_price":0,
-           "rating":3.5
+           "rating":0
         }
      }
 ]
