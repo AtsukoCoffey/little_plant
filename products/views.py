@@ -107,9 +107,11 @@ def add_product(request):
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            # To access this instance id, assign this form.save()
+            product = form.save()
             messages.success(request, 'Successfully added product!')
-            return redirect(reverse('add_product'))
+            # After adding the product redirect to details page
+            return redirect(reverse('product_detail', args=[product.slug]))
         else:
             messages.error(
                 request,
@@ -135,7 +137,7 @@ def edit_product(request, product_id):
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated product!')
-            return redirect(reverse('product_detail', args=[product.id]))
+            return redirect(reverse('product_detail', args=[product.slug]))
         else:
             messages.error(
                 request,
@@ -152,3 +154,4 @@ def edit_product(request, product_id):
     }
 
     return render(request, template, context)
+

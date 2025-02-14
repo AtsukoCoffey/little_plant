@@ -45,8 +45,8 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
     First time force to create a profile and runserver then login
     UserProfile.objects.create(user=instance)
     """
-    # if created:
-    UserProfile.objects.create(user=instance)
+    if created:
+        UserProfile.objects.create(user=instance)
     # For users who registered before signals add:
     # just force to save the profile with take out 'if' and login
 

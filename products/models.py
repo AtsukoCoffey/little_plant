@@ -36,5 +36,4 @@ class PlantItem(models.Model):
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)
-        self.image_alt = self.name
         super(PlantItem, self).save(*args, **kwargs)
