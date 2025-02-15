@@ -7,6 +7,7 @@ class PlantItemAdmin(admin.ModelAdmin):
         'name',
         'category',
         'price',
+        'sale_price',
         'rating',
         'image',
     )

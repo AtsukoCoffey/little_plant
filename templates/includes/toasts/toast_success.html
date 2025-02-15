@@ -30,7 +30,7 @@
                         </div>
                         <div class="col-9">
                             <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                            <p class="my-0 small">Price: {% if item.product.sale_price != 0 %}{{ item.product.sale_price }}{% else %}{{ item.product.price }}{% endif %}</p>
+                            <p class="my-0 small">Price: {% if item.product.sale_price %}{{ item.product.sale_price }}{% else %}{{ item.product.price }}{% endif %}</p>
                             <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
                         </div>
                     </div>

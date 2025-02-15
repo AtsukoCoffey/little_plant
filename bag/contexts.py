@@ -18,7 +18,7 @@ def bag_contents(request):
 
     for item_id, quantity in bag.items():
         product = get_object_or_404(PlantItem, pk=item_id)
-        if product.sale_price != 0:
+        if product.sale_price:
             total += quantity * product.sale_price
         else:
             total += quantity * product.price

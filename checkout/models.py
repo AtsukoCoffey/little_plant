@@ -10,6 +10,9 @@ from profiles.models import UserProfile
 
 
 class Order(models.Model):
+    """
+    Customer's address and phone numbers and grand total
+    """
     order_number = models.CharField(max_length=32, null=False, editable=False)
     user_profile = models.ForeignKey(
         UserProfile,
@@ -92,6 +95,10 @@ class Order(models.Model):
 
 
 class OrderLineItem(models.Model):
+    """
+    Calculate the subtotal.
+    If the product have sales priice calculate with sale price.
+    """
     order = models.ForeignKey(
         Order, null=False, blank=False, on_delete=models.CASCADE,
         related_name='lineitems'
@@ -111,9 +118,13 @@ class OrderLineItem(models.Model):
         Override the original save method to set the lineitem total
         and update the order total.
         """
-        self.lineitem_total = self.product.price * self.quantity
+        if self.product.sale_price:
+            self.lineitem_total = self.product.sale_price * self.quantity
+        else:
+            self.lineitem_total = self.product.price * self.quantity
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return f'Product {self.product.slug} on order {self.order.order_number}'
-
+        # This string is used in dashboard line items section
+        return f'Product {self.product.slug} on order {
+            self.order.order_number}'
