@@ -18,9 +18,11 @@ class Category(models.Model):
 
 
 class PlantItem(models.Model):
-    name = models.CharField(max_length=254)
+    name = models.CharField(
+        max_length=100, unique=True, null=False, blank=False
+    )
     scientific_name = models.CharField(max_length=254, null=True, blank=True)
-    slug = models.SlugField(max_length=50, null=True, blank=True)
+    slug = models.SlugField()
     category = models.ForeignKey(
         'Category', null=True, blank=True, on_delete=models.SET_NULL)
     description = models.TextField(max_length=500)
