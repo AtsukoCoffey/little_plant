@@ -1,7 +1,7 @@
 from django.db import models
 from django.db.models import Avg
 from django.utils.text import slugify
-from django_resized import ResizedImageField
+# from django_resized import ResizedImageField
 
 from django.contrib.auth.models import User
 
@@ -67,12 +67,13 @@ class ReviewRating(models.Model):
         User, on_delete=models.CASCADE, related_name='reviewer'
     )
     review_body = models.CharField(max_length=500, null=False, blank=False)
-    image = ResizedImageField(
-        size=[100, None], quality=75, upload_to="media",
-        force_format='WEBP', blank=True
-    )
+    image = models.ImageField(null=True, blank=True)
+    # image = ResizedImageField(
+    #     size=[100, None], quality=75, upload_to="media",
+    #     force_format='WEBP', blank=True
+    # )
     created_on = models.DateTimeField(auto_now=True)
     rating = models.IntegerField(default=0, null=True)
 
     def __str__(self):
-        return f"{self.plant_item.name}: {self.rating}"
+        return f"{self.product.name}: {self.rating}"

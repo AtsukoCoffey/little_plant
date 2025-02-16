@@ -261,6 +261,31 @@ def review_edit(request, slug, review_id):
                 request, 'Review Updated!'
             )
         else:
-            messages.add_message(
-                request, messages.error, 'Error updating review!')
-    return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
+            messages.success(
+                request, 'Error updating review!')
+    return HttpResponseRedirect(reverse('product_detail', args=[slug]))
+
+
+@login_required
+def review_delete(request, slug, review_id):
+    """
+    Delete an individual comment.
+    **Context**
+    ``recipe``
+        An instance of :model:`recipes.Recipe`.
+    ``comment``
+        A single comment related to the recipe.
+    """
+    product = get_object_or_404(PlantItem.objects.all(), slug=slug)
+    review = get_object_or_404(ReviewRating, pk=review_id)
+
+    #  "user = reviewer" check
+    if review.reviewer == request.user:
+        review.delete()
+        messages.success(
+            request, 'Your review is deleted!'
+        )
+    else:
+        messages.aerror(
+            request, 'You can only delete your own comments!')
+    return HttpResponseRedirect(reverse('rproduct_detail', args=[slug]))
