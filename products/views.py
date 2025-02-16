@@ -1,9 +1,10 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
-from django.http import HttpRequest
-# from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
+import datetime
 
 from .models import PlantItem, Category, ReviewRating
 from .forms import ProductForm, ReviewForm
@@ -12,7 +13,8 @@ from .forms import ProductForm, ReviewForm
 # For update the result anytime - independent function
 def get_user_rating(user, product):
     if user.is_authenticated:
-        rating = ReviewRating.objects.filter(product=product, reviewer=user).first()
+        rating = ReviewRating.objects.filter(
+            product=product, reviewer=user).first()
         return rating.rating if rating else 0
     else:
         return 0
@@ -108,6 +110,32 @@ def product_detail(request, slug):
     # get all reviews for this product
     reviews = product.reviews.all().order_by("-created_on")
     review_form = ReviewForm()
+
+    # Check the review is request user's review
+    if request.method == "POST" and request.user.is_authenticated:
+        review_form = ReviewForm(data=request.POST)
+        rating = request.POST.get('user_rating')
+        # form validation
+        if review_form.is_valid():
+            review = review_form.save(commit=False)
+            review.product = product
+            review.reviewer = request.user
+            review.rating = rating
+            review.create_on = datetime.datetime.now()
+            review.save()
+            messages.success(
+                request, 'Review Updated!'
+            )
+            review_form = ReviewForm()
+            return render(request, 'products/product_detail.html', {
+                'product': product,
+                'user_rating': user_rating,
+                'reviews': reviews,
+                "review_form": review_form,
+            })
+        else:
+            messages.add_message(
+                request, messages.error, 'Error updating review!')
 
     context = {
         'product': product,
@@ -209,3 +237,30 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+
+@login_required
+def review_edit(request, slug, review_id):
+    """
+    Indivisual review for edit
+    `review_id`arg is sent from template, reverse relation of `reviews`
+    """
+    product = get_object_or_404(PlantItem.objects.all(), slug=slug)
+    review = get_object_or_404(ReviewRating, pk=review_id)
+    review_form = ReviewForm(data=request.POST, instance=review)
+
+    # Check the review is request user's review
+    if request.method == "POST" and review.reviewer == request.user:
+
+        # form validation
+        if review_form.is_valid():
+            review = review_form.save(commit=False)
+            review.recipe = product
+            review.save()
+            messages.success(
+                request, 'Review Updated!'
+            )
+        else:
+            messages.add_message(
+                request, messages.error, 'Error updating review!')
+    return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))

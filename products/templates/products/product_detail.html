@@ -106,24 +106,27 @@
             </div>
         </div>
         <div class="row">
-            <div class="product-container col-10 offset-1">
-                <div class="d-flex w-100">
+            <div class="container-fluid">
+                <div class="col-10 offset-lg-2">
                     <h4 class="mb-0"><i class="fa-solid fa-comment-dots"></i> Reviews </h4>
                     <hr>
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#reviewModal" aria-label="button for review" title="button for review">
+                    <button type="button" class="btn btn-warning ml-auto offset-1" data-toggle="modal" data-target="#reviewModal" aria-label="button for review" title="button for review">
                         Contribute your review!<i class="fa-solid fa-magnifying-glass"></i>
                     </button>
-                    <div>
+                </div>
                     <!-- Iterate through each review in ReviewRating -->
+                <div class="d-flex col-10 offset-lg-2">
                     {% for review in reviews %}
-                    <div class="p-2">
-                        <p class="fw-bold">
-                            {{ review.reviewer }}
-                            <span class="fw-normal">
-                                {{ review.created_on }}
-                            </span> wrote:
-                        </p>
+                    <div  class="card mx-3 my-3" style="width: 10rem;">
+                        <img class="card-img-top" src="{{ static  }}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="fw-bold">
+                                {{ review.reviewer }}
+                                <span class="fw-normal">{{ review.created_on }}</span> wrote:
+                            </p>
+                        </div>
                         <div id="review{{ review.id }}">
                             {{ review.review_body | linebreaks }}
                         </div>
