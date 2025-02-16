@@ -182,8 +182,8 @@
                         </div>
                         {% if user.is_authenticated and request.user == review.reviewer %}
                         <div class="d-flex mx-5 mb-1">
-                            <button class="btn btn-delete btn-success mr-auto" data-comment_id="{{ review.id }}">Delete</button>
-                            <button class="btn btn-edit btn-warning ml-auto" data-comment_id="{{ review.id }}">Edit</button>
+                            <button class="btn btn-delete btn-success mr-auto" data-id="{{ review.id }}">Delete</button>
+                            <button class="btn btn-edit btn-warning ml-auto" data-id="{{ review.id }}">Edit</button>
                         </div>
                         {% endif %}
                     </div>
