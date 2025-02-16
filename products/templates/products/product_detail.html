@@ -107,7 +107,7 @@
         </div>
         <div class="row">
             <div class="container-fluid">
-                <div class="col-10 offset-lg-2">
+                <div class="col-12 col-lg-8 offset-lg-2">
                     <h4 class="mb-0"><i class="fa-solid fa-comment-dots"></i> Reviews </h4>
                     <hr>
                     <!-- Button trigger modal -->
@@ -116,9 +116,9 @@
                     </button>
                 </div>
                     <!-- Iterate through each review in ReviewRating -->
-                <div class="d-flex col-10 offset-lg-2">
+                <div class="d-sm-flex flex-sm-wrap col-12 col-lg-8 offset-lg-2">
                     {% for review in reviews %}
-                    <div  class="card mx-3 my-3" style="width: 10rem;">
+                    <div  class="card my-3 mx-3 review-card">
                         <img class="card-img-top" src="{{ static  }}" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
@@ -184,10 +184,10 @@
 {% block postloadjs %}
 <!-- with the call super, replace the first template rather than this -->
 {{ block.super }}
-<script>
+<!-- <script>
     $('#myModal').on('shown.bs.modal', function () {
         $('#myInput').trigger('focus')
     })
-</script>
+</script> -->
 {% include 'products/includes/quantity_input_script.html' %}
 {% endblock %}
