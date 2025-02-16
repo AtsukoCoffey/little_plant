@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.http import HttpRequest
 # from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
@@ -11,7 +12,7 @@ from .forms import ProductForm, ReviewForm
 # For update the result anytime - independent function
 def get_user_rating(user, product):
     if user.is_authenticated:
-        rating = ReviewRating.objects.filter(product=product, reviewer=request.user).first()
+        rating = ReviewRating.objects.filter(product=product, reviewer=user).first()
         return rating.rating if rating else 0
     else:
         return 0

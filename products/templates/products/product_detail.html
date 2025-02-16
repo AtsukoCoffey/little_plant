@@ -28,7 +28,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="product-details-container mb-5 mt-md-5">
+                <div class="product-details-container mb-3 mt-md-5">
                     <h4 class="mb-0">{{ product.name }}</h4>
                     <p class="mb-1">{{ product.scientific_name }}</p>
                     {% if product.sale_price %}
@@ -61,7 +61,7 @@
                         {% csrf_token %}
                         <div class="form-row">
                             <div class="col-12">
-                                <p class="mt-3"><strong>Quantity:</strong></p>
+                                <p class="mt-2"><strong>Quantity:</strong></p>
                                 <div class="form-group w-50">
                                     <div class="input-group">
                                         <!-- Prepend quantity -->
@@ -90,13 +90,13 @@
                                 </div>
                             </div>
                             <div class="col-12">
-                                <a href="{% url 'products' %}" class="btn btn-light border mt-5">
+                                <a href="{% url 'products' %}" class="btn btn-light border mt-2">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="text-uppercase">Keep Shopping</span>
                                 </a>
-                                <input type="submit" class="btn btn-black text-uppercase mt-5" value="Add to Bag">
+                                <input type="submit" class="btn btn-black text-uppercase mt-2" value="Add to Bag">
                             </div>
                             <!-- To submit a field named redirect_url. Which will contain the current URL to the view -->
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
@@ -106,10 +106,73 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-                {{ product }} {{ user_rating }}{{reviews}}
-                {{ review_form | crispy }}
-                    {% csrf_token %}
+            <div class="product-container col-10 offset-1">
+                <div class="d-flex w-100">
+                    <h4 class="mb-0"><i class="fa-solid fa-comment-dots"></i> Reviews </h4>
+                    <hr>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#reviewModal" aria-label="button for review" title="button for review">
+                        Contribute your review!<i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <div>
+                    <!-- Iterate through each review in ReviewRating -->
+                    {% for review in reviews %}
+                    <div class="p-2">
+                        <p class="fw-bold">
+                            {{ review.reviewer }}
+                            <span class="fw-normal">
+                                {{ review.created_on }}
+                            </span> wrote:
+                        </p>
+                        <div id="review{{ review.id }}">
+                            {{ review.review_body | linebreaks }}
+                        </div>
+                        {% if user.is_authenticated and request.user == review.reviewer %}
+                        <button class="btn btn-delete btn-success" data-comment_id="{{ review.id }}">Delete</button>
+                        <button class="btn btn-edit btn-warning" data-comment_id="{{ review.id }}">Edit</button>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="reviewModal" tabindex="-1" role="dialog" aria-labelledby="reviewModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="reviewModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-12">
+                        <div>
+                            <h4><i class="fa-solid fa-comment-dots"></i> Contribute your review!</h4>
+                            <hr>
+                            {% if user.is_authenticated %}
+                            <p>Posting as: {{ user.username }}</p>
+                            <form id="reviewForm" method="post" style="margin-top: 1.3em;">
+                                {% csrf_token %}
+                                {{ review_form | crispy }}
+                                <button id="submitButton" type="submit" class="btn btn-signup btn-success">Submit</button>
+                            </form>
+                            {% else %}
+                            <p>Log in to leave a review?</p>
+                            <p><a href="/accounts/login" class="btn btn-success p-1 mb-1" aria-label="Log-in link" title="Log-in"><i
+                                        class="fa-solid fa-right-to-bracket"></i> Log-in</a> to rate this product, or <a
+                                    href="/accounts/signup" class="btn btn-success p-1 mb-1" aria-label="Sign-Up link" title="Sign-up"><i
+                                        class="fa-solid fa-user-pen"></i> Sign-up</a></p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
             </div>
         </div>
     </div>
@@ -118,5 +181,10 @@
 {% block postloadjs %}
 <!-- with the call super, replace the first template rather than this -->
 {{ block.super }}
+<script>
+    $('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+    })
+</script>
 {% include 'products/includes/quantity_input_script.html' %}
 {% endblock %}
