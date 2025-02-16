@@ -4,8 +4,17 @@ from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .models import PlantItem, Category
-from .forms import ProductForm
+from .models import PlantItem, Category, ReviewRating
+from .forms import ProductForm, ReviewForm
+
+
+# For update the result anytime - independent function
+def get_user_rating(user, product):
+    if user.is_authenticated:
+        rating = ReviewRating.objects.filter(product=product, reviewer=request.user).first()
+        return rating.rating if rating else 0
+    else:
+        return 0
 
 
 def all_products(request):
@@ -91,9 +100,19 @@ def product_detail(request, slug):
     **Context**
     'product': indivisual product detail
     """
-    product = get_object_or_404(PlantItem, slug=slug)
+    product = get_object_or_404(PlantItem.objects.all(), slug=slug)
+
+    # Review part - get user's own rating value function
+    user_rating = get_user_rating(request.user, product)
+    # get all reviews for this product
+    reviews = product.reviews.all().order_by("-created_on")
+    review_form = ReviewForm()
+
     context = {
         'product': product,
+        'user_rating': user_rating,
+        'reviews': reviews,
+        "review_form": review_form,
     }
 
     return render(request, 'products/product_detail.html', context)
@@ -175,7 +194,6 @@ def edit_product(request, product_id):
     return render(request, template, context)
 
 
-# @login_required
 def delete_product(request, product_id):
     """
     Delete a product from the store. Site owner or administrator only

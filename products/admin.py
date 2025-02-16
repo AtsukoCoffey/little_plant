@@ -8,7 +8,6 @@ class PlantItemAdmin(admin.ModelAdmin):
         'category',
         'price',
         'sale_price',
-        'rating',
         'image',
     )
 

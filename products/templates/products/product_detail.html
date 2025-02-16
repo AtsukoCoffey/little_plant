@@ -104,7 +104,14 @@
                     </form>
                 </div>
             </div>
-        </div>   
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+                {{ product }} {{ user_rating }}{{reviews}}
+                {{ review_form | crispy }}
+                    {% csrf_token %}
+            </div>
+        </div>
     </div>
 {% endblock %}
 

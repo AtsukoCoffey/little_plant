@@ -11,8 +11,7 @@
           "image_url":"https://www.gardens4you.ie/media/amasty/webp/catalog/product/cache/3a7af0a8e0e317723249dc9098669163/f/d/fd17902wh_jpg.webp",
           "image":"succulent-echeveria-lilacina.webp",
           "price":5.20,
-          "sale_price":0,
-          "rating":0
+          "sale_price":0
        }
     },
     {
@@ -27,8 +26,7 @@
           "image_url":"https://airplantshop.com/cdn/shop/files/tillandsia_strict_green_bloom_air_plants-min.jpg?v=1722970581&width=1800",
           "image":"air-tillandsia_strict_green.webp",
           "price":11.95,
-          "sale_price":9.90,
-          "rating":0
+          "sale_price":9.90
        }
     },
     {
@@ -43,8 +41,7 @@
            "image_url":"https://airplantshop.com/collections/shop-air-plants/products/tillandsia-sweet-isabel",
            "image":"air-tillandsia_paleacea-sweet-isabel.webp",
            "price":36.05,
-           "sale_price":0,
-           "rating":0
+           "sale_price":0
         }
      },
      {
@@ -59,8 +56,7 @@
            "image_url":"https://www.gardens4you.ie/media/amasty/webp/catalog/product/cache/3a7af0a8e0e317723249dc9098669163/f/d/fd17920wh_jpg.webp",
            "image":"succulent-pachyveria-corvus.webp",
            "price":5.95,
-           "sale_price":3.90,
-           "rating":0
+           "sale_price":3.90
         }
      },
      {
@@ -75,8 +71,7 @@
            "image_url":"https://www.gardens4you.ie/media/amasty/webp/catalog/product/cache/3a7af0a8e0e317723249dc9098669163/f/d/fd16239wh_jpg.webp",
            "image":"ficus-benjamina-twilight.webp",
            "price":5.20,
-           "sale_price":3.90,
-           "rating":0
+           "sale_price":3.90
         }
      },
      {
@@ -91,8 +86,7 @@
            "image_url":"https://www.gardens4you.ie/media/amasty/webp/catalog/product/cache/3a7af0a8e0e317723249dc9098669163/f/d/fd19274-1-wh_jpg.webp",
            "image":"ficus-elastica-abidjan.webp",
            "price":14.95,
-           "sale_price":0,
-           "rating":0
+           "sale_price":0
         }
      }
 ]
