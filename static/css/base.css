@@ -269,6 +269,25 @@ input[name='q']::placeholder {
     bottom: 0;
 }
 
+
+/* Change Bootstrap button style */
+.btn-b-danger {
+    color: #dc3545;
+    border-color: #dc3545;
+    font-weight: 800;
+}
+.btn-b-secondary {
+    color: #6c757d;
+    border-color: #6c757d;
+    font-weight: 800;
+}
+.btn-b-success {
+    color: #1e7e34;
+    border-color: #1e7e34;
+    font-weight: 800;
+}
+
+
 /* Convenience classes - colors copied from Bootstrap */
 .arrow-primary {
     border-bottom-color: #007bff !important;
