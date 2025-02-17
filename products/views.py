@@ -273,7 +273,7 @@ def review_delete(request, slug, review_id):
     Delete an individual review.
     **Context**
     """
-    product = get_object_or_404(PlantItem.objects.all(), slug=slug)
+    # product = get_object_or_404(PlantItem.objects.all(), slug=slug)
     review = get_object_or_404(ReviewRating, pk=review_id)
 
     #  "user = reviewer" check
@@ -283,6 +283,6 @@ def review_delete(request, slug, review_id):
             request, 'Your review is deleted!'
         )
     else:
-        messages.aerror(
+        messages.error(
             request, 'You can only delete your own reviews!')
-    return HttpResponseRedirect(reverse('rproduct_detail', args=[slug]))
+    return HttpResponseRedirect(reverse('product_detail', args=[slug]))
