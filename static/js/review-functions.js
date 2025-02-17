@@ -21,12 +21,16 @@ const submitButton = document.getElementById("submitButton");
 
 for (let button of editButtons) {
     button.addEventListener("click", (e) => {
+        // We need to send slug value too
         let dataId = e.target.getAttribute("data-id");
+        let slug = e.target.getAttribute("data-slug");
+        document.getElementById("review-overlay").style.display = "block";
+
         let reviewContent = document.getElementById(
-          `review${dataId}`).innerText;
-          reviewText.value = reviewContent;
+            `review${dataId}`).innerText;
+            reviewText.value = reviewContent;
         submitButton.innerText = "Update";
-        reviewForm.setAttribute("action", `edit_review/${dataId}/`);
+        reviewForm.setAttribute("action", `/products/${slug}/edit_review/${dataId}/`);
     });
 }
 

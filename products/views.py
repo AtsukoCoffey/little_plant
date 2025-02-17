@@ -251,11 +251,12 @@ def review_edit(request, slug, review_id):
 
     # Check the review is request user's review
     if request.method == "POST" and review.reviewer == request.user:
+        review_form = ReviewForm(data=request.POST, instance=review)
 
         # form validation
         if review_form.is_valid():
             review = review_form.save(commit=False)
-            review.recipe = product
+            review.product = product
             review.save()
             messages.success(
                 request, 'Review Updated!'
@@ -269,12 +270,8 @@ def review_edit(request, slug, review_id):
 @login_required
 def review_delete(request, slug, review_id):
     """
-    Delete an individual comment.
+    Delete an individual review.
     **Context**
-    ``recipe``
-        An instance of :model:`recipes.Recipe`.
-    ``comment``
-        A single comment related to the recipe.
     """
     product = get_object_or_404(PlantItem.objects.all(), slug=slug)
     review = get_object_or_404(ReviewRating, pk=review_id)
@@ -287,5 +284,5 @@ def review_delete(request, slug, review_id):
         )
     else:
         messages.aerror(
-            request, 'You can only delete your own comments!')
+            request, 'You can only delete your own reviews!')
     return HttpResponseRedirect(reverse('rproduct_detail', args=[slug]))
