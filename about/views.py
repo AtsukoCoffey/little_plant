@@ -3,6 +3,7 @@ from django.contrib import messages
 
 from .models import AboutUs
 from .forms import ContactUsForm
+from profiles.models import UserProfile
 
 
 def about_us(request):
@@ -18,6 +19,18 @@ def about_us(request):
             form.save()
             messages.success(request, 'Successfully send a contact form!')
             return redirect('about')
+
+    if request.user.is_authenticated:
+        try:
+            profile = UserProfile.objects.get(user=request.user)
+            form = ContactUsForm(initial={
+                'user_name': profile.user.username,
+                'email': profile.user.email,
+            })
+        except UserProfile.DoesNotExist:
+            form = ContactUsForm()
+    else:
+        form = ContactUsForm()
 
     context = {
         "about": about_content,
