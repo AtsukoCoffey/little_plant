@@ -22,7 +22,10 @@ class ContactUsAdmin(admin.ModelAdmin):
         'email',
         'message',
         'purpose',
+        'date',
         'checked',
     )
+    ordering = ('-date',)
+
 
 admin.site.register(ContactPurpose)

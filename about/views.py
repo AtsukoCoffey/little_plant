@@ -12,12 +12,15 @@ def about_us(request):
     """
     about_content = AboutUs.objects.all().order_by('-created_on').first()
     form = ContactUsForm()
+    success_message = 'Your message has been successfully sent!  \
+        Thank you for contact us.  We will review your message soon and \
+            respond shortly.'
 
     if request.method == 'POST':
         form = ContactUsForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Successfully send a contact form!')
+            messages.success(request, success_message)
             return redirect('about')
 
     if request.user.is_authenticated:
