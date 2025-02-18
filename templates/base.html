@@ -105,7 +105,13 @@
                     </li>
                 </ul>
                 <div class="text-right">
-                    <span class="mr-3">Hi Atsuko!</span>
+                    <span class="mr-3">Hi 
+                        {% if request.user.is_authenticated %}
+                            {{ request.user.username }} !
+                        {% else %}
+                            Guest !
+                        {% endif %}
+                    </span>
                 </div>
             </nav>
         </div>
