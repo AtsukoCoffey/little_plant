@@ -1,57 +1,57 @@
 [
     {
         "pk": 1,
-        "model": "products.category",
+        "model": "about.contactpurpose",
         "fields": {
             "name": "General Inquiry"        }
     },
     {
         "pk": 2,
-        "model": "products.category",
+        "model": "about.contactpurpose",
         "fields": {
             "name": "Complaint"        }
     },
     {
         "pk": 3,
-        "model": "products.category",
+        "model": "about.contactpurpose",
         "fields": {
             "name": "Billing & Payments"
         }
     },
     {
-        "pk": 1,
-        "model": "products.category",
+        "pk": 4,
+        "model": "about.contactpurpose",
         "fields": {
             "name": "Partnerships/Collaboration"        }
     },
     {
-        "pk": 2,
-        "model": "products.category",
+        "pk": 5,
+        "model": "about.contactpurpose",
         "fields": {
             "name": "Press/Media Inquiry"        }
     },
     {
-        "pk": 3,
-        "model": "products.category",
+        "pk": 6,
+        "model": "about.contactpurpose",
         "fields": {
             "name": "Careers/Job Application"
         }
     },
     {
-        "pk": 1,
-        "model": "products.category",
+        "pk": 7,
+        "model": "about.contactpurpose",
         "fields": {
             "name": "Feedback/Suggestions"        }
     },
     {
-        "pk": 2,
-        "model": "products.category",
+        "pk": 8,
+        "model": "about.contactpurpose",
         "fields": {
             "name": "Advice/Guidance"        }
     },
     {
-        "pk": 3,
-        "model": "products.category",
+        "pk": 9,
+        "model": "about.contactpurpose",
         "fields": {
             "name": "Other"
         }

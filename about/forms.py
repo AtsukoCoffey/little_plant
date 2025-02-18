@@ -25,7 +25,7 @@ class ContactUsForm(forms.ModelForm):
         empty_label="Select a purpose",
         required=False
     )
-    
+
     class Meta:
         model = ContactUs
         fields = ['user_name', 'email', 'purpose', 'message']

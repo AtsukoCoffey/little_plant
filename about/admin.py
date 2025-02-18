@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import AboutUs, ContactUs
+from .models import AboutUs, ContactUs, ContactPurpose
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -24,3 +24,5 @@ class ContactUsAdmin(admin.ModelAdmin):
         'purpose',
         'checked',
     )
+
+admin.site.register(ContactPurpose)
