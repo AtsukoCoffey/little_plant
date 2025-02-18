@@ -14,6 +14,9 @@ class AboutUs(models.Model):
 
 
 class ContactPurpose(models.Model):
+    """
+    Contact form - purpose
+    """
     name = models.CharField(max_length=255)
 
     def __str__(self):
@@ -21,6 +24,10 @@ class ContactPurpose(models.Model):
 
 
 class ContactUs(models.Model):
+    """
+    Contact form - main form
+    Related to (FK) :ContactPurpose
+    """
     user_name = models.CharField(max_length=255,)
     email = models.EmailField()
     message = models.TextField()

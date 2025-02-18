@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import AboutUs, ContactUs, ContactPurpose
+from .models import AboutUs, ContactUs
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -25,7 +25,10 @@ class ContactUsAdmin(admin.ModelAdmin):
         'date',
         'checked',
     )
-    ordering = ('-date',)
-
-
-admin.site.register(ContactPurpose)
+    readonly_fields = (
+        'user_name',
+        'email',
+        'message',
+        'purpose',
+        'date',
+    )
