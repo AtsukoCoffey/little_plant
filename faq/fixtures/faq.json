@@ -1,46 +1,218 @@
 [
     {
         "pk": 1,
-        "model": "faq.faqcategory",
+        "model": "faq.faq",
         "fields": {
-            "name": "Create terrarium"        }
+            "category": 1,
+            "question": "How long will my terrarium last?",
+            "answer": "Greenery NYC terrariums are built to last, as long as they are maintained properly. Providing the right lighting requirements and a regular watering schedule is key to keeping your terrarium happy and healthy. As every terrarium is its own unique eco-system, everyone&apos;s home is different as well. Finding a baseline for your terrarium as it exists in your space will insure its success. This means paying close attention to its needs when you take it home, and then setting up a regular, appropriate care plan."
+        }
     },
     {
         "pk": 2,
-        "model": "faq.faqcategory",
+        "model": "faq.faq",
         "fields": {
-            "name": "Care Airplants"        }
+            "category": 1,
+            "question": "How do I water my terrarium?",
+            "answer": "Since every home has different heating and cooling systems, it is important to monitor the soil in your pre-watered terrarium when you bring it into your space. Your terrarium is pre-watered upon purchase. Touch the soil and feel how moist it is. By frequently checking as time passes, figure out how many days it takes for your terrarium to dry in your space. When it feels dry, it&apos;s time to water."
+        }
     },
     {
         "pk": 3,
-        "model": "faq.faqcategory",
+        "model": "faq.faq",
         "fields": {
-            "name": "Care Succulents"
+            "category": 1,
+            "question": "How do I care for my Desert Terrarium?",
+            "answer": "These terrariums require infrequent, but regular watering. Depending on the heat in your home, you will water your desert terrarium every 2-3 weeks. Start by checking the soil. Is it completely dry? When it is, focus your watering on the roots of each plant, making sure to lightly saturate the soil around that plant without flooding the terrain. Remember, there is no drainage in a terrarium, so too much water can rot and kill cacti and succulents."
         }
     },
     {
         "pk": 4,
-        "model": "faq.faqcategory",
+        "model": "faq.faq",
         "fields": {
-            "name": "Care House plants"        }
+            "category": 1,
+            "question": "How do I care for my Woodland Terrarium?",
+            "answer": "These types of terrariums like moisture and absorb water faster than a desert terrarium. Depending on the heat in your home, you will be watering your terrarium every week to every week and a half. Make sure the soil is reasonably dry, check each plant for moisture and water the roots evenly. Over watering can lead to root rot. Be very calibrated and mindful in your watering plan."
+        }
     },
     {
         "pk": 5,
-        "model": "faq.faqcategory",
+        "model": "faq.faq",
         "fields": {
-            "name": "Returning"        }
+            "category": 1,
+            "question": "What kind of lighting conditions does my terrarium need?",
+            "answer": "Different plants need different qualities of light. Desert terrariums need least 5-6 hours of direct sunlight, like their natural desert environment. These terrariums do well in an unobstructed south or west-facing window. Woodland terrariums like indirect filtered bright light, much like their natural environment under the forest canopy. Make sure that the terrarium is placed in a bright spot out of the rays of the sun. An eastern or northern exposure is great. Woodland terrariums need natural light, so a shadowy position in your home will not serve your terrarium."
+        }
     },
     {
         "pk": 6,
-        "model": "faq.faqcategory",
+        "model": "faq.faq",
         "fields": {
-            "name": "Terms & Conditions"
+            "category": 2,
+            "question": "Where do air plants come from?",
+            "answer": "Most air plants are natives to tropical regions in Mexico, South America, and Central America. Some plants, are even found growing wild here in Florida and other areas of the Southern United States."
         }
     },
     {
         "pk": 7,
-        "model": "faq.faqcategory",
+        "model": "faq.faq",
         "fields": {
-            "name": "Privacy Policy"        }
+            "category": 2,
+            "question": "How do you care for an air plant?",
+            "answer": "Air plants need light, air, and water to survive.  Air Plant care will also depend on the type of environment you are housing them in as well as the type of tillandsia you have.  As a general rule xeric (silver leafed) plants will like drier conditions and more sunlight, while mesic (greener leafed) type plants will like more moisture and lower indirect light levels"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "faq.faq",
+        "fields": {
+            "category": 2,
+            "question": "Do air plants purify air?",
+            "answer": "There have been studies that houseplants can purify the air in your home, but in pretty small amounts. Read our article about the benefits of bringing air plants into your home to learn more! "
+        }
+    },
+    {
+        "pk": 9,
+        "model": "faq.faq",
+        "fields": {
+            "category": 2,
+            "question": "Does an air plant need sunlight?",
+            "answer": "Yes, absolutely! Air plants can also survive under artificial lighting. If you have an area that doesn't get adequate light, you can always rotate plants every couple of days so you can still enjoy their beauty, and the plant can continue to thrive!"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "faq.faq",
+        "fields": {
+            "category": 2,
+            "question": "Can air plants grow in artificial light or low light?",
+            "answer": "Yes, air plants can grow under adequate artificial light. Be sure that your plants get at least 4-6 hours of light a day. Air plants do not do very well in low light. If you do keep your plants in a lower light area, we recommend moving them periodically to higher light areas so they get enough light.  You will notice air plants in low light environments will become dull looking and loose their color more than a plant in good indirect light."
+        }
+    },
+    {
+        "pk": 11,
+        "model": "faq.faq",
+        "fields": {
+            "category": 3,
+            "question": "How often should I water my succulent?",
+            "answer": "A good rule of thumb is to water just a little at a time when the soil is completely dry.If you do overwater, you might see little blisters pop up, white patches appearing on the leaves, or rot forming. Not ideal. Some damage can be reversible - if you catch it quickly and let the soil thoroughly dry out. With good succulent care practice, you&apos;ll be able to avoid all that from the start. "
+        }
+    },
+    {
+        "pk": 12,
+        "model": "faq.faq",
+        "fields": {
+            "category": 3,
+            "question": "How much light does my succulent need?",
+            "answer": "Native to warm countries, succulents love direct light. Suri needs about six hours of sunlight per day - so she&apos;ll live happily on a shelf or table near a window. With the right succulent care, you might even see her colours change a bit. It&apos;s called &apos;blushing&apos;. Not because she&apos;s coy, but because she&apos;s grinning ear-to-ear. Just avoid keeping her in the full blast of direct sunlight all day, as this could burn her."
+        }
+    },
+    {
+        "pk": 13,
+        "model": "faq.faq",
+        "fields": {
+            "category": 3,
+            "question": "What&apos;s the best kind of soil for succulents?",
+            "answer": "Succulents do best in well-drained soils; they&apos;re designed to cope with drier environments. But if you notice roots growing out of the drainage hole, it means they&apos;ve run out of space to grow. That&apos;s a good sign you need to repot. "
+        }
+    },
+    {
+        "pk": 14,
+        "model": "faq.faq",
+        "fields": {
+            "category": 3,
+            "question": "What are succulent plants all about?",
+            "answer": "Succulents originally come from dry, desert-like environments like the European Alps, Central America and South Africa. Amazingly, there are over 10,000 types - all with different colours, textures and sizes. Not only are they beautiful to look at, but their thick, fleshy leaves, they&aposre also able to store their own water, so it&apos;s best to keep watering to a minimum. For extra love, give your succulents a feed every now and again with a succulent or cacti-specific fertiliser. Once a month in spring and summer is best."
+        }
+    },
+    {
+        "pk": 15,
+        "model": "faq.faq",
+        "fields": {
+            "category": 4,
+            "question": "How much water Houseplants need?",
+            "answer": "All houseplants have slightly different watering requirements, depending on how they're grown and how their growth changes through the seasons. It's best to water on an as-needed basis rather than by a set calendar schedule. In general, plants grown in well-drained potting mix in an appropriate-size container should be watered when the top 1/2 to 1 inch of soil feels dry. Cacti and succulents need less water; flowering plants usually need slightly more. To water, let a slow stream of water (from your watering can or the tap) soak into the plant; once you see it start draining from the pot&apos;s drainage hole, the soil is well saturated. Avoid splashing onto leaves and stems, which can encourage diseases and leaf spotting."
+        }
+    },
+    {
+        "pk": 16,
+        "model": "faq.faq",
+        "fields": {
+            "category": 4,
+            "question": "Adjust Humidity Levels?",
+            "answer": "Many popular houseplants, such as pothos and calathea, prefer a somewhat humid environment. To counteract the drying affect of air conditioning in the summer and heating systems in the winter, avoid placing indoor plants near vents. Adding a humidifier to your space will help your humidity-loving plants, while clustering houseplants together can also help them hold onto moisture in the air. Note that succulents and other desert plants are an exception—they like a dry environment."
+        }
+    },
+    {
+        "pk": 17,
+        "model": "faq.faq",
+        "fields": {
+            "category": 4,
+            "question": "Fertilize Houseplants Periodically?",
+            "answer": "Like watering, there's not an easy rule to know how much to fertilize: It depends on the plant's growth rate and age, and the time of year. Some people choose not to fertilize their houseplants at all, and they still do just fine. However, if you want to give houseplants a boost, the best time to fertilize them is spring and summer, when they have a growth spurt. Follow label directions to know how much plant food to use."
+        }
+    },
+    {
+        "pk": 18,
+        "model": "faq.faq",
+        "fields": {
+            "category": 4,
+            "question": "Need to repot Overgrown Houseplants?",
+            "answer": "Not sure if your houseplants need repotting? Check the root systems. If the roots are circling the inside of the container, it may be time to repot the plant. If the plant has outgrown its pot, you can transplant it into a slightly larger container. If you'd like to keep it in the same pot, trim off some of the roots with a sharp knife and replant it into the container using fresh potting soil. Spring and summer are the best seasons for repotting your houseplants."
+        }
+    },
+    {
+        "pk": 19,
+        "model": "faq.faq",
+        "fields": {
+            "category": 4,
+            "question": "Remove Dust From Plants?",
+            "answer": "Almost all houseplants look better with regular cleaning. Dust collects on leaves, so wash them with a gentle shower of room-temperature water or dust them with a soft brush if the plants have hairy leaves (which can hold onto moisture and encourage disease). For plants with smooth leaves, you can also use a cloth to gently wipe away any dust that collects on leaves. Not only does this improve your plant's appearance, but it&apos;ll actually help it to soak up more light."
+        }
+    },
+    {
+        "pk": 20,
+        "model": "faq.faq",
+        "fields": {
+            "category": 4,
+            "question": "Prune and Pinch Back Houseplants?",
+            "answer": "You can prune any time of the year, but fall is a natural time to break out your pruning scissors after a summer of growth. The main reasons for pruning houseplants are to make them look better and keep them from getting too large. Similar to propagating, cutting overgrown houseplants back to 4 to 6 inches tall helps rejuvenate them. This technique is effective in encouraging new growth for trailing plants such as Swedish ivy and pothos that may have become bare at their bases. Try to make your cuts just above a set of buds or side shoots on a stem you want to cut back. These are where the new growth will start. Also, remove any dead or diseased leaves and stems to help prevent the problem from spreading. Pinching means removing stem tips, either with your fingernails or pruners. Pinch out the tip of a stem and the topmost leaves to encourage the growth of side buds. Plants that grow rapidly often look best with frequent pinching to keep them compact and fuller."
+        }
+    },
+    {
+        "pk": 21,
+        "model": "faq.faq",
+        "fields": {
+            "category": 5,
+            "question": "Returns Policy - FAULTY GOODS",
+            "answer": "If your goods are faulty your are entitled replacement or repair. All items (unless otherwise stated) come with a 12 month warranty. If you have a faulty item, please notify TheGardenShop.ie by email using our Contact Us page. Provide us with the order #, the item and a brief description of the fault Customers can then opt to: pay the shipping costs involved in returning the item(s) to our premises or alternatively they can drop the goods to our depot (please check in advance that we have item in stock)"
+        }
+    },
+    {
+        "pk": 22,
+        "model": "faq.faq",
+        "fields": {
+            "category": 5,
+            "question": "Returns Policy - CHANGE OF MIND",
+            "answer": "Customers have 14 days form receiving their order to return the goods to us for a full refund of the cost of the item (excluding the delivery fee) Please notify TheGardenshop.ie by email using our Contact Us page. Provide us with the order #, the item and detail your intention to return the product Customers can then opt to: pay the shipping costs involved in returning the item(s) to our premises or alternatively they can drop the goods to our depot Customers must return the goods where they are fit for resale and in its original and undamaged packaging. Refunds can only be paid on the same payment card or paypal account used to place the order."
+        }
+    },
+    {
+        "pk": 23,
+        "model": "faq.faq",
+        "fields": {
+            "category": 5,
+            "question": "Returns Policy - REVIEWS & TESTIMONIALS",
+            "answer": "TheGardenShop.ie reserves the right to not publish reviews and testimonials. In general we publish as many as we can but profanity, slander, spam etc will not be accepted. In general, we only publish reviews that we can verify were actually customers to avoid anti-competitive measures by competitors. Also reviews which are left regarding product issues that customers have not tried to resolve with us first, will not be published. Reviews & testimonials are generally published 2-3 times a week, so your post will not appear on the website immediately. We really do appreciate customers feedback but unfortunately the internet being what it is, this is the policy we have had to adopt"
+        }
+    },
+    {
+        "pk": 24,
+        "model": "faq.faq",
+        "fields": {
+            "category": 5,
+            "question": "Returns Policy - CONDITIONS",
+            "answer": "TheGardenShop.ie reserves the right to inspect all returned goods. Your statutory rights are not affected"
+        }
     }
 ]

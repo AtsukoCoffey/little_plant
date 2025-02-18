@@ -1,0 +1,51 @@
+[
+    {
+        "pk": 1,
+        "model": "faq.faqcategory",
+        "fields": {
+            "name": "Create terrarium"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "faq.faqcategory",
+        "fields": {
+            "name": "Care Airplants"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "faq.faqcategory",
+        "fields": {
+            "name": "Care Succulents"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "faq.faqcategory",
+        "fields": {
+            "name": "Care House plants"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "faq.faqcategory",
+        "fields": {
+            "name": "Returning"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "faq.faqcategory",
+        "fields": {
+            "name": "Terms & Conditions"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "faq.faqcategory",
+        "fields": {
+            "name": "Privacy Policy"
+        }
+    }
+]
