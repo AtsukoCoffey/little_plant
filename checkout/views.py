@@ -102,7 +102,7 @@ def checkout(request):
     # Check the contents of intent
     # print(intent)
 
-    # From Order history to view the  
+    # From Order history to view the
     if request.user.is_authenticated:
         try:
             profile = UserProfile.objects.get(user=request.user)
@@ -152,7 +152,7 @@ def checkout_success(request, order_number):
         # Attach the user's profile to the order
         order.user_profile = profile
         order.save()
-        
+
         # "Remember me" check box - Save the user's info
         if save_info:
             profile_data = {
@@ -167,7 +167,7 @@ def checkout_success(request, order_number):
             user_profile_form = UserProfileForm(profile_data, instance=profile)
             if user_profile_form.is_valid():
                 user_profile_form.save()
-    
+
     messages.success(
         request,
         f"Order successfully processed! Your order number is \
