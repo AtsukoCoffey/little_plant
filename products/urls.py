@@ -16,4 +16,5 @@ urlpatterns = [
     path(
         '<slug:slug>/delete_review/<int:review_id>/',
         views.review_delete, name='review_delete'),
+    path('review/', views.review, name='review'),
 ]

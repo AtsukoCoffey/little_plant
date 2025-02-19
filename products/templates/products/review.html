@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+{% block  extra_title %}Reviews - {{ category }}{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <main class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+                <h2 class="">Reviews - {{ category }}</h2>
+                <hr>
+
+                <!-- Iterate through each review in ReviewRating -->
+                <div class="col-12 d-sm-flex flex-md-wrap col-lg-8 offset-lg-2">
+                    {% for review in reviews %}
+                    <div  class="card my-3 mx-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="fw-bold">
+                                {{ review.reviewer }}
+                                <span class="fw-normal">{{ review.created_on }}</span> wrote:
+                            </p>
+                        </div>
+                        <div class="mx-3" id="review{{ review.id }}">
+                            {{ review.review_body | linebreaks }}
+                        </div>
+                        <div width="100">
+                            {% if review.image %}
+                                <img class="card-img-top" src="{{ review.image.url }}" alt="{{ review.reviewer }}" width="100">
+                            {% else %}
+                                <img class="card-img-top"src="{{ MEDIA_URL }}placeholder.png" alt="{{ review.reviewer }}" width="96">
+                            {% endif %}
+                        </div>
+                        {% if user.is_authenticated and request.user == review.reviewer %}
+                        <div class="w-100 d-flex justify-content-center mb-1">
+                            <button class="btn btn-edit btn-b-success mx-2" data-id="{{ review.id }}" data-slug="{{ review.product.slug }}">Edit</button>
+                            <button class="btn btn-delete btn-b-danger mx-2" data-id="{{ review.id }}" data-slug="{{ review.product.slug }}">Delete</button>
+                        </div>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+            
+            </div>
+        </div>
+    </main>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% endblock %}

@@ -33,10 +33,10 @@
                 REVIEWS
             </a>
             <div class="dropdown-menu border-0 bg-whitish" aria-labelledby="review-link">
-                <a href="" class="dropdown-item">All Products</a>
-                <a href="" class="dropdown-item ">Succulents plants</a>
-                <a href="" class="dropdown-item ">Air plants</a>
-                <a href="" class="dropdown-item">Indoor plants</a>
+                <a href="{% url 'review' %}" class="dropdown-item">All Products</a>
+                <a href="{% url 'review' %}?category=succulents" class="dropdown-item ">Succulents plants</a>
+                <a href="{% url 'review' %}?category=airplants" class="dropdown-item ">Air plants</a>
+                <a href="{% url 'review' %}?category=indoor" class="dropdown-item">Indoor plants</a>
             </div>
         </li>
         <li class="nav-item">

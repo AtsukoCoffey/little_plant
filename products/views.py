@@ -286,3 +286,25 @@ def review_delete(request, slug, review_id):
         messages.error(
             request, 'You can only delete your own reviews!')
     return HttpResponseRedirect(reverse('product_detail', args=[slug]))
+
+
+def review(request):
+
+    context = {'reviews': ReviewRating.objects.all(), }
+
+    if request.GET:
+        if request.GET['category']:
+            category = request.GET['category'].split(',')
+            reviews = ReviewRating.objects.filter(
+                product__category__name__in=category
+            )
+            context = {
+                'reviews': reviews,
+                'category': category,
+            }
+        else:
+            context = {
+                'reviews': reviews,
+            }
+
+    return render(request, 'products/review.html', context)
