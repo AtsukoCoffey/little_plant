@@ -300,7 +300,7 @@ def review(request):
             )
             context = {
                 'reviews': reviews,
-                'category': category,
+                'category': category[0],
             }
         else:
             context = {
