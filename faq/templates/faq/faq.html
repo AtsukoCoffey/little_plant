@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-{% block  extra_title %}FAQ - {{faqs.category}}{% endblock %}
+{% block  extra_title %}FAQ - {{ category }}{% endblock %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'faq/css/faq-style.css' %}">
@@ -19,7 +19,7 @@
     <main class="container-fluid">
         <div class="row">
             <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 mt-3">
-                <h2 class="">FAQ - {{faqs.category}}</h2>
+                <h2 class="">FAQ - {{ category }}</h2>
                 <hr>
                 <div class="accordion">
                 {% for faq in faqs %}

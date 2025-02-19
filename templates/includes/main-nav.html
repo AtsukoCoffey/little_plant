@@ -21,10 +21,11 @@
                 FAQ
             </a>
             <div class="dropdown-menu border-0 bg-whitish" aria-labelledby="faq-link">
-                <a href="" class="dropdown-item">How to care</a>
-                <a href="" class="dropdown-item">Create terrariums</a>
-                <a href="" class="dropdown-item">Shipping</a>
-                <a href="" class="dropdown-item">Returning</a>
+                <a href="{% url 'faq' %}?category=1" class="dropdown-item">Create terrarium</a>
+                <a href="{% url 'faq' %}?category=2" class="dropdown-item">Air Plant Care</a>
+                <a href="{% url 'faq' %}?category=3" class="dropdown-item">Succulent Plant Care</a>
+                <a href="{% url 'faq' %}?category=4" class="dropdown-item">House Plant Care</a>
+                <a href="{% url 'faq' %}?category=5" class="dropdown-item">Returing Product</a>
             </div>
         </li>
         <li class="nav-item dropdown">
