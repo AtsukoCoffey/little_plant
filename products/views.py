@@ -99,9 +99,12 @@ def product_detail(request, slug):
     """
     A view to show individual product details
     This page's url is constructed by slug to prevent to guess the other pages
-    model:`products.PlantItem`
+    model:`products.PlantItem`, 'products.ReviewRating'
     **Context**
-    'product': indivisual product detail
+    'product': Indivisual product detail
+    'reviews': All the reviews related to thid indivisual product
+    "review_form": Check if user had already write review, populate or newform
+    'user_rating': (int) if user had already rated or 0
     """
     product = get_object_or_404(PlantItem.objects.all(), slug=slug)
 
@@ -109,7 +112,15 @@ def product_detail(request, slug):
     user_rating = get_user_rating(request.user, product)
     # get all reviews for this product
     reviews = product.reviews.all().order_by("-created_on")
-    review_form = ReviewForm()
+
+    # Populate Indivisual past review in form if already had review or new form
+    try:
+        review_instance = ReviewRating.objects.get(
+            reviewer=request.user, product=product
+        )
+        review_form = ReviewForm(instance=review_instance)
+    except ReviewRating.DoesNotExist:
+        review_form = ReviewForm()
 
     # Check the review is request user's review
     if request.method == "POST" and request.user.is_authenticated:
@@ -135,7 +146,7 @@ def product_detail(request, slug):
             })
         else:
             messages.add_message(
-                request, messages.error, 'Error updating review!')
+                request, messages.error, 'Error updating review!')        
 
     context = {
         'product': product,

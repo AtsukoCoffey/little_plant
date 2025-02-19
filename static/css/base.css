@@ -209,6 +209,43 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
+/*---------------------------------------------------------- Star rating */
+
+/* Average rating */
+.checked:hover,
+.checked {
+    color: var(--star-yellow);
+}
+
+/* User indivisual rating */
+.rating-list {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    list-style: none;
+    width: fit-content;
+}
+
+.rating-list .fa-star {
+    color: var(--star-gray);
+    padding: 3px 5px;
+}
+
+/* Style for the hover color */
+label.fa-star:hover ~ label.fa-star,
+label.fa-star:hover + label.fa-star,
+label.fa-star:hover,
+label.fa-star:hover ~ label.fa-star {
+    color: var(--star-yellow);
+}
+
+
+/* Style for the checked color */
+input:checked ~ label.fa-star,
+input:checked + label.fa-star {
+    color: var(--star-yellow);
+}
+
 /* ------------------------------- bootstrap toasts */
 .message-container {
     position: fixed;
