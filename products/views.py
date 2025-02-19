@@ -290,7 +290,10 @@ def review_delete(request, slug, review_id):
 
 def review(request):
 
-    context = {'reviews': ReviewRating.objects.all(), }
+    context = {
+        'reviews': ReviewRating.objects.all(),
+        'all_categories': Category.objects.all(),
+    }
 
     if request.GET:
         if request.GET['category']:
@@ -301,10 +304,12 @@ def review(request):
             context = {
                 'reviews': reviews,
                 'category': category[0],
+                'all_categories': Category.objects.all(),
             }
         else:
             context = {
                 'reviews': reviews,
+                'all_categories': Category.objects.all(),
             }
 
     return render(request, 'products/review.html', context)

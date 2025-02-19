@@ -14,37 +14,43 @@
     <div class="overlay"></div>
     <main class="container-fluid">
         <div class="row">
-            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-                <h2 class="">Reviews - {{ category }}</h2>
+            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 mt-3">
+                <h2 class="">Reviews - {% if category %}{{ category }} {% else %} All products {% endif %} </h2>
                 <hr>
-
+                {% for c in all_categories %}
+                    <a class="category-badge text-decora" href="{% url 'review' %}?category={{ c.name }}">
+                        <span class="p-2 mt-2 badge badge-light text-black border border-dark">{{ c.friendly_name }}</span>
+                    </a>
+                {% endfor %}
                 <!-- Iterate through each review in ReviewRating -->
-                <div class="col-12 d-sm-flex flex-wrap">
+                <div class="d-sm-flex flex-wrap">
                     {% for review in reviews %}
-                    <div  class="card my-3 mx-3 col-sm-6 col-md-4 col-lg-3">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="fw-bold">
-                                {{ review.reviewer }}
-                                <span class="fw-normal">{{ review.created_on }}</span> wrote:
-                            </p>
-                        </div>
-                        <div class="mx-3" id="review{{ review.id }}">
-                            {{ review.review_body | linebreaks }}
-                        </div>
-                        <div width="100">
-                            {% if review.image %}
-                                <img class="card-img-top" src="{{ review.image.url }}" alt="{{ review.reviewer }}" width="100">
-                            {% else %}
-                                <img class="card-img-top"src="{{ MEDIA_URL }}placeholder.png" alt="{{ review.reviewer }}" width="96">
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3 py-3 px-3 align-items-stretch">
+                        <div class="card h-100 shadow">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ review.product }} </h5>
+                                <p class="fw-bold">
+                                    {{ review.reviewer }}
+                                    <span class="fw-normal">{{ review.created_on }}</span> wrote:
+                                </p>
+                            </div>
+                            <div class="mx-3" id="review{{ review.id }}">
+                                {{ review.review_body | linebreaks }}
+                            </div>
+                            <div width="100">
+                                {% if review.image %}
+                                    <img class="card-img-top" src="{{ review.image.url }}" alt="{{ review.reviewer }}" width="100">
+                                {% else %}
+                                    <img class="card-img-top"src="{{ MEDIA_URL }}placeholder.png" alt="{{ review.reviewer }}" width="96">
+                                {% endif %}
+                            </div>
+                            {% if user.is_authenticated and request.user == review.reviewer %}
+                            <div class="w-100 d-flex justify-content-center mb-1">
+                                <button class="btn btn-edit btn-b-success mx-2" data-id="{{ review.id }}" data-slug="{{ review.product.slug }}">Edit</button>
+                                <button class="btn btn-delete btn-b-danger mx-2" data-id="{{ review.id }}" data-slug="{{ review.product.slug }}">Delete</button>
+                            </div>
                             {% endif %}
                         </div>
-                        {% if user.is_authenticated and request.user == review.reviewer %}
-                        <div class="w-100 d-flex justify-content-center mb-1">
-                            <button class="btn btn-edit btn-b-success mx-2" data-id="{{ review.id }}" data-slug="{{ review.product.slug }}">Edit</button>
-                            <button class="btn btn-delete btn-b-danger mx-2" data-id="{{ review.id }}" data-slug="{{ review.product.slug }}">Delete</button>
-                        </div>
-                        {% endif %}
                     </div>
                     {% endfor %}
                 </div>
