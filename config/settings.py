@@ -193,3 +193,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 if 'DEVELOPMENT' in os.environ:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
     DEFAULT_FROM_EMAIL = 'aproject.025@gmail.com'
+
+DATE_INPUT_FORMATS = [
+    '%d %b, %Y',
+]

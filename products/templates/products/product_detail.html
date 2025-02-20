@@ -136,7 +136,7 @@
                                 <!-- Rating and Reviewing - Authenticated user only -->
                                 {% if user.is_authenticated %}
                                     <p class="ml-auto">Posting as: {{ user.username }}</p>
-                                    <form id="reviewForm" method="post" class="mt-3">
+                                    <form id="reviewForm" method="post" class="mt-3"  enctype="multipart/form-data">
                                         <p>How many stars would you like to give this &quot;{{ product.name }}&quot;?</p>
                                         <figure>
                                             <figcaption>Your rating:</figcaption>

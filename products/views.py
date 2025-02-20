@@ -107,12 +107,11 @@ def product_detail(request, slug):
     """
     product = get_object_or_404(PlantItem.objects.all(), slug=slug)
 
-    # Review part - get user's own rating value function
-    # user_rating = get_user_rating(request.user, product)
-    # get all reviews for this product
+    # Get all reviews for list view
     reviews = product.reviews.all().order_by("-created_on")
 
-    # Populate Indivisual past review in form if already had review or new form
+    # For prevent to create multiple reviews per user
+    # Populate existing content to the form, still create button was pressed.
     try:
         review_instance = ReviewRating.objects.get(
             reviewer=request.user, product=product
@@ -126,7 +125,7 @@ def product_detail(request, slug):
 
         review_form = ReviewForm(
             request.POST,
-            # if 'review_instance'in vars() -> use a more explicit check
+            # with this "if 'review_instance'in vars()" > use explicit term
             instance=review_instance if review_instance else None
         )
         rating = request.POST.get('rate')
@@ -138,7 +137,7 @@ def product_detail(request, slug):
             review.product = product
             review.reviewer = request.user
             review.rating = rating
-            review.created_on = datetime.datetime.now()
+            review.created_on = datetime.date.now()
             review.save()
             messages.success(
                 request, 'Review Updated!'

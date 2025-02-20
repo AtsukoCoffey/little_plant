@@ -72,7 +72,7 @@ class ReviewRating(models.Model):
     #     size=[100, None], quality=75, upload_to="media",
     #     force_format='WEBP', blank=True
     # )
-    created_on = models.DateTimeField(auto_now=True)
+    created_on = models.DateField(auto_now=True)
     rating = models.IntegerField(default=0, null=True)
 
     def __str__(self):
