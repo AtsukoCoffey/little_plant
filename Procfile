@@ -1,0 +1,1 @@
+web: gunicorn little_plant.wsgi:application
