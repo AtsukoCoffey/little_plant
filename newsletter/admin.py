@@ -1,3 +1,12 @@
 from django.contrib import admin
+from .models import NewsLetter
 
-# Register your models here.
+
+class NewsLetterAdmin(admin.ModelAdmin):
+    list_display = (
+        'email',
+        'id',
+    )
+
+
+admin.site.register(NewsLetter, NewsLetterAdmin)

@@ -3,5 +3,5 @@ from . import views
 from .views import NewsLetterCreateView
 
 urlpatterns = [
-    path('', NewsLetterCreateView.as_view(), name='mailing-list-subscribe'),
+    path('', NewsLetterCreateView.as_view(), name='news-letter-subsc'),
 ]
