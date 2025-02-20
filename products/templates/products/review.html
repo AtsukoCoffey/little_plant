@@ -23,15 +23,20 @@
                     </a>
                 {% endfor %}
                 <!-- Iterate through each review in ReviewRating -->
-                <div class="d-sm-flex flex-wrap">
+                <div class="d-flex flex-wrap">
                     {% for review in reviews %}
                     <div class="col-12 col-sm-6 col-lg-4 col-xl-3 py-3 px-3 align-items-stretch">
                         <div class="card h-100 shadow">
-                            <div class="card-body">
-                                <h5 class="card-title">{{ review.product }} </h5>
-                                <p class="fw-bold">
-                                    {{ review.reviewer }}
-                                    <span class="fw-normal">{{ review.created_on }}</span> wrote:
+                            <div class="card-body"> 
+                                <a href="{% url 'product_detail' review.product.slug %}"><h5 class="card-title">{{ review.product|truncatechars:20 }} </h5></a>
+                                <span class="small">wrote on: {{ review.created_on }}</span> 
+                                <p class="rating" aria-label="Average Rating:{{ review.rating }}">
+                                    <span class="fa fa-star {% if review.rating > 0 %} checked {% endif %}"></span>
+                                    <span class="fa fa-star {% if review.rating > 1 %} checked {% endif %}"></span>
+                                    <span class="fa fa-star {% if review.rating > 2 %} checked {% endif %}"></span>
+                                    <span class="fa fa-star {% if review.rating > 3 %} checked {% endif %}"></span>
+                                    <span class="fa fa-star {% if review.rating > 4 %} checked {% endif %}"></span>
+                                    <small class="text-muted">{{ review.rating }} / 5</small>
                                 </p>
                             </div>
                             <div class="mx-3" id="review{{ review.id }}">
@@ -45,7 +50,7 @@
                                 {% endif %}
                             </div>
                             {% if user.is_authenticated and request.user == review.reviewer %}
-                            <div class="w-100 d-flex justify-content-center mb-1">
+                            <div class="w-100 d-flex justify-content-center mb-3">
                                 <button class="btn btn-edit btn-b-success mx-2" data-id="{{ review.id }}" data-slug="{{ review.product.slug }}">Edit</button>
                                 <button class="btn btn-delete btn-b-danger mx-2" data-id="{{ review.id }}" data-slug="{{ review.product.slug }}">Delete</button>
                             </div>

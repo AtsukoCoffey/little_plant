@@ -60,7 +60,7 @@ class ReviewRatingTestCase(TestCase):
     def test_str(self):
         """Test the string method"""
         review_string = f"{self.plant.name}: {self.review1.rating}"
-        self.assertEqual(str(self.review_string), "Test Plant: 5")
+        self.assertEqual("Test Plant: 5", review_string)
 
     def test_review_creation(self):
         self.assertEqual(ReviewRating.objects.count(), 2)

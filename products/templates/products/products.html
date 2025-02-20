@@ -72,7 +72,14 @@
                                                 </p>
                                                 {% endif %}
                                                 {% if product.average_rating %}
-                                                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.average_rating }} / 5</small>
+                                                    <p class="rating" aria-label="Average Rating:{{ product.average_rating }}">
+                                                        <span class="fa fa-star {% if product.average_rating > 0 %} checked {% endif %}"></span>
+                                                        <span class="fa fa-star {% if product.average_rating > 1 %} checked {% endif %}"></span>
+                                                        <span class="fa fa-star {% if product.average_rating > 2 %} checked {% endif %}"></span>
+                                                        <span class="fa fa-star {% if product.average_rating > 3 %} checked {% endif %}"></span>
+                                                        <span class="fa fa-star {% if product.average_rating > 4 %} checked {% endif %}"></span>
+                                                        <small class="text-muted">{{ product.average_rating }} / 5</small>
+                                                    </p>
                                                 {% else %}
                                                     <small class="text-muted">No Rating</small>
                                                 {% endif %}
