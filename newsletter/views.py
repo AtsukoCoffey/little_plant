@@ -9,10 +9,10 @@ def NewsLetterCreateView(request):
     """
     Renders the Newsletter subscriotion Page
     """
-    form = NewsLetterForm
-    success_message = 'Thanks for subscribing to our newsletter!' \
-        'We will send you shortly'
-    
+    success_message = 'Thanks for subscribing to our newsletter! '\
+        'We send you e-mail address confirmation mail. '\
+        'Please check your e-mail.'
+
     if request.user.is_authenticated:
         try:
             profile = UserProfile.objects.get(user=request.user)
@@ -21,6 +21,13 @@ def NewsLetterCreateView(request):
             })
         except UserProfile.DoesNotExist:
             form = NewsLetterForm()
+
+    if request.method == 'POST':
+        form = NewsLetterForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, success_message)
+            return redirect('home')
 
     context = {
             "form": form,

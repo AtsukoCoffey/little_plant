@@ -25,9 +25,12 @@
                 <div class="col">
                     <h4>Subscribe to our newsletter</h4>
                     <p>Join to receive! Notifications & updates about new arrivals and special offers!</p>
-                    <formmethod="POST" enctype="multipart/form-data">
+                    <form method="POST" enctype="multipart/form-data">
                         {% csrf_token %}
                         {{ form|crispy }}
+                        <div class="container-fluid d-flex justify-content-center">
+                            <button class="btn btn-secondary ml-auto mr-auto" type="submit">Submit</button>
+                        </div>
                         <button class="btn btn-light btn-outline-success" type="submit">Join</button>
                     </form>
                 </div>
