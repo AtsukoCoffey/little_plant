@@ -12,9 +12,9 @@ def about_us(request):
     """
     about_content = AboutUs.objects.all().order_by('-created_on').first()
     form = ContactUsForm()
-    success_message = 'Your message has been successfully sent!  \
-        Thank you for contact us.  We will review your message soon and \
-            respond shortly.'
+    success_message = 'Your message has been successfully sent!' \
+        'Thank you for contact us.  We will review your message soon' \
+        ' and respond shortly.'
 
     if request.method == 'POST':
         form = ContactUsForm(request.POST)
