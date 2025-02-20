@@ -52,7 +52,7 @@ class PlantItem(models.Model):
 
     def average_rating(self) -> float:
         return ReviewRating.objects.filter(
-            plant_item=self).aggregate(Avg("rating"))["rating__avg"] or 0
+            product=self).aggregate(Avg("rating"))["rating__avg"] or 0
 
 
 class ReviewRating(models.Model):
@@ -61,10 +61,10 @@ class ReviewRating(models.Model):
     Related to :model:`auth.User` and products :model:`PlantItem`
     """
     product = models.ForeignKey(
-        PlantItem, on_delete=models.CASCADE, related_name="reviews"
+        PlantItem, on_delete=models.CASCADE, related_name="reviews", null=False
     )
     reviewer = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name='reviewer'
+        User, on_delete=models.CASCADE, related_name='reviewer', null=False
     )
     review_body = models.CharField(max_length=500, null=False, blank=False)
     image = models.ImageField(null=True, blank=True)

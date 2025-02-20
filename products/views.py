@@ -13,8 +13,8 @@ from .forms import ProductForm, ReviewForm
 # For update the result anytime - independent function
 def get_user_rating(user, product):
     if user.is_authenticated:
-        rating = ReviewRating.objects.filter(
-            product=product, reviewer=user).first()
+        rating = ReviewRating.objects.get(
+            product=product, reviewer=user)
         return rating.rating if rating else 0
     else:
         return 0
@@ -104,12 +104,11 @@ def product_detail(request, slug):
     'product': Indivisual product detail
     'reviews': All the reviews related to thid indivisual product
     "review_form": Check if user had already write review, populate or newform
-    'user_rating': (int) if user had already rated or 0
     """
     product = get_object_or_404(PlantItem.objects.all(), slug=slug)
 
     # Review part - get user's own rating value function
-    user_rating = get_user_rating(request.user, product)
+    # user_rating = get_user_rating(request.user, product)
     # get all reviews for this product
     reviews = product.reviews.all().order_by("-created_on")
 
@@ -122,39 +121,44 @@ def product_detail(request, slug):
     except ReviewRating.DoesNotExist:
         review_form = ReviewForm()
 
-    # Check the review is request user's review
+    # Check login user and
     if request.method == "POST" and request.user.is_authenticated:
-        review_form = ReviewForm(data=request.POST)
-        rating = request.POST.get('user_rating')
+
+        review_form = ReviewForm(
+            request.POST,
+            # if 'review_instance'in vars() -> use a more explicit check
+            instance=review_instance if review_instance else None
+        )
+        rating = request.POST.get('rate')
+        print(rating)
+
         # form validation
         if review_form.is_valid():
             review = review_form.save(commit=False)
             review.product = product
             review.reviewer = request.user
             review.rating = rating
-            review.create_on = datetime.datetime.now()
+            review.created_on = datetime.datetime.now()
             review.save()
             messages.success(
                 request, 'Review Updated!'
             )
+            print(product.average_rating, 'Average rating')
             review_form = ReviewForm()
             return render(request, 'products/product_detail.html', {
                 'product': product,
-                'user_rating': user_rating,
                 'reviews': reviews,
                 "review_form": review_form,
             })
         else:
             messages.add_message(
-                request, messages.error, 'Error updating review!')        
+                request, messages.error, 'Error updating review!')
 
     context = {
         'product': product,
-        'user_rating': user_rating,
         'reviews': reviews,
         "review_form": review_form,
     }
-
     return render(request, 'products/product_detail.html', context)
 
 

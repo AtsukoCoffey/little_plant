@@ -45,15 +45,15 @@
                         </a>
                     </p>
                     {% endif %}
-                    {% if product.rating %}
-                    <p class="rating" aria-label="Average Rating:{{ product.rating }}"><strong>Average Rating:</strong>
+                    {% if product.average_rating %}
+                    <p class="rating" aria-label="Average Rating:{{ product.average_rating }}"><strong>Average Rating:</strong>
                         <span class="fa fa-star {% if product.average_rating > 0 %} checked {% endif %}"></span>
                         <span class="fa fa-star {% if product.average_rating > 1 %} checked {% endif %}"></span>
                         <span class="fa fa-star {% if product.average_rating > 2 %} checked {% endif %}"></span>
                         <span class="fa fa-star {% if product.average_rating > 3 %} checked {% endif %}"></span>
                         <span class="fa fa-star {% if product.average_rating > 4 %} checked {% endif %}"></span>
                     </p>
-                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.average_rating }} / 5</small>
                     {% else %}
                         <small class="text-muted">No Rating</small>
                     {% endif %}
@@ -143,19 +143,19 @@
                                                     <div class="d-flex flex-wrap">
                                                         <div class="btn btn-light rating-list">
                                                             <input type="radio" class="d-none" name="rate" id="5" value="5" {% if user_rating == 5 %}checked{% endif %}>
-                                                            <label for="5" class="fa fa-star {% if productrating == 5 %}checked{% endif %}"
+                                                            <label for="5" class="fa fa-star {% if product.average_rating == 5 %}checked{% endif %}"
                                                                 title="Rate 5"></label>
                                                             <input type="radio" class="d-none" name="rate" id="4" value="4" {% if user_rating == 4 %}checked{% endif %}>
-                                                            <label for="4" class="fa fa-star {% if user_rating == 4 %}checked{% endif %}"
+                                                            <label for="4" class="fa fa-star {% if product.average_rating == 4 %}checked{% endif %}"
                                                                 title="Rate 4"></label>
                                                             <input type="radio" class="d-none" name="rate" id="3" value="3" {% if user_rating == 3 %}checked{% endif %}>
-                                                            <label for="3" class="fa fa-star {% if user_rating == 3 %}checked{% endif %}"
+                                                            <label for="3" class="fa fa-star {% if product.average_rating == 3 %}checked{% endif %}"
                                                                 title="Rate 3"></label>
                                                             <input type="radio" class="d-none" name="rate" id="2" value="2" {% if user_rating == 2 %}checked{% endif %}>
-                                                            <label for="2" class="fa fa-star {% if user_rating == 2 %}checked{% endif %}"
+                                                            <label for="2" class="fa fa-star {% if product.average_rating == 2 %}checked{% endif %}"
                                                                 title="Rate 2"></label>
                                                             <input type="radio" class="d-none" name="rate" id="1" value="1" {% if user_rating == 1 %}checked{% endif %}>
-                                                            <label for="1" class="fa fa-star {% if user_rating == 1 %}checked{% endif %}"
+                                                            <label for="1" class="fa fa-star {% if product.average_rating == 1 %}checked{% endif %}"
                                                                 title="Rate 1"></label>
                                                         </div>
                                                     </div>
