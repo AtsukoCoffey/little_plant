@@ -129,15 +129,15 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # }
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL")),
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+    # 'default': dj_database_url.parse(os.environ.get("DATABASE_URL")),
 }
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://*.herokuapp.com"
+    "https://little-plant-shop-e08318b823f1.herokuapp.com/"
 ]
 
 
