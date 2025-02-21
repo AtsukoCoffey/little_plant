@@ -31,7 +31,7 @@ DEBUG = os.environ.get('DEVELOPMENT')
 ALLOWED_HOSTS = [
     '127.0.0.1',  # Lodal preview
     'localhost',  # Listen for stripe webhook
-    '*.herokuapp.com'  # Heroku application
+    'little-plant-shop-e08318b823f1.herokuapp.com'  # Heroku application
 ]
 
 
