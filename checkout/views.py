@@ -99,8 +99,6 @@ def checkout(request):
         amount=stripe_total,
         currency=settings.STRIPE_CURRENCY,
     )
-    # Check the contents of intent
-    # print(intent)
 
     # From Order history to view the
     if request.user.is_authenticated:

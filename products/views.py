@@ -4,7 +4,6 @@ from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
-import datetime
 
 from .models import PlantItem, Category, ReviewRating
 from .forms import ProductForm, ReviewForm
@@ -112,12 +111,15 @@ def product_detail(request, slug):
 
     # For prevent to create multiple reviews per user
     # Populate existing content to the form, still create button was pressed.
-    try:
-        review_instance = ReviewRating.objects.get(
-            reviewer=request.user, product=product
-        )
-        review_form = ReviewForm(instance=review_instance)
-    except ReviewRating.DoesNotExist:
+    if request.user.is_authenticated:
+        try:
+            review_instance = ReviewRating.objects.get(
+                reviewer=request.user, product=product
+            )
+            review_form = ReviewForm(instance=review_instance)
+        except ReviewRating.DoesNotExist:
+            review_form = ReviewForm()
+    else:
         review_form = ReviewForm()
 
     # Check login user and
@@ -125,11 +127,10 @@ def product_detail(request, slug):
 
         review_form = ReviewForm(
             request.POST,
-            # with this "if 'review_instance'in vars()" > use explicit term
-            instance=review_instance if review_instance else None
+            # with this "if review_instance" >
+            instance=review_instance if 'review_instance' in vars() else None
         )
         rating = request.POST.get('rate')
-        print(rating)
 
         # form validation
         if review_form.is_valid():
@@ -137,12 +138,11 @@ def product_detail(request, slug):
             review.product = product
             review.reviewer = request.user
             review.rating = rating
-            review.created_on = datetime.date.now()
             review.save()
             messages.success(
                 request, 'Review Updated!'
             )
-            print(product.average_rating, 'Average rating')
+            # print(product.average_rating, 'Average rating')
             review_form = ReviewForm()
             return render(request, 'products/product_detail.html', {
                 'product': product,

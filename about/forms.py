@@ -33,4 +33,3 @@ class ContactUsForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         purpose = ContactPurpose.objects.all()
-

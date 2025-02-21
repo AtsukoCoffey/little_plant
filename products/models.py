@@ -1,7 +1,7 @@
 from django.db import models
 from django.db.models import Avg
 from django.utils.text import slugify
-# from django_resized import ResizedImageField
+from django_resized import ResizedImageField
 
 from django.contrib.auth.models import User
 
@@ -38,7 +38,10 @@ class PlantItem(models.Model):
         'Category', null=True, blank=True, on_delete=models.SET_NULL)
     description = models.TextField(max_length=500)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
-    image = models.ImageField(null=True, blank=True)
+    image = ResizedImageField(
+        size=[400, None], quality=75, upload_to="media",
+        force_format='WEBP', blank=True
+    )
     price = models.DecimalField(max_digits=6, decimal_places=2)
     sale_price = models.DecimalField(
         max_digits=6, decimal_places=2, null=True, blank=True)
@@ -67,12 +70,11 @@ class ReviewRating(models.Model):
         User, on_delete=models.CASCADE, related_name='reviewer', null=False
     )
     review_body = models.CharField(max_length=500, null=False, blank=False)
-    image = models.ImageField(null=True, blank=True)
-    # image = ResizedImageField(
-    #     size=[100, None], quality=75, upload_to="media",
-    #     force_format='WEBP', blank=True
-    # )
-    created_on = models.DateField(auto_now=True)
+    image = ResizedImageField(
+        size=[100, None], quality=75, upload_to="media",
+        force_format='WEBP', blank=True
+    )
+    created_on = models.DateTimeField(auto_now=True)
     rating = models.IntegerField(default=0, null=True)
 
     def __str__(self):

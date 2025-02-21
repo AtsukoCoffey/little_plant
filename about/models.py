@@ -34,7 +34,7 @@ class ContactUs(models.Model):
     checked = models.BooleanField(default=False)
     purpose = models.ForeignKey(
         'ContactPurpose', null=True, blank=True, on_delete=models.SET_NULL)
-    date = models.DateField(auto_now_add=True)
+    date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return f"Contact from {self.user_name}"
