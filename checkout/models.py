@@ -127,4 +127,5 @@ class OrderLineItem(models.Model):
     def __str__(self):
         # This string is used in dashboard line items section
         return f'Product {self.product.slug} on order {
-            self.order.order_number}'
+            self.order.order_number
+        }'
