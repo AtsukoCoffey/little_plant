@@ -102,15 +102,15 @@ def product_detail(request, slug):
     **Context**
     'product': Indivisual product detail
     'reviews': All the reviews related to thid indivisual product
-    "review_form": Check if user had already write review, populate or newform
+    "review_form": Check if user already has write review, populate or newform
     """
     product = get_object_or_404(PlantItem.objects.all(), slug=slug)
-
     # Get all reviews for list view
     reviews = product.reviews.all().order_by("-created_on")
 
-    # For prevent to create multiple reviews per user
-    # Populate existing content to the form, still create button was pressed.
+    # For preventing to create multiple reviews per user
+    # Even 'Create' button works like 'Edit'
+    # Populate existing own review to the form
     if request.user.is_authenticated:
         try:
             review_instance = ReviewRating.objects.get(
@@ -122,14 +122,14 @@ def product_detail(request, slug):
     else:
         review_form = ReviewForm()
 
-    # Check login user and
+    # POST request for review : only authenticated user can do
     if request.method == "POST" and request.user.is_authenticated:
-
         review_form = ReviewForm(
             request.POST,
-            # with this "if review_instance" >
+            # with "review_instance" > assigned in try statement
             instance=review_instance if 'review_instance' in vars() else None
         )
+        # Star rating value
         rating = request.POST.get('rate')
 
         # form validation
@@ -142,7 +142,7 @@ def product_detail(request, slug):
             messages.success(
                 request, 'Review Updated!'
             )
-            # print(product.average_rating, 'Average rating')
+            # Clear the form
             review_form = ReviewForm()
             return render(request, 'products/product_detail.html', {
                 'product': product,
@@ -171,7 +171,7 @@ def add_product(request):
     'form': `products.PlantItem`
     """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
+        messages.error(request, 'Sorry, only owner or stuff can add products.')
         return redirect(reverse('account_login'))
 
     form = ProductForm()
@@ -209,7 +209,9 @@ def edit_product(request, product_id):
     'form': `products.PlantItem`
     """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
+        messages.error(
+            request, 'Sorry, only owner or stuff can edit products.'
+        )
         return redirect(reverse('account_login'))
 
     product = get_object_or_404(PlantItem, pk=product_id)
@@ -228,7 +230,7 @@ def edit_product(request, product_id):
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
 
-        template = 'products/edit_product.html'
+    template = 'products/edit_product.html'
     context = {
         'form': form,
         'product': product,
