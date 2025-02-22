@@ -3,3 +3,4 @@ env.py
 .env
 *.sqlite3
 *.pyc
+memo
