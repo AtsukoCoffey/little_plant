@@ -39,7 +39,7 @@ class PlantItem(models.Model):
     description = models.TextField(max_length=500)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = ResizedImageField(
-        size=[400, None], quality=75, upload_to="media",
+        size=[400, None], quality=75, upload_to="products",
         force_format='WEBP', blank=True
     )
     price = models.DecimalField(max_digits=6, decimal_places=2)
@@ -71,7 +71,7 @@ class ReviewRating(models.Model):
     )
     review_body = models.CharField(max_length=500, null=False, blank=False)
     image = ResizedImageField(
-        size=[100, None], quality=75, upload_to="media",
+        size=[100, None], quality=75, upload_to="reviews",
         force_format='WEBP', blank=True
     )
     created_on = models.DateTimeField(auto_now=True)
