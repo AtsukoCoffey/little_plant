@@ -9,7 +9,7 @@
           "category":1,
           "description":"Echeveria lilacina is has bluish grey upwardly curving, spoon-shaped leaves which have a lilac tinge in full sun. This rosette forming succulent",
           "image_url":"https://www.gardens4you.ie/media/amasty/webp/catalog/product/cache/3a7af0a8e0e317723249dc9098669163/f/d/fd17902wh_jpg.webp",
-          "image":"succulent-echeveria-lilacina.webp",
+          "image":"products/succulent-echeveria-lilacina.webp",
           "price":5.20,
           "sale_price":0
        }
@@ -24,7 +24,7 @@
           "category":2,
           "description":"Stricta Hybrid have bright green, silvery, or deep purple leaves. These leaves are stiff that will cascade down from a stacked center. They make a great gift but order one for yourself as well so you won/'t be jealous of your friend",
           "image_url":"https://airplantshop.com/cdn/shop/files/tillandsia_strict_green_bloom_air_plants-min.jpg?v=1722970581&width=1800",
-          "image":"air-tillandsia_strict_green.webp",
+          "image":"products/air-tillandsia_strict_green.webp",
           "price":11.95,
           "sale_price":9.90
        }
@@ -39,7 +39,7 @@
            "category":2,
            "description":"Tillandsia Palacea X Tectorum 'Sweet Isabel' is a vigorous clumping plant with gray-green leaves. When in bloom, purple blossoms will appear in every direction to put on a spectacular show. Divide your plants as they mature, our continue to let them make a clump and you will have a specimen plant in no time.",
            "image_url":"https://airplantshop.com/collections/shop-air-plants/products/tillandsia-sweet-isabel",
-           "image":"air-tillandsia_paleacea-sweet-isabel.webp",
+           "image":"products/air-tillandsia_paleacea-sweet-isabel.webp",
            "price":36.05,
            "sale_price":0
         }
@@ -54,7 +54,7 @@
            "category":1,
            "description":"Pachyveria corvus is an attractive succulent with thick fleshy light green cylindrical shaped leaves flushed with purple tips. It produces red buds which open to a yellow flower. Pachyveria plants are a hybrid cross between Pachyphytum and Echeveria. Easily propagated by dropping leaves, which then sprout new plants. A plant that just keeps on giving.",
            "image_url":"https://www.gardens4you.ie/media/amasty/webp/catalog/product/cache/3a7af0a8e0e317723249dc9098669163/f/d/fd17920wh_jpg.webp",
-           "image":"succulent-pachyveria-corvus.webp",
+           "image":"products/succulent-pachyveria-corvus.webp",
            "price":5.95,
            "sale_price":3.90
         }
@@ -69,7 +69,7 @@
            "category":3,
            "description":"icus benjamina Twilight also known as the &apos;Weeping Fig&apos; is one of the most popular house trees available. Prized for its glossy variegated foliage, this beautiful ornamental tree is very adaptable in terms of light; soil and weather growing with minimal care both indoors and out in warm climates. As an added bonus it filters toxins, purifying the air.",
            "image_url":"https://www.gardens4you.ie/media/amasty/webp/catalog/product/cache/3a7af0a8e0e317723249dc9098669163/f/d/fd16239wh_jpg.webp",
-           "image":"ficus-benjamina-twilight.webp",
+           "image":"products/ficus-benjamina-twilight.webp",
            "price":5.20,
            "sale_price":3.90
         }
@@ -82,9 +82,9 @@
            "scientific_name":"Ficus Elastica Abidjan",
            "slug":"ficus-elastica-abidjan",
            "category":3,
-           "description":"Ficus elastica is also known as the Rubber Plant. Prized for its luscious foliage, this beautiful ornamental houseplant is very easy to grow. ‘Abidjan’ has dark green leaves with a hint of burgundy. As an added bonus, this is one of the most effective plants for filtering the air.",
+           "description":"Ficus elastica is also known as the Rubber Plant. Prized for its luscious foliage, this beautiful ornamental houseplant is very easy to grow. &apos;Abidjan&apos; has dark green leaves with a hint of burgundy. As an added bonus, this is one of the most effective plants for filtering the air.",
            "image_url":"https://www.gardens4you.ie/media/amasty/webp/catalog/product/cache/3a7af0a8e0e317723249dc9098669163/f/d/fd19274-1-wh_jpg.webp",
-           "image":"ficus-elastica-abidjan.webp",
+           "image":"products/ficus-elastica-abidjan.webp",
            "price":14.95,
            "sale_price":0
         }
