@@ -25,7 +25,7 @@
                 <div class="col">
                     <h4>Subscribe to our newsletter</h4>
                     <p>Join to receive! Notifications & updates about new arrivals and special offers!</p>
-                    <form method="POST" enctype="multipart/form-data">
+                    <form method="POST" enctype="multipart/form-data" autocomplete="on">
                         {% csrf_token %}
                         {{ form|crispy }}
                         <div class="container-fluid d-flex justify-content-center">
