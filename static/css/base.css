@@ -8,7 +8,7 @@
     --mos-green: #cdd6af;
     --whitish: #fdfae2;
     --logo-green: #4d5f37;
-    --light-orange: #fbf5ea;
+    --light-orange: #f7d9a4;
     --dark-color: #0e170f;
     --star-yellow: #faa907;
     --star-gray: #27252594;
@@ -19,13 +19,14 @@
     --small-shadow: 1px -1px 7px rgba(31, 38, 19, 0.707);
 }
 
+/* Base Tag style */
 html {
     height: 100%;
 }
 
 body {
     background: linear-gradient(to right, rgba(240, 249, 231, 0.8), rgba(240, 249, 231, 0.1)),
-    url('/media/succulents-and-air-plants-in-terrarium.jpg') no-repeat center center fixed;
+    url('/media/air-plants-verses-succulents-1024x765.webp') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: var(--logo-green);
@@ -50,7 +51,7 @@ a {
     text-decoration: none;
 }
 
-/* text primary color */
+/* Bootstrap text primary color */
 a:hover,
 a:active,
 a:focus {
@@ -58,22 +59,59 @@ a:focus {
     text-decoration: none;
 }
 
-.hover-color:hover,
-.hover-color:active,
-.hover-color:focus {
-    background-color: var(--light-orange);
-    box-shadow: 5px -5px 7px var(--logo-green);
+h1 {
+    font-family: var(--title);
+    font-size: 2rem;
 }
 
-#delivery-banner {
-    padding-top: 95px;
-    background-color: var(--star-yellow);
+h3 {
+    font-size: 1.5rem;
 }
 
-.catch-copy {
-    color: var(--dark-color);
-    font-weight: 700;
-    font-style: italic;
+
+/* Base button text etc class */
+
+.text-black {
+    color: var(--dark-color) !important;
+}
+.text-logogreen {
+    color: var(--logo-green);
+}
+
+.border-black {
+    border: 1px solid var(--dark-color) !important;
+}
+
+.btn-black {
+    background: var(--logo-green);
+    color: white;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: white;
+    z-index: -1;
+}
+
+/* Change Bootstrap button style */
+.btn-b-danger {
+    color: #dc3545;
+    border-color: #dc3545;
+    font-weight: 800;
+}
+.btn-b-secondary {
+    color: #6c757d;
+    border-color: #6c757d;
+    font-weight: 800;
+}
+.btn-b-success {
+    color: #1e7e34;
+    border-color: #1e7e34;
+    font-weight: 800;
 }
 
 /* from Bulma */
@@ -85,13 +123,22 @@ a:focus {
     width: 1.5rem;
 }
 
-h1 {
-    font-family: var(--title);
-    font-size: 2rem;
+/* Logo colour class */
+.bg-lgreen {
+    background-color: var(--light-green);
+}
+.bg-logogreen {
+    background-color: var(--logo-green);
+}
+.bg-whitish {
+    background-color: var(--whitish);
 }
 
-h3 {
-    font-size: 1.5rem;
+
+/* Header Navigation and Delivery section style */
+
+.main-logo-link {
+    width: fit-content;
 }
 
 .nav-link {
@@ -105,6 +152,19 @@ h3 {
     margin: 3px;
 }
 
+.navbar-light .navbar-toggler {
+    background-color: var(--mos-green);
+    border-color: var(--dark-color);
+}
+
+/* Nav drop down list */
+/* Change Bootstrap dropdown hover colour */
+.dropdown-item:focus, .dropdown-item:hover {
+    color: var(--whitish);
+    background-color: var(--logo-green);
+}
+
+/* Nav mobile header */
 .mobile {
     padding-right: 0;
     padding-left: 0;
@@ -112,21 +172,29 @@ h3 {
     margin-bottom: 0;
 }
 
-
-.bg-lgreen {
-    background-color: var(--light-green);
+#delivery-banner {
+    background-color: var(--light-orange);
+    padding-top: 133px;
+    padding-bottom: 3px;
 }
 
-.bg-logogreen {
-    background-color: var(--logo-green);
+/* ----------------------------------------------Top page style */
+.catch-copy {
+    color: var(--dark-color);
+    font-weight: 700;
+    font-style: italic;
 }
 
-.bg-whitish {
-    background-color: var(--whitish);
+.hero-image {
+    height: 85%;
 }
 
-.main-logo-link {
-    width: fit-content;
+.carousel-div {
+    background-color: var(--light-orange);
+}
+
+#carouselExampleCaptions {
+    box-shadow: var(--small-shadow);
 }
 
 .shop-now-button {
@@ -134,11 +202,6 @@ h3 {
     color: var(--light-orange);
     font-weight: 700;
     min-width: 260px;
-}
-
-.btn-black {
-    background: var(--logo-green);
-    color: white;
 }
 
 .shop-now-button:hover,
@@ -151,22 +214,6 @@ h3 {
     color: white;
 }
 
-.text-black {
-    color: var(--dark-color) !important;
-}
-.text-logogreen {
-    color: var(--logo-green);
-}
-
-.border-black {
-    border: 1px solid var(--dark-color) !important;
-}
-
-.navbar-light .navbar-toggler {
-    background-color: var(--mos-green);
-    border-color: var(--dark-color);
-}
-
 .footer {
     position: fixed;
     bottom: 0;
@@ -176,28 +223,18 @@ h3 {
     font-weight: 500;
 }
 
-.overlay {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    background: white;
-    z-index: -1;
+/* ----------------------------------------Product list page */
+/* Card hover style */
+.hover-color:hover,
+.hover-color:active,
+.hover-color:focus {
+    background-color: var(--whitish);
+    box-shadow: 5px -5px 7px var(--logo-green);
 }
 
 a.category-badge > span.badge:hover {
     background: var(--logo-green) !important;
     color: var(--white) !important;
-}
-
-#carouselExampleCaptions {
-    box-shadow: var(--small-shadow);
-}
-
-#delivery-banner {
-    padding-top: 133px;
-    padding-bottom: 3px;
 }
 
 /* Back to Top button */
@@ -244,7 +281,6 @@ input[name='q']::placeholder {
 }
 
 /*---------------------------------------------------------- Star rating */
-
 /* Average rating */
 .checked:hover,
 .checked {
@@ -278,20 +314,6 @@ label.fa-star:hover ~ label.fa-star {
 input:checked ~ label.fa-star,
 input:checked + label.fa-star {
     color: var(--star-yellow);
-}
-
-/* ------------------------------- bootstrap toasts */
-.message-container {
-    position: fixed;
-    top: 72px;
-    right: 15px;
-    z-index: 99999999999;
-}
-.custom-toast {
-    overflow: visible;
-}
-.toast-capper {
-    height: 2px;
 }
 
 /* --------------------------------- reviews layout */
@@ -328,7 +350,14 @@ input:checked + label.fa-star {
     box-shadow: var(--small-shadow);
 }
 
-/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+/* ------------------------------------------- Shopping bag */
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/  FAQ */
 .arrow-up {
     width: 0; 
     height: 0; 
@@ -340,67 +369,18 @@ input:checked + label.fa-star {
     bottom: 0;
 }
 
-
-/* Change Bootstrap button style */
-.btn-b-danger {
-    color: #dc3545;
-    border-color: #dc3545;
-    font-weight: 800;
+/* ------------------------------- bootstrap toasts */
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
 }
-.btn-b-secondary {
-    color: #6c757d;
-    border-color: #6c757d;
-    font-weight: 800;
+.custom-toast {
+    overflow: visible;
 }
-.btn-b-success {
-    color: #1e7e34;
-    border-color: #1e7e34;
-    font-weight: 800;
-}
-
-/* Change Bootstrap dropdown hover colour */
-.dropdown-item:focus, .dropdown-item:hover {
-    color: var(--light-orange);
-    background-color: var(--logo-green);
-}
-
-/* Convenience classes - colors copied from Bootstrap */
-.arrow-primary {
-    border-bottom-color: #007bff !important;
-}
-
-.arrow-secondary {
-    border-bottom-color: #6c757d !important;
-}
-
-.arrow-success {
-    border-bottom-color: #28a745 !important;
-}
-
-.arrow-danger {
-    border-bottom-color: #dc3545 !important;
-}
-
-.arrow-warning {
-    border-bottom-color: #ffc107 !important;
-}
-
-.arrow-info {
-    border-bottom-color: #17a2b8 !important;
-}
-
-.arrow-light {
-    border-bottom-color: #f8f9fa !important;
-}
-
-.arrow-dark {
-    border-bottom-color: #343a40 !important;
-}
-
-.bag-notification-wrapper {
-    height: 100px;
-    overflow-x: hidden;
-    overflow-y: auto;
+.toast-capper {
+    height: 2px;
 }
 
 /* -------------------------------- Media Queries */
@@ -441,8 +421,6 @@ input:checked + label.fa-star {
     }
     
 }
-
-
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
