@@ -63,7 +63,7 @@ def all_products(request):
             category = Category.objects.filter(name__in=category)
 
         if 'sale_price' in request.GET:
-            special_offer = products.exclude(sale_price__icontains=0)
+            special_offer = products.filter(sale_price__isnull=False)
             products = special_offer
 
         if 'q' in request.GET:

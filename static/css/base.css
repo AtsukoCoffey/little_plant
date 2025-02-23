@@ -33,6 +33,7 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    font-size: 85%;
 }
 
 header {
@@ -66,12 +67,11 @@ a:focus {
 
 #delivery-banner {
     padding-top: 95px;
-    background-color: var(--logo-green);
+    background-color: var(--star-yellow);
 }
 
 .catch-copy {
     color: var(--dark-color);
-    font-size: 28px;
     font-weight: 700;
     font-style: italic;
 }
@@ -87,7 +87,31 @@ a:focus {
 
 h1 {
     font-family: var(--title);
+    font-size: 2rem;
 }
+
+h3 {
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    padding: .25rem 0.5rem;
+}
+
+.navbar-toggler {
+    padding: 0;
+}
+.navbar-toggler-icon {
+    margin: 3px;
+}
+
+.mobile {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
 
 .bg-lgreen {
     background-color: var(--light-green);
@@ -106,8 +130,9 @@ h1 {
 }
 
 .shop-now-button {
-    background: var(--dark-color);
-    color: white;
+    background: var(--logo-green);
+    color: var(--light-orange);
+    font-weight: 700;
     min-width: 260px;
 }
 
@@ -164,6 +189,15 @@ h1 {
 a.category-badge > span.badge:hover {
     background: var(--logo-green) !important;
     color: var(--white) !important;
+}
+
+#carouselExampleCaptions {
+    box-shadow: var(--small-shadow);
+}
+
+#delivery-banner {
+    padding-top: 133px;
+    padding-bottom: 3px;
 }
 
 /* Back to Top button */
@@ -370,9 +404,57 @@ input:checked + label.fa-star {
 }
 
 /* -------------------------------- Media Queries */
+/* Screen size Small (sm) 576px (Bootstrap) */
+@media (min-width: 576px) {
+    body {
+        font-size: 90%;
+    }
+
+    h1 {
+        font-size: 2.1rem;
+        margin-top: 3px;
+    }
+
+    .mobile {
+        margin-right: 1rem;
+    }
+
+    #delivery-banner {
+        padding-top: 138px;
+        padding-bottom: 3px;
+    }
+}
+
+/* Screen size Medium (md) 769px (Bootstrap) */
+@media (min-width: 768px) {
+    body {
+        font-size: 92%;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+        margin-top: 5px;
+    }
+
+    .mobile {
+        margin-right: 1.5rem;
+    }
+    
+}
+
+
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
+    body {
+        font-size: 90%;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+        margin-top: 8px;
+    }
+
     .fixed-top-desktop-only {
         position: fixed;
         top: 0;
@@ -380,25 +462,31 @@ input:checked + label.fa-star {
         left: 0;
         /* z-index: 1030; */
     }
+    .mobile {
+        margin-right: 2rem;
+    }
 
     .bg-whiteparent {
         background-color: rgba(205, 214, 175, 0.7);
     }
 
     #delivery-banner {
-        padding-top: 185px;
+        padding-top: 135px;
     }
 
 }
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
+    body {
+        font-size: 100%;
+    }
+
     .container {
       max-width: 80%;
     }
 
     #delivery-banner {
-        padding-top: 170px;
         padding-bottom: 4px;
     }
 

@@ -45,14 +45,17 @@
     <title>LITTLE PLANT shop {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
+    <!-- Top header -->
     <header class="container-fluid fixed-top">
-        <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+        <div id="topnav" class="row bg-white pt-3">
+            <!-- Shop title logo -->
+            <div class="col-12 col-lg-6 my-auto pt-lg-2 pl-lg-4 pl-xl-5">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h1 class="text-logogreen my-0"><strong>LITTLE PLANT</strong> shop</h1>
+                    <h1 class="text-logogreen my-0 mx-auto"><strong>LITTLE PLANT</strong> shop</h1>
                 </a>
             </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+            <!-- Search bar - hiding in the small windows size -->
+            <div class="d-none d-lg-flex col-lg-3 my-auto">
                 <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
                         <input type="text" class="form-control border border-black" name="q"
@@ -67,13 +70,21 @@
                     </div>
                 </form>
             </div>
-            <nav class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+            <!-- Account & shopping bag - hiding in the small windows size -->
+            <nav class="d-none d-lg-flex col-lg-3 my-auto py-1 w-100">
+                <ul class="list-inline list-unstyled mx-auto my-0">
                     <li class="list-inline-item dropdown">
                         <a href="#" class="text-logogreen nav-link" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 <div><i class="fas fa-user fa-lg"></i></div>
-                                <p class="my-0">My Account</p>
+                                <p class="my-0">
+                                    Hi 
+                                {% if request.user.is_authenticated %}
+                                    {{ request.user.username }} !
+                                {% else %}
+                                    Guest !
+                                {% endif %}
+                                </p>
                             </div>
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -91,7 +102,7 @@
                     </li>
                     <li class="list-inline-item">
                         <a href="{% url 'view_bag' %}" class="{% if grand_total %}text-info font-weight-bold{% else %}text-logogreen{% endif %} nav-link">
-                            <div class="text-center">
+                            <div class="text-right">
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                                 <p class="my-0">
                                     {% if grand_total %}
@@ -104,29 +115,24 @@
                         </a>
                     </li>
                 </ul>
-                <div class="text-right">
-                    <span class="mr-3">Hi 
-                        {% if request.user.is_authenticated %}
-                            {{ request.user.username }} !
-                        {% else %}
-                            Guest !
-                        {% endif %}
-                    </span>
-                </div>
             </nav>
         </div>
+        <!-- Toggle button for small screen size -->
         <div class="row bg-lgreen">
             <nav class="navbar navbar-expand-lg navbar-light w-100">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <!-- Main navigation - products, reviews, FAQ, contact -->
                 {% include 'includes/main-nav.html' %}
+                <!-- Mobile top navigation - account and shopping bag -->
                 {% include 'includes/mobile-top-header.html' %}
             </nav>
         </div>
     </header>
+    <!--  -->
     <div id="delivery-banner" class="row text-center">
-        <div class="col text-white  w-100">
+        <div class="col text-black  w-100">
             <span class="my-1">Free delivery on orders over €{{ free_delivery_threshold }}!</span>                
         </div>            
     </div>
@@ -157,23 +163,22 @@
 
     <footer class="container-fluid bg-lgreen mt-3">
         <div class="row p-3">
-            <div class="col">
+            <div class="col col-md-4 col-lg-4 offset-lg-1 mb-1">
                 <h4>Newsletter</h4>
                 <p>Join to receive! Notifications & updates about new arrivals and special offers!</p>
-                <a href="{% url 'news-letter-subsc' %}"><button class="btn btn-black" type="submit">SUBSCRIBE NOW</button></a>
+                <a href="{% url 'news-letter-subsc' %}"><button class="btn btn-black" name="subsc-now" type="submit">SUBSCRIBE NOW</button></a>
             </div>
-            <div class="col">
+            <div class="col-md-4 col-lg-3">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li>About us</li>
-                    <li>Contact us</li>
-                    <li>Privacy policy</li>
-                    <li>Reviews</li>
-                    <li>FAQ</li>
-                    <li></li>
+                    <li><a href="{% url 'about' %}">About us</a></li>
+                    <li><a href="{% url 'about' %}">Contact us</a></li>
+                    <li><a href="{% url 'news-letter-subsc' %}">Privacy policy</a></li>
+                    <li><a href="{% url 'review' %}">Reviews</a></li>
+                    <li><a href="{% url 'faq' %}">FAQ</a></li>
                 </ul>
             </div>
-            <div class="col">
+            <div class="col-md-4 col-lg-3">
                 <h4>LITTLE PLANTS shop</h4>
                 <address>1234 Green St.<br>
                 Athlone<br>
