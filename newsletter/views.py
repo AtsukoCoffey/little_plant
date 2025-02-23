@@ -33,8 +33,8 @@ def NewsLetterCreateView(request):
     Renders the Newsletter subscriotion Page
     """
     success_message = 'Thanks for subscribing to our newsletter! '\
-        'We send you e-mail address confirmation mail. '\
-        'Please check your e-mail.'
+        'We have sent an email to your address. '\
+        'We will send newsletters shortly.'
 
     # Try prefill the user's email
     if request.user.is_authenticated:
