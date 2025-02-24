@@ -49,17 +49,10 @@
                                     <img class="card-img-top" src="{{ MEDIA_URL }}placeholder.png" alt="{{ review.reviewer }}" width="96">
                                 {% endif %}
                             </div>
-                            {% if user.is_authenticated and request.user == review.reviewer %}
-                            <div class="w-100 d-flex justify-content-center mb-3">
-                                <button class="btn btn-edit btn-b-success mx-2" data-id="{{ review.id }}" data-slug="{{ review.product.slug }}">Edit</button>
-                                <button class="btn btn-delete btn-b-danger mx-2" data-id="{{ review.id }}" data-slug="{{ review.product.slug }}">Delete</button>
-                            </div>
-                            {% endif %}
                         </div>
                     </div>
                     {% endfor %}
                 </div>
-            
             </div>
         </div>
     </main>

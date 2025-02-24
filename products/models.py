@@ -71,7 +71,7 @@ class ReviewRating(models.Model):
     )
     review_body = models.CharField(max_length=500, null=False, blank=False)
     image = ResizedImageField(
-        size=[100, None], quality=75, upload_to="reviews",
+        size=[250, None], quality=75, upload_to="reviews",
         force_format='WEBP', blank=True
     )
     created_on = models.DateTimeField(auto_now=True)
