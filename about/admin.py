@@ -6,7 +6,7 @@ from django_summernote.admin import SummernoteModelAdmin
 @admin.register(AboutUs)
 class AboutUsAdmin(SummernoteModelAdmin):
     """
-    Register the model into admin site. Instead of admin.site.register(AboutUs)
+    Register models into admin site. Instead of admin.site.register(AboutUs)
     @admin decorator, class based model to use Summernote.
     """
     summernote_fields = ('content',)

@@ -31,7 +31,6 @@ body {
     height: calc(100vh - 164px);
     color: var(--logo-green);
     font-family: var(--main-font);
-    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     font-size: 85%;
