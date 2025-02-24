@@ -264,11 +264,13 @@ def review_edit(request, slug, review_id):
     """
     product = get_object_or_404(PlantItem.objects.all(), slug=slug)
     review = get_object_or_404(ReviewRating, pk=review_id)
-    review_form = ReviewForm(data=request.POST, instance=review)
+    review_form = ReviewForm(
+        data=request.POST, files=request.FILES, instance=review)
 
     # Check the review is request user's review
     if request.method == "POST" and review.reviewer == request.user:
-        review_form = ReviewForm(data=request.POST, instance=review)
+        review_form = ReviewForm(
+            data=request.POST, files=request.FILES, instance=review)
 
         # form validation
         if review_form.is_valid():
