@@ -46,7 +46,7 @@
                     </p>
                     {% endif %}
                     {% if product.average_rating %}
-                    <p class="rating" aria-label="Average rating value is {{ product.average_rating }}"><strong>Average Rating:</strong>
+                    <p class="rating" aria-label="Average{{ product.average_rating }}"><strong>Average Rating:</strong>
                         <span class="fa fa-star {% if product.average_rating > 0 %} checked {% endif %}"></span>
                         <span class="fa fa-star {% if product.average_rating > 1 %} checked {% endif %}"></span>
                         <span class="fa fa-star {% if product.average_rating > 2 %} checked {% endif %}"></span>
@@ -131,7 +131,7 @@
                         <div class="w-50 bg-light review-modal text-right p-5">
                             <button type="button" class="review-btn-close ml-auto border-0" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                             <div class="text-left">
-                                <h4><i class="fa-solid fa-comment-dots"></i> Contribute your review!</h4><hr>
+                                <h4 id="reviewModalLabel"><i class="fa-solid fa-comment-dots"></i> Contribute your review!</h4><hr>
                                 <!-- Rating and Reviewing - Authenticated user only -->
                                 {% if user.is_authenticated %}
                                     <p class="ml-auto">Posting as: {{ user.username }}</p>
@@ -193,7 +193,7 @@
                             <div class="card-body"> 
                                 <a href="{% url 'product_detail' review.product.slug %}"><h5 class="card-title">{{ review.product|truncatechars:20 }} </h5></a>
                                 <span class="small">wrote on: {{ review.created_on }}</span> 
-                                <p class="rating" aria-label="Average Rating:{{ review.rating }}">
+                                <p class="rating" aria-label="Average{{ review.rating }}">
                                     <span class="fa fa-star {% if review.rating > 0 %} checked {% endif %}"></span>
                                     <span class="fa fa-star {% if review.rating > 1 %} checked {% endif %}"></span>
                                     <span class="fa fa-star {% if review.rating > 2 %} checked {% endif %}"></span>

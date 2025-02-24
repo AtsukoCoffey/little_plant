@@ -72,7 +72,7 @@
                                                 </p>
                                                 {% endif %}
                                                 {% if product.average_rating %}
-                                                    <p class="rating" aria-label="Average rating value is {{ product.average_rating }}">
+                                                    <p class="rating" aria-label="Average{{ product.average_rating }}">
                                                         <span class="fa fa-star {% if product.average_rating > 0 %} checked {% endif %}"></span>
                                                         <span class="fa fa-star {% if product.average_rating > 1 %} checked {% endif %}"></span>
                                                         <span class="fa fa-star {% if product.average_rating > 2 %} checked {% endif %}"></span>
