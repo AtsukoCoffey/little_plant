@@ -35,7 +35,9 @@ class PlantItem(models.Model):
     scientific_name = models.CharField(max_length=254, null=True, blank=True)
     slug = models.SlugField()
     category = models.ForeignKey(
-        'Category', null=True, blank=True, on_delete=models.SET_NULL)
+        'Category', null=False, blank=False,
+        on_delete=models.SET_DEFAULT, default='3'
+    )
     description = models.TextField(max_length=500)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = ResizedImageField(
