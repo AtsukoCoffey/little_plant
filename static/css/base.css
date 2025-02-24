@@ -25,8 +25,8 @@ html {
 }
 
 body {
-    background: linear-gradient(to right, rgba(240, 249, 231, 0.8), rgba(240, 249, 231, 0.1)),
-    url('/media/air-plants-verses-succulents-1024x765.webp') no-repeat center center fixed;
+    background: linear-gradient(to right, rgba(240, 249, 231, 0.9), rgba(240, 249, 231, 0.1)),
+    url('/media/hero-colourful-succulents-100dpi.1500xh.webp') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: var(--logo-green);
@@ -190,7 +190,7 @@ h3 {
 }
 
 .carousel-div {
-    background-color: var(--light-orange);
+    background-color: var(--whitish);
 }
 
 #carouselExampleCaptions {
@@ -199,9 +199,10 @@ h3 {
 
 .shop-now-button {
     background: var(--logo-green);
-    color: var(--light-orange);
+    color: var(--white);
     font-weight: 700;
     min-width: 260px;
+    border-radius: 12px;
 }
 
 .shop-now-button:hover,

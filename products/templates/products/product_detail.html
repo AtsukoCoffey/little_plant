@@ -46,7 +46,7 @@
                     </p>
                     {% endif %}
                     {% if product.average_rating %}
-                    <p class="rating" aria-label="Average Rating:{{ product.average_rating }}"><strong>Average Rating:</strong>
+                    <p class="rating" aria-label="Average rating value is {{ product.average_rating }}"><strong>Average Rating:</strong>
                         <span class="fa fa-star {% if product.average_rating > 0 %} checked {% endif %}"></span>
                         <span class="fa fa-star {% if product.average_rating > 1 %} checked {% endif %}"></span>
                         <span class="fa fa-star {% if product.average_rating > 2 %} checked {% endif %}"></span>
@@ -113,8 +113,8 @@
                     </form>
                 </div>
             </div>
-        </main>
-    </div>
+        </div>
+    </main>
     <!-- Review part -->
     <article class="container-fluid">
         <div class="row">
@@ -125,7 +125,6 @@
                     Contribute your review!<i class="fa-solid fa-magnifying-glass"></i>
                 </button>
                 <hr>                
-
                 <!-- Modal body -->
                 <div id="review-overlay">                        
                     <div class="container-fluid" id="review-container" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
@@ -178,15 +177,13 @@
                                     <p>Log in to leave a review?</p>
                                     <p><a href="/accounts/login" class="btn btn-b-success p-1 mb-1" aria-label="Log-in link" title="Log-in"><i
                                                 class="fa-solid fa-right-to-bracket"></i> Log-in</a> to rate this product, or <a
-                                            href="/accounts/signup" class="btn btn-b-success p-1 mb-1" aria-label="Sign-Up link" title="Sign-up"><i
-                                                class="fa-solid fa-user-pen"></i> Sign-up</a></p>
+                                            href="/accounts/signup" class="btn btn-b-success p-1 mb-1" aria-label="Sign-Up link" title="Sign-up"><i class="fa-solid fa-user-pen"></i> Sign-up</a></p>
                                 {% endif %}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
             <!-- Iterate through each review in ReviewRating -->
             <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 mt-3">
                 <div class="d-flex flex-wrap">
@@ -208,11 +205,11 @@
                             <div class="mx-3" id="review{{ review.id }}">
                                 {{ review.review_body | linebreaks }}
                             </div>
-                            <div width="100">
+                            <div>
                                 {% if review.image %}
                                     <img class="card-img-top" src="{{ review.image.url }}" alt="{{ review.reviewer }}" width="100">
                                 {% else %}
-                                    <img class="card-img-top"src="{{ MEDIA_URL }}placeholder.png" alt="{{ review.reviewer }}" width="96">
+                                    <img class="card-img-top" src="{{ MEDIA_URL }}placeholder.png" alt="{{ review.reviewer }}" width="96">
                                 {% endif %}
                             </div>
                             {% if user.is_authenticated and request.user == review.reviewer %}
@@ -227,7 +224,7 @@
                 </div>          
             </div>
         </div>
-    </artcle>
+    </article>
 
     <!-- Delete confirmation modal -->
     <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">

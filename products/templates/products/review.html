@@ -30,7 +30,7 @@
                             <div class="card-body"> 
                                 <a href="{% url 'product_detail' review.product.slug %}"><h5 class="card-title">{{ review.product|truncatechars:20 }} </h5></a>
                                 <span class="small">wrote on: {{ review.created_on }}</span> 
-                                <p class="rating" aria-label="Average Rating:{{ review.rating }}">
+                                <p class="rating" aria-label="Average rating value is {{ review.rating }}">
                                     <span class="fa fa-star {% if review.rating > 0 %} checked {% endif %}"></span>
                                     <span class="fa fa-star {% if review.rating > 1 %} checked {% endif %}"></span>
                                     <span class="fa fa-star {% if review.rating > 2 %} checked {% endif %}"></span>
@@ -42,11 +42,11 @@
                             <div class="mx-3" id="review{{ review.id }}">
                                 {{ review.review_body | linebreaks }}
                             </div>
-                            <div width="100">
+                            <div>
                                 {% if review.image %}
                                     <img class="card-img-top" src="{{ review.image.url }}" alt="{{ review.reviewer }}" width="100">
                                 {% else %}
-                                    <img class="card-img-top"src="{{ MEDIA_URL }}placeholder.png" alt="{{ review.reviewer }}" width="96">
+                                    <img class="card-img-top" src="{{ MEDIA_URL }}placeholder.png" alt="{{ review.reviewer }}" width="96">
                                 {% endif %}
                             </div>
                             {% if user.is_authenticated and request.user == review.reviewer %}
