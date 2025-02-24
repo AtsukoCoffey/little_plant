@@ -59,7 +59,7 @@
                     {% endif %}
                     {% if request.user.is_superuser %}
                         <div class="w-100 d-flex justify-content-center mb-1">
-                            <a class="btn btn-edit btn-b-success mx-2" href="{% url 'edit_product' product.id %}">Edit</a>
+                            <a class="btn btn-b-success mx-2" href="{% url 'edit_product' product.id %}">Edit</a>
                             <a class="btn btn-delete btn-b-danger mx-2" data-product-id="{{ product.id }}" href="#">Delete</a>
                         </div>
                     {% endif %}
@@ -248,22 +248,17 @@
 {% endblock %}
 
 {% block postloadjs %}
-<!-- with the call super, replace the first template rather than this -->
-{{ block.super }}
+    <!-- with the call super, replace the first template rather than this -->
+    {{ block.super }}
     <!-- Product delete button for confirmation -->
     <script src="{% static 'js/product-functions.js' %}"></script>
     <!-- Cunstom clearable widget -->
-    <script type="text/javascript">
+    <script>
         $('#new-image').change(function() {
             var file = $('#new-image')[0].files[0];
             $('#filename').text(`Image will be set to: ${file.name}`);
         });
     </script>
 
-    <!-- <script>
-        $('#myModal').on('shown.bs.modal', function () {
-            $('#myInput').trigger('focus')
-        })
-    </script> -->
-{% include 'products/includes/quantity_input_script.html' %}
+    {% include 'products/includes/quantity_input_script.html' %}
 {% endblock %}

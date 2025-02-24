@@ -64,8 +64,7 @@ def all_products(request):
 
         if 'sale_price' in request.GET:
             special_offer = products.exclude(
-                sale_price__isnull=True).exclude(sale_price__exact=0
-            )
+                sale_price__isnull=True).exclude(sale_price__exact=0)
             products = special_offer
 
         if 'q' in request.GET:
@@ -127,7 +126,7 @@ def product_detail(request, slug):
     # POST request for review : only authenticated user can do
     if request.method == "POST" and request.user.is_authenticated:
         review_form = ReviewForm(
-            request.POST,
+            request.POST, request.FILES,
             # with "review_instance" > assigned in try statement
             instance=review_instance if 'review_instance' in vars() else None
         )
