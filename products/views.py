@@ -108,6 +108,7 @@ def product_detail(request, slug):
     product = get_object_or_404(PlantItem.objects.all(), slug=slug)
     # Get all reviews for list view
     reviews = product.reviews.all().order_by("-created_on")
+    personal_rate = 1
 
     # For preventing to create multiple reviews per user
     # Even 'Create' button works like 'Edit'
@@ -118,6 +119,8 @@ def product_detail(request, slug):
                 reviewer=request.user, product=product
             )
             review_form = ReviewForm(instance=review_instance)
+            # If user laready rated before
+            personal_rate = review_instance.rating
         except ReviewRating.DoesNotExist:
             review_form = ReviewForm()
     else:
@@ -158,6 +161,7 @@ def product_detail(request, slug):
         'product': product,
         'reviews': reviews,
         "review_form": review_form,
+        'personal_rate': personal_rate,
     }
     return render(request, 'products/product_detail.html', context)
 
@@ -279,7 +283,8 @@ def review_edit(request, slug, review_id):
         if review_form.is_valid():
             review = review_form.save(commit=False)
             review.product = product
-            review.rating = rating
+            if rating:
+                review.rating = rating
             review.save()
             messages.success(
                 request, 'Review Updated!'

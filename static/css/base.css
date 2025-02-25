@@ -311,6 +311,7 @@ label.fa-star:hover ~ label.fa-star {
 
 
 /* Style for the checked color */
+label.checked ~ label.fa-star,
 input:checked ~ label.fa-star,
 input:checked + label.fa-star {
     color: var(--star-yellow);

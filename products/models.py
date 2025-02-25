@@ -77,7 +77,7 @@ class ReviewRating(models.Model):
         force_format='WEBP', blank=True
     )
     created_on = models.DateTimeField(auto_now=True)
-    rating = models.IntegerField(default=0, null=True)
+    rating = models.IntegerField(null=False, blank=False, default=1)
 
     def __str__(self):
         return f"{self.product.name}: {self.rating}"
