@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path, include
+from .views import handler404
 
 
 urlpatterns = [
@@ -32,3 +33,5 @@ urlpatterns = [
     path('newsletter/', include('newsletter.urls')),
     path('summernote/', include('django_summernote.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+handler404 = 'config.views.handler404'
