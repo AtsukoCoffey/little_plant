@@ -272,10 +272,14 @@ def review_edit(request, slug, review_id):
         review_form = ReviewForm(
             data=request.POST, files=request.FILES, instance=review)
 
+        # Star rating value
+        rating = request.POST.get('rate')
+
         # form validation
         if review_form.is_valid():
             review = review_form.save(commit=False)
             review.product = product
+            review.rating = rating
             review.save()
             messages.success(
                 request, 'Review Updated!'
