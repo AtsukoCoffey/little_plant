@@ -1,4 +1,5 @@
 from django.db import models
+from django_resized import ResizedImageField
 
 
 class AboutUs(models.Model):
@@ -7,6 +8,10 @@ class AboutUs(models.Model):
     """
     title = models.CharField(max_length=50, unique=True)
     content = models.TextField(max_length=1000)
+    image = ResizedImageField(
+        size=[400, None], quality=75, upload_to="about",
+        force_format='WEBP', blank=True
+    )
     created_on = models.DateTimeField(auto_now=True)
 
     def __str__(self):

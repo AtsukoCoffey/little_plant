@@ -12,7 +12,7 @@
 
 {% block content %}
     <div class="overlay"></div>
-    <main class="container-fluid">
+    <main class="container">
         <div class="row">
             <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 mt-3">
                 <h2 class="">About us</h2>
@@ -25,6 +25,9 @@
                 <h2>{{ about.title }}</h2>
                 <!-- About us Content -->
                 {{ about.content | safe }}
+                {% if about.image %}
+                    <img class="card-img-top" src="{{ about.image.url }}" alt="{{ about.title }}">
+                {% endif %}
                 <small>{{ about.created_on }}</small>
                 <hr>
             </div>
