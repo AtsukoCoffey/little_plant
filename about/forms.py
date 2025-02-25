@@ -12,7 +12,7 @@ class AboutUsForm(forms.ModelForm):
 
     class Meta:
         model = AboutUs
-        fields = '__all__'
+        exclude = ('created_on',)
 
 
 class ContactUsForm(forms.ModelForm):

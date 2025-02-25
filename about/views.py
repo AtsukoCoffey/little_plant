@@ -40,3 +40,10 @@ def about_us(request):
         "form": form,
     }
     return render(request, "about/aboutus.html", context)
+
+
+def privacy_policy(request):
+    """
+    Renders the Privacy policy Page
+    """
+    return render(request, "about/privacy_policy.html")
