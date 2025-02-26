@@ -14,11 +14,11 @@
         <div class="row h-100">
             <div class="col-7 col-md-6 my-auto">
                 <h3 class="catch-copy">
-                    Lovely companion plants for your home, office and everywhere!
+                  Brighten up your home, office, and everywhere with our air-purifying, stress-reducing companion plants!
                 </h3>
                 <div class="my-5">
                     <h4>
-                        <a href="{% url 'products' %}" class="shop-now-button btn btn-lg text-uppercase py-3">Find one!</a>
+                        <a href="{% url 'products' %}" class="shop-now-button btn text-uppercase py-3">Find one!</a>
                     </h4>
                 </div>
             </div>
@@ -33,7 +33,7 @@
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active rounded">
-                <a href="{% url 'products' %}">
+                <a href="{% url 'products' %}?category=succulents">
                   <img src="{{ MEDIA_URL }}succulents-3-on-table.webp" class="d-block w-100 rounded" alt="succulents-3-on-table">
                   <div class="carousel-caption d-none d-md-block">
                     <h5>Succulents</h5>
@@ -42,7 +42,7 @@
                 </a>
               </div>
               <div class="carousel-item rounded">
-                <a href="{% url 'products' %}">
+                <a href="{% url 'products' %}?category=airplants">
                   <img src="{{ MEDIA_URL }}airplants-in-glass-bowl.webp" class="d-block w-100 rounded" alt="airplants-in-glass-bowl">
                   <div class="carousel-caption d-none d-md-block">
                     <h5>Air plants</h5>
@@ -51,7 +51,7 @@
                 </a>
               </div>
               <div class="carousel-item rounded">
-                <a href="{% url 'products' %}">
+                <a href="{% url 'products' %}?category=indoor">
                   <img src="{{ MEDIA_URL }}houseplants-in-small-pots.webp" class="d-block w-100 rounded" alt="houseplants-in-small-pots">
                   <div class="carousel-caption d-none d-md-block">
                     <h5>House plants</h5>

@@ -13,14 +13,14 @@
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-6 mt-3">
+            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 mt-3">
                 <h2 class="mb-4">Product Management</h2>
                 <h5 class="text-muted">Add a Product</h5>
                 <hr>
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 mt-3">
                 <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                     {% for field in form %}
@@ -32,7 +32,7 @@
                         {% endif %}
                     {% endfor %}
                     <div class="text-right">
-                        <a class="btn border-black" href="{% url 'products' %}">Cancel</a>
+                        <a class="btn btn-light border" href="{% url 'products' %}">Cancel</a>
                         <button class="btn btn-black" type="submit">Add Product</button>
                     </div>
                 </form>

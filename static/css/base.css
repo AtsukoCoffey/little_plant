@@ -200,7 +200,7 @@ h3 {
     background: var(--logo-green);
     color: var(--white);
     font-weight: 700;
-    min-width: 260px;
+    min-width: 180px;
     border-radius: 12px;
 }
 
@@ -357,6 +357,20 @@ input:checked + label.fa-star {
     overflow-x: hidden;
     overflow-y: auto;
 }
+
+/* ----------------------------------------------- Social networks links */
+#social-networks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    list-style-type: none;
+    width: 100%;
+    max-width: 250px;
+}
+/* #social-networks a:hover,
+#social-networks a:active {
+    color: var(--logo-green);
+} */
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/  FAQ */
 .arrow-up {
