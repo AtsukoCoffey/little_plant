@@ -11,15 +11,24 @@
 {% endblock %}
 {% block content %}
     <div class="overlay"></div> 
-    <div class="container-fluid">
+    <main class="container-fluid">
         <div class="row">
-            <div class="col text-center mt-3">
+            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 mt-3">
                 <h2>Products</h2>
-                <hr class="w-75 mb-2">
+                <hr class="mb-2">
+                <!-- Category quick access links -->
+                <a class="category-badge text-decora mb-1" href="{% url 'products' %}">
+                    <span class="p-2 mt-2 badge badge-light text-black border border-dark">All products</span>
+                </a>
+                {% for c in category_list %}
+                    <a class="category-badge text-decora mb-1" href="{% url 'products' %}?category={{ c.name }}">
+                        <span class="p-2 mt-2 badge badge-light text-black border border-dark">{{ c.name }}</span>
+                    </a>
+                {% endfor %}
             </div>
         </div>
         <div class="row">
-            <div class="product-container col-10 offset-1">
+            <div class="product-container col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 mt-3">
                 <div class="d-flex w-100">
                     <span class="small text-muted">
                     {% if search_term or current_category or current_sorting != 'None_None' %}
@@ -141,7 +150,7 @@
                 </div>
             </div>
         </div>    
-    </div>
+    </main>
     <div class="btt-button shadow-sm border border-black">
         <a class="btt-link d-flex h-100">
             <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>

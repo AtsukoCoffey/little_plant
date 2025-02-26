@@ -21,6 +21,17 @@
             <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 mt-3">
                 <h2 class="">FAQ - {{ category }}</h2>
                 <hr>
+                <!-- Category quick access links -->
+                {% for c in category_list %}
+                    <a class="category-badge text-decora mb-1" href="{% url 'faq' %}?category={{ c.pk }}">
+                        <span class="p-2 mt-2 badge badge-light text-black border border-dark">{{ c.name }}</span>
+                    </a>
+                {% endfor %}
+                <!-- FAQ contents -->
+                </div>
+            </div>
+        <div class="row">
+            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 mt-3">         
                 <div class="accordion">
                 {% for faq in faqs %}
                     <div class="accordion-item">

@@ -84,12 +84,15 @@ def all_products(request):
 
     # return current sorting methodology to the template
     current_sorting = f'{sort}_{direction}'
+    # return category list for quick access links
+    category_list = Category.objects.all()
 
     context = {
         'products': products,
         'search_term': query,
         'current_category': category,
         'current_sorting': current_sorting,
+        'category_list': category_list,
     }
 
     return render(request, 'products/products.html', context)

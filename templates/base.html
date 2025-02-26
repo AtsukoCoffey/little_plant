@@ -132,13 +132,13 @@
             </nav>
         </div>
     </header>
-    <!--  -->
+    <!-- Delivery banner -->
     <div id="delivery-banner" class="row text-center">
         <div class="col text-black  w-100">
             <span class="my-1">Free delivery on orders over €{{ free_delivery_threshold }}!</span>                
         </div>            
     </div>
-
+    <!-- Messages -->
     {% if messages %}
     <div class="message-container">
         {% for message in messages %}
@@ -168,7 +168,7 @@
             <div class="col col-md-4 col-lg-4 offset-lg-1 mb-1">
                 <h4>Newsletter</h4>
                 <p>Join to receive! Notifications & updates about new arrivals and special offers!</p>
-                <a href="{% url 'news-letter-subsc' %}" class="btn btn-black">SUBSCRIBE NOW</a>
+                <a href="{% url 'news-letter-subsc' %}" class="btn btn-black mb-2">SUBSCRIBE NOW</a>
             </div>
             <div class="col-md-4 col-lg-3">
                 <h4>Quick Links</h4>
