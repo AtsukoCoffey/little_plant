@@ -29,7 +29,6 @@
                 <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
                     {% csrf_token %}
                     {{ form|crispy }}
-                    <label for="id_default_country mb-1" class="small">* Country dropdown list ↑</label><br>
                     <button class="btn btn-black text-uppercase mx-auto mb-1 float-right">Update Information</button>
                 </form>
             </div>
