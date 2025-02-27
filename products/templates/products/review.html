@@ -32,8 +32,10 @@
                     <div class="col-12 col-sm-6 col-lg-4 col-xl-3 py-3 px-3 align-items-stretch">
                         <div class="card h-100 shadow">
                             <div class="card-body"> 
-                                <a href="{% url 'product_detail' review.product.slug %}"><h5 class="card-title">{{ review.product|truncatechars:20 }} </h5></a>
-                                <span class="small">wrote on: {{ review.created_on }}</span> 
+                                <a href="{% url 'product_detail' review.product.slug %}">
+                                    <h5 class="card-title">{{ review.product|truncatechars:20 }} </h5>
+                                </a>
+                                <span class="small">{{ review.created_on|date:"d b, Y" }}</span> 
                                 <p class="rating" title="Average rating value: {{ review.rating }}">
                                     <span class="fa fa-star {% if review.rating > 0 %} checked {% endif %}"></span>
                                     <span class="fa fa-star {% if review.rating > 1 %} checked {% endif %}"></span>
@@ -42,16 +44,16 @@
                                     <span class="fa fa-star {% if review.rating > 4 %} checked {% endif %}"></span>
                                     <small class="text-muted">{{ review.rating }} / 5</small>
                                 </p>
-                            </div>
-                            <div class="mx-3" id="review{{ review.id }}">
-                                {{ review.review_body | linebreaks }}
-                            </div>
-                            <div>
-                                {% if review.image %}
-                                    <img class="card-img-top" src="{{ review.image.url }}" alt="{{ review.reviewer }}" width="100">
-                                {% else %}
-                                    <img class="card-img-top" src="{{ MEDIA_URL }}placeholder.png" alt="{{ review.reviewer }}" width="96">
-                                {% endif %}
+                                <div class="mb-1" id="review{{ review.id }}">
+                                    {{ review.review_body | linebreaks }}
+                                </div>
+                                <div>
+                                    {% if review.image %}
+                                        <img class="card-img-top" src="{{ review.image.url }}" alt="{{ review.reviewer }}" width="100">
+                                    {% else %}
+                                        <img class="card-img-top" src="{{ MEDIA_URL }}placeholder.png" alt="{{ review.reviewer }}" width="96">
+                                    {% endif %}
+                                </div>
                             </div>
                         </div>
                     </div>
