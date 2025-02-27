@@ -353,6 +353,10 @@ input:checked + label.fa-star {
     box-shadow: var(--small-shadow);
 }
 
+.card-footer {
+    background-color: var(--white);
+}
+
 /* ------------------------------------------- Shopping bag */
 .bag-notification-wrapper {
     height: 100px;
