@@ -25,7 +25,7 @@ html {
 }
 
 body {
-    background: linear-gradient(to right, rgba(240, 249, 231, 0.9), rgba(240, 249, 231, 0.1)),
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.1)),
     url('/media/hero-colourful-succulents-100dpi.1500xh.webp') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
@@ -180,7 +180,9 @@ h3 {
 /* ----------------------------------------------Top page style */
 .catch-copy {
     color: var(--dark-color);
-    font-weight: 700;
+    font-weight: 500;
+    font-size: 150%;
+    line-height: 150%;
     font-style: italic;
 }
 
