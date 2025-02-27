@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://little-plant-shop-e08318b823f1.herokuapp.com/</loc>
+  <lastmod>2025-02-27T01:16:37+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://little-plant-shop-e08318b823f1.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2025-02-27T01:16:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://little-plant-shop-e08318b823f1.herokuapp.com/accounts/login/</loc>
+  <lastmod>2025-02-27T01:16:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://little-plant-shop-e08318b823f1.herokuapp.com/bag/</loc>
+  <lastmod>2025-02-27T01:16:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://little-plant-shop-e08318b823f1.herokuapp.com/products/</loc>
+  <lastmod>2025-02-27T01:16:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://little-plant-shop-e08318b823f1.herokuapp.com/products/?category=succulents</loc>
+  <lastmod>2025-02-27T01:16:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://little-plant-shop-e08318b823f1.herokuapp.com/products/?category=airplants</loc>
+  <lastmod>2025-02-27T01:16:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://little-plant-shop-e08318b823f1.herokuapp.com/products/?category=indoor</loc>
+  <lastmod>2025-02-27T01:16:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://little-plant-shop-e08318b823f1.herokuapp.com/products/?sale_price=0</loc>
+  <lastmod>2025-02-27T01:16:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://little-plant-shop-e08318b823f1.herokuapp.com/faq/?category=1</loc>
+  <lastmod>2025-02-27T01:16:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://little-plant-shop-e08318b823f1.herokuapp.com/faq/?category=2</loc>
+  <lastmod>2025-02-27T01:16:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://little-plant-shop-e08318b823f1.herokuapp.com/faq/?category=3</loc>
+  <lastmod>2025-02-27T01:16:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://little-plant-shop-e08318b823f1.herokuapp.com/faq/?category=4</loc>
+  <lastmod>2025-02-27T01:16:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://little-plant-shop-e08318b823f1.herokuapp.com/faq/?category=5</loc>
+  <lastmod>2025-02-27T01:16:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://little-plant-shop-e08318b823f1.herokuapp.com/products/review/</loc>
+  <lastmod>2025-02-27T01:16:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://little-plant-shop-e08318b823f1.herokuapp.com/products/review/?category=succulents</loc>
+  <lastmod>2025-02-27T01:16:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://little-plant-shop-e08318b823f1.herokuapp.com/products/review/?category=airplants</loc>
+  <lastmod>2025-02-27T01:16:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://little-plant-shop-e08318b823f1.herokuapp.com/products/review/?category=indoor</loc>
+  <lastmod>2025-02-27T01:16:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://little-plant-shop-e08318b823f1.herokuapp.com/about/</loc>
+  <lastmod>2025-02-27T01:16:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://little-plant-shop-e08318b823f1.herokuapp.com/about/privacy-policy</loc>
+  <lastmod>2025-02-27T01:16:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://little-plant-shop-e08318b823f1.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2025-02-27T01:16:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://little-plant-shop-e08318b823f1.herokuapp.com/products/echeveria-lilacina</loc>
+  <lastmod>2025-02-27T01:16:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://little-plant-shop-e08318b823f1.herokuapp.com/products/ficus-elastica-rubber-plant-abijan</loc>
+  <lastmod>2025-02-27T01:16:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://little-plant-shop-e08318b823f1.herokuapp.com/products/tillandsia-stricta-green-hybrid-air-plant-col</loc>
+  <lastmod>2025-02-27T01:16:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://little-plant-shop-e08318b823f1.herokuapp.com/products/tillandsia-palacea-x-tectorum-sweet-isabel-ai</loc>
+  <lastmod>2025-02-27T01:16:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://little-plant-shop-e08318b823f1.herokuapp.com/products/pachyveria-corvus</loc>
+  <lastmod>2025-02-27T01:16:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://little-plant-shop-e08318b823f1.herokuapp.com/products/ficus-benjamina-twilight</loc>
+  <lastmod>2025-02-27T01:16:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://little-plant-shop-e08318b823f1.herokuapp.com/products/asdasd</loc>
+  <lastmod>2025-02-27T01:16:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://little-plant-shop-e08318b823f1.herokuapp.com/faq/?category=6</loc>
+  <lastmod>2025-02-27T01:16:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>

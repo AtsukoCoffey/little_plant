@@ -38,13 +38,6 @@
         "pk": 6,
         "model": "faq.faqcategory",
         "fields": {
-            "name": "Terms & Conditions"
-        }
-    },
-    {
-        "pk": 7,
-        "model": "faq.faqcategory",
-        "fields": {
             "name": "Privacy Policy"
         }
     }

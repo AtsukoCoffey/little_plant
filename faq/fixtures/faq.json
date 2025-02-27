@@ -5,7 +5,7 @@
         "fields": {
             "category": 1,
             "question": "How long will my terrarium last?",
-            "answer": "Greenery NYC terrariums are built to last, as long as they are maintained properly. Providing the right lighting requirements and a regular watering schedule is key to keeping your terrarium happy and healthy. As every terrarium is its own unique eco-system, everyone&apos;s home is different as well. Finding a baseline for your terrarium as it exists in your space will insure its success. This means paying close attention to its needs when you take it home, and then setting up a regular, appropriate care plan."
+            "answer": "As long as they are maintained properly. Providing the right lighting requirements and a regular watering schedule is key to keeping your terrarium happy and healthy. As every terrarium is its own unique eco-system, everyone's home is different as well. Finding a baseline for your terrarium as it exists in your space will insure its success. This means paying close attention to its needs when you take it home, and then setting up a regular, appropriate care plan."
         }
     },
     {
@@ -14,7 +14,7 @@
         "fields": {
             "category": 1,
             "question": "How do I water my terrarium?",
-            "answer": "Since every home has different heating and cooling systems, it is important to monitor the soil in your pre-watered terrarium when you bring it into your space. Your terrarium is pre-watered upon purchase. Touch the soil and feel how moist it is. By frequently checking as time passes, figure out how many days it takes for your terrarium to dry in your space. When it feels dry, it&apos;s time to water."
+            "answer": "Since every home has different heating and cooling systems, it is important to monitor the soil in your pre-watered terrarium when you bring it into your space. Your terrarium is pre-watered upon purchase. Touch the soil and feel how moist it is. By frequently checking as time passes, figure out how many days it takes for your terrarium to dry in your space. When it feels dry, it is time to water."
         }
     },
     {
@@ -95,7 +95,7 @@
         "fields": {
             "category": 3,
             "question": "How often should I water my succulent?",
-            "answer": "A good rule of thumb is to water just a little at a time when the soil is completely dry.If you do overwater, you might see little blisters pop up, white patches appearing on the leaves, or rot forming. Not ideal. Some damage can be reversible - if you catch it quickly and let the soil thoroughly dry out. With good succulent care practice, you&apos;ll be able to avoid all that from the start. "
+            "answer": "A good rule of thumb is to water just a little at a time when the soil is completely dry.If you do overwater, you might see little blisters pop up, white patches appearing on the leaves, or rot forming. Not ideal. Some damage can be reversible - if you catch it quickly and let the soil thoroughly dry out. With good succulent care practice, you will be able to avoid all that from the start. "
         }
     },
     {
@@ -104,7 +104,7 @@
         "fields": {
             "category": 3,
             "question": "How much light does my succulent need?",
-            "answer": "Native to warm countries, succulents love direct light. Suri needs about six hours of sunlight per day - so she&apos;ll live happily on a shelf or table near a window. With the right succulent care, you might even see her colours change a bit. It&apos;s called &apos;blushing&apos;. Not because she&apos;s coy, but because she&apos;s grinning ear-to-ear. Just avoid keeping her in the full blast of direct sunlight all day, as this could burn her."
+            "answer": "Native to warm countries, succulents love direct light. Suri needs about six hours of sunlight per day - so she'll live happily on a shelf or table near a window. With the right succulent care, you might even see her colours change a bit. It is called 'blushing'. Not because she is coy, but because she is grinning ear-to-ear. Just avoid keeping her in the full blast of direct sunlight all day, as this could burn her."
         }
     },
     {
@@ -112,8 +112,8 @@
         "model": "faq.faq",
         "fields": {
             "category": 3,
-            "question": "What&apos;s the best kind of soil for succulents?",
-            "answer": "Succulents do best in well-drained soils; they&apos;re designed to cope with drier environments. But if you notice roots growing out of the drainage hole, it means they&apos;ve run out of space to grow. That&apos;s a good sign you need to repot. "
+            "question": "What is the best kind of soil for succulents?",
+            "answer": "Succulents do best in well-drained soils; they are designed to cope with drier environments. But if you notice roots growing out of the drainage hole, it means they have run out of space to grow. That is a good sign you need to repot. "
         }
     },
     {
@@ -122,7 +122,7 @@
         "fields": {
             "category": 3,
             "question": "What are succulent plants all about?",
-            "answer": "Succulents originally come from dry, desert-like environments like the European Alps, Central America and South Africa. Amazingly, there are over 10,000 types - all with different colours, textures and sizes. Not only are they beautiful to look at, but their thick, fleshy leaves, they&aposre also able to store their own water, so it&apos;s best to keep watering to a minimum. For extra love, give your succulents a feed every now and again with a succulent or cacti-specific fertiliser. Once a month in spring and summer is best."
+            "answer": "Succulents originally come from dry, desert-like environments like the European Alps, Central America and South Africa. Amazingly, there are over 10,000 types - all with different colours, textures and sizes. Not only are they beautiful to look at, but their thick, fleshy leaves, they&aposre also able to store their own water, so it is best to keep watering to a minimum. For extra love, give your succulents a feed every now and again with a succulent or cacti-specific fertiliser. Once a month in spring and summer is best."
         }
     },
     {
@@ -131,7 +131,7 @@
         "fields": {
             "category": 4,
             "question": "How much water Houseplants need?",
-            "answer": "All houseplants have slightly different watering requirements, depending on how they're grown and how their growth changes through the seasons. It's best to water on an as-needed basis rather than by a set calendar schedule. In general, plants grown in well-drained potting mix in an appropriate-size container should be watered when the top 1/2 to 1 inch of soil feels dry. Cacti and succulents need less water; flowering plants usually need slightly more. To water, let a slow stream of water (from your watering can or the tap) soak into the plant; once you see it start draining from the pot&apos;s drainage hole, the soil is well saturated. Avoid splashing onto leaves and stems, which can encourage diseases and leaf spotting."
+            "answer": "All houseplants have slightly different watering requirements, depending on how they're grown and how their growth changes through the seasons. It's best to water on an as-needed basis rather than by a set calendar schedule. In general, plants grown in well-drained potting mix in an appropriate-size container should be watered when the top 1/2 to 1 inch of soil feels dry. Cacti and succulents need less water; flowering plants usually need slightly more. To water, let a slow stream of water (from your watering can or the tap) soak into the plant; once you see it start draining from the pot is drainage hole, the soil is well saturated. Avoid splashing onto leaves and stems, which can encourage diseases and leaf spotting."
         }
     },
     {
@@ -167,7 +167,7 @@
         "fields": {
             "category": 4,
             "question": "Remove Dust From Plants?",
-            "answer": "Almost all houseplants look better with regular cleaning. Dust collects on leaves, so wash them with a gentle shower of room-temperature water or dust them with a soft brush if the plants have hairy leaves (which can hold onto moisture and encourage disease). For plants with smooth leaves, you can also use a cloth to gently wipe away any dust that collects on leaves. Not only does this improve your plant's appearance, but it&apos;ll actually help it to soak up more light."
+            "answer": "Almost all houseplants look better with regular cleaning. Dust collects on leaves, so wash them with a gentle shower of room-temperature water or dust them with a soft brush if the plants have hairy leaves (which can hold onto moisture and encourage disease). For plants with smooth leaves, you can also use a cloth to gently wipe away any dust that collects on leaves. Not only does this improve your plant's appearance, but it will actually help it to soak up more light."
         }
     },
     {
@@ -213,6 +213,42 @@
             "category": 5,
             "question": "Returns Policy - CONDITIONS",
             "answer": "LITTLE PLANT shop reserves the right to inspect all returned goods. Your statutory rights are not affected"
+        }
+    },
+    {
+        "pk": 25,
+        "model": "faq.faq",
+        "fields": {
+            "category": 6,
+            "question": "What is a privacy policy",
+            "answer": "Privacy policies exist to protect customers from predatory data collection practices"
+        }
+    },
+    {
+        "pk": 26,
+        "model": "faq.faq",
+        "fields": {
+            "category": 6,
+            "question": "Which data are you collecting from users in LITTLEPLANT shop",
+            "answer": "We collect user's name, email, address, phone number also cookie for sessions"
+        }
+    },
+    {
+        "pk": 27,
+        "model": "faq.faq",
+        "fields": {
+            "category": 6,
+            "question": "Why are you collecting and how do you use the data?",
+            "answer": "Mainly we use for providing our service (shopping & delivering) Also we use for managing the customer's registration data as a site user. We will not share any personal data with third parties."
+        }
+    },
+    {
+        "pk": 28,
+        "model": "faq.faq",
+        "fields": {
+            "category": 6,
+            "question": "Where is full privavy policy?",
+            "answer": "Please refer to our Privacy Policy in the footer navigation."
         }
     }
 ]
