@@ -261,7 +261,8 @@
 {% block postloadjs %}
     {{ block.super }}
     <!-- Product delete button for confirmation -->
-    <script src="{% static 'js/product-functions.js' %}"></script>
+    <script src="{% static 'js/product-delete.js' %}"></script>
+    <script src="{% static 'js/product-review-create-edit.js' %}"></script>
     <!-- Cunstom clearable widget -->
     <script>
         $('#new-image').change(function() {

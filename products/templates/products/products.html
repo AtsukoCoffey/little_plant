@@ -159,10 +159,9 @@
 {% endblock %}
 
 {% block postloadjs %}
-    <!-- Using block.super will ensure we append this code to anything already in the block -->
     {{ block.super }}
     <!-- Product delete button for confirmation -->
-    <script src="{% static 'js/product-functions.js' %}"></script>
+    <script src="{% static 'js/product-delete.js' %}"></script>
     <!-- Bottom to Top link -->
     <script>
 		$('.btt-link').click(function(e) {
