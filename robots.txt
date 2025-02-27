@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://little-plant-shop-e08318b823f1.herokuapp.com/sitemap.xml

@@ -5,7 +5,7 @@
 ### HTML
 | Page | W3C URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| Home | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-plant-shop-e08318b823f1.herokuapp.com%2F) | ![screenshot]() | Error |
+| Home | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-plant-shop-e08318b823f1.herokuapp.com%2F) | ![screenshot]() | No Error |
 | Sign-up | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-plant-shop-e08318b823f1.herokuapp.com%2Faccounts%2Fsignup%2F) | ![screenshot]() | Error |
 | Log-in | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-plant-shop-e08318b823f1.herokuapp.com%2Faccounts%2Flogin%2F) | ![screenshot]() | Error ||
 | Log-out | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fhealthy-food-c44b0f8f09a5.herokuapp.com%2Faccounts%2Flogout%2F) | ![screenshot]() | Error |
@@ -18,7 +18,7 @@
 | Checkout | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-plant-shop-e08318b823f1.herokuapp.com%2Fcheckout%2F) | ![screenshot]() | Error |
 | Checkout success | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-plant-shop-e08318b823f1.herokuapp.com%2Fcheckout%2Fcheckout_success%2FA3CEB167CDEA4CAA8BC9A6F35FFB6440) | ![screenshot]() | No Error |
 | Profile | [W3C - Validated By Input](https://validator.w3.org/#validate_by_input) | ![screenshot]() | Error |
-| Newsletter | [W3C - Validated By Input](https://validator.w3.org/#validate_by_input) | ![screenshot]() | Error |
+| Newsletter | [W3C - Validated By Input]() | ![screenshot](documentation/vali-html-newsletter.png) | No Error |
 | Privacy Policy | [W3C - Validated By Input](https://validator.w3.org/#validate_by_input) | ![screenshot]() | Error |
 
 
