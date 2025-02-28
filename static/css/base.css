@@ -262,9 +262,6 @@ a.category-badge > span.badge:hover {
     position: fixed;
     bottom: 30px;
     right: 20px;
-}
-
-.btt-link {
     cursor: pointer;
 }
 
@@ -335,11 +332,16 @@ input:checked + label.fa-star {
 }
 
 /* --------------------------------- reviews layout */
+#review-input-button {
+    position:absolute;
+    right: 0;
+    top: 25px;
+}
 .review-card {
     flex: 1 1 300px;
     max-width: 400px;
 }
-
+right: 0; top: 25px;
 #review-overlay {
 	display: none;
 	position: fixed;
@@ -452,6 +454,9 @@ input:checked + label.fa-star {
     }
     .review-modal {
         width: 90%;
+    }
+    #review-input-button {
+        top: 0px;
     }
 }
 
