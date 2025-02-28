@@ -173,7 +173,9 @@ I've tested my deployed project using the Lighthouse Audit tool.
 | Privacy policy | Desktop | ![screenshot](documentation/vali-light-) |  |
 | Profile | Desktop | ![screenshot](documentation/vali-light-profile-d.png) |  |
 | Profile success | Desktop | ![screenshot](documentation/vali-light-profile-suc-d.png) |  |
-
+| Shopping bag | Desktop | ![screenshot](documentation) |  |
+| Checkout | Desktop | ![screenshot](documentation/vali-light-checkout-d.png) |  |
+| Checkout success | Desktop | ![screenshot](documentation/vali-light-checkout-suc-d.png) |  |
 | Product add | Desktop | ![screenshot](documentation/va) |  |
 | Product edit | Desktop | ![screenshot](documentation) |  |
 | Shopping bag | Desktop | ![screenshot](documentation) |  |
@@ -193,16 +195,18 @@ I've tested my deployed project using the Lighthouse Audit tool.
 | Home | Mobile | ![screenshot](documentation/vali-light-top-m.png) |  |
 | Product list | Mobile | ![screenshot](documentation/vali-light-products-m.png) |  |
 | Product detail | Mobile | ![screenshot](documentation/vali-light-detail-m.png) |  |
-| FAQ | Mobile | ![screenshot](documentation) |  |
+| FAQ | Mobile | ![screenshot](documentation/vali-light-faq-m.png) |  |
 | Reviews | Mobile | ![screenshot](documentation) |  |
-| About us | Mobile | ![screenshot](documentation) |  |
-| Privacy policy | Mobile | ![screenshot](documentation/vali-light-) |  |
+| About us | Mobile | ![screenshot](documentation/vali-light-about-m.png) |  |
+| Privacy policy | Mobile | ![screenshot](documentation/vali-l) |  |
 | Profile | Mobile | ![screenshot](documentation/vali-light-profile-m.png) |  |
 | Profile success | Mobile | ![screenshot](documentation/vali-light-profile-suc-m.png) |  |
-
+| Shopping bag | Mobile | ![screenshot](documentation) |  |
+| Checkout | Mobile | ![screenshot](documentation/vali-light-checkout-m.png) |  |
+| Checkout success | Mobile | ![screenshot](documentation/vali-light-checkout-suc-m.png) |  |
 | Product add | Mobile | ![screenshot](documentation/va) |  |
 | Product edit | Mobile | ![screenshot](documentation) |  |
-| Shopping bag | Mobile | ![screenshot](documentation) |  |
+
 
 ## Defensive Programming
 
