@@ -31,14 +31,14 @@
         <div class="row">
             <div class="product-container col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 mt-3">
                 <div class="d-flex w-100">
-                    <span class="small text-muted">
+                    <h3 class="small text-muted">
                     {% if search_term or current_category or current_sorting != 'None_None' %}
                         <a href="{% url 'products' %}">Products Home</a> | Filterd by 
                         {% if search_term %}{{ search_term }}
                         {% elif current_category%}{% for c in current_category %}<strong>{{ c.friendly_name }}</strong>{% endfor %}
                         {% elif current_sorting %}{{ current_sorting }}{% endif %} --  {{products|length}} products
                     {% endif %}
-                    </span>
+                    </h3>
                     <div class="dropdown ml-auto">
                         <select id="sort-selector" aria-label="Sort selector" class="custom-select custom-select-sm border border-{% if current_sorting != 'None_None' %}info{% else %}secondary{% endif %}" >
                             <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
@@ -59,7 +59,7 @@
                             <a href="{% url 'product_detail' product.slug %}" aria-label="{{ product.name }} detail page">
                                 <div class="card h-100 border-1 shadow hover-color">
                                     {% if product.image %}
-                                        <img class="card-img-top img-fluid" src="{{ product.image.url|truncatechars: 12}}" alt="{{ product.name }}">
+                                        <img class="card-img-top img-fluid" src="{{ product.image.url}}" alt="{{ product.name|truncatechars:12 }}">
                                     {% else %}
                                         <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="No image">
                                     {% endif %}

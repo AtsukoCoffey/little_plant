@@ -175,6 +175,24 @@ I've tested my deployed project using the Lighthouse Audit tool.
 | Product list | Mobile | ![screenshot]() | warnings |
 | Product detail | Mobile | ![screenshot]() | warnings |
 
+## Defensive Programming
+
+Defensive programming was manually tested with the below user acceptance testing:
+
+| Home Page | User Action | Expected Result | Pass/Fail | Comments |
+| --- | --- | --- | --- | --- |
+| Nav links | Click on Logo | Redirection to Home page | Pass | <ul><li>-[]</li></ul> |
+| | Click on Home Recipes link in navbar | Redirection to Home page | Pass | |
+| | Click on Posts link in navbar | Redirection to Posts page | Pass | |
+| | Hover on New link in navbar  | Display dropdown list | Pass | |
+| Authenticated user only | Click on Create Recipe - in dropdown list | Redirection to Create Recipe page | Pass | |
+| Authenticated user only | Click on Create Post - in dropdown list | Redirection to Create Post page | Pass | |
+| Not authenticated user only | Click on Create Recipe - in dropdown list | Redirection to Log-in page | Pass | |
+| Not authenticated user only | Click on Create Post - in dropdown list | Redirection to Log-in page | Pass | |
+| Not authenticated user only | Click on Sign-up link in navbar | Redirection to Sign-up page | Pass | |
+| Not authenticated user only | Click on Log-in link in navbar | Redirection to Log-in page | Pass | |
+| Authenticated user only | Click on Logout link in navbar | Redirection to Logout page | Pass | |  
+
 ## User story Testing
 | Epic | User Story ID | AS A/AN | I WANT TO BE ABLE TO ... | SO THAT I CAN ... |
 |-|-|-|-|-|
