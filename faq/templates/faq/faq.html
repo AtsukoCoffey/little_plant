@@ -19,8 +19,9 @@
     <main class="container-fluid">
         <div class="row">
             <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 mt-3">
-                <h2 class="">FAQ - {{ category }}</h2>
+                <h2 class="">FAQ</h2>
                 <hr>
+                <h3>{{ category }}</h3>
                 <!-- Category quick access links -->
                 {% for c in category_list %}
                     <a class="category-badge text-decora mb-1" href="{% url 'faq' %}?category={{ c.pk }}">

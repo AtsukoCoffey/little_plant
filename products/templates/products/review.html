@@ -15,8 +15,9 @@
     <main class="container-fluid">
         <div class="row">
             <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 mt-3">
-                <h2 class="">Reviews - {% if category %}{{ category }} {% else %} All products reviews{% endif %} </h2>
+                <h2 class="">Reviews</h2>
                 <hr>
+                <h3>{% if category %}{{ category }} {% else %} All products reviews{% endif %}</h3>
                 <!-- Category quick access links -->
                 <a class="category-badge text-decora" href="{% url 'review' %}">
                     <span class="p-2 mt-2 badge badge-light text-black border border-dark">All products reviews</span>
@@ -49,9 +50,9 @@
                                 </div>
                                 <div>
                                     {% if review.image %}
-                                        <img class="card-img-top" src="{{ review.image.url }}" alt="{{ review.reviewer }}" width="100">
+                                        <img class="card-img-top review-image" src="{{ review.image.url }}" alt="{{ review.reviewer }}" width="100">
                                     {% else %}
-                                        <img class="card-img-top" src="{{ MEDIA_URL }}placeholder.png" alt="{{ review.reviewer }}" width="96">
+                                        <img class="card-img-top review-image" src="{{ MEDIA_URL }}placeholder.png" alt="No image" width="96">
                                     {% endif %}
                                 </div>
                             </div>

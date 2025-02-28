@@ -357,6 +357,10 @@ input:checked + label.fa-star {
     background-color: var(--white);
 }
 
+.review-image {
+    max-width: 250px;
+}
+
 /* ------------------------------------------- Shopping bag */
 .bag-notification-wrapper {
     height: 100px;

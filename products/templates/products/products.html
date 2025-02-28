@@ -18,7 +18,7 @@
                 <h2>Products</h2>
                 <hr class="mb-2">
                 <!-- Category quick access links -->
-                <a class="category-badge text-decora mb-1" href="{% url 'products' %}">
+                <a class="category-badge text-decora mb-1" href="{% url 'products' %}" aria-label="{{ product.name }} detail page">
                     <span class="p-2 mt-2 badge badge-light text-black border border-dark">All products</span>
                 </a>
                 {% for c in category_list %}
@@ -40,7 +40,7 @@
                     {% endif %}
                     </span>
                     <div class="dropdown ml-auto">
-                        <select id="sort-selector" class="custom-select custom-select-sm border border-{% if current_sorting != 'None_None' %}info{% else %}secondary{% endif %}">
+                        <select id="sort-selector" aria-label="Sort selector" class="custom-select custom-select-sm border border-{% if current_sorting != 'None_None' %}info{% else %}secondary{% endif %}" >
                             <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
                             <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
                             <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
@@ -56,14 +56,12 @@
                 <div class="row mt-2 mb-2">
                     {% for product in products %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                            <a href="{% url 'product_detail' product.slug %}">
+                            <a href="{% url 'product_detail' product.slug %}" aria-label="{{ product.name }} detail page">
                                 <div class="card h-100 border-1 shadow hover-color">
                                     {% if product.image %}
-                                        <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                        <img class="card-img-top img-fluid" src="{{ product.image.url|truncatechars: 12}}" alt="{{ product.name }}">
                                     {% else %}
-                                    <a href="{% url 'product_detail' product.slug %}">
-                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                                    </a>
+                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="No image">
                                     {% endif %}
                                     <div class="card-body pb-0">
                                         <p class="mb-0">{{ product.name }}</p>
@@ -153,7 +151,7 @@
         </div>    
     </main>
     <div class="btt-button shadow-sm border border-black">
-        <a class="btt-link d-flex h-100">
+        <a class="btt-link d-flex h-100" rel="nofollow">
             <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
         </a>	
     </div>

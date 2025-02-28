@@ -10,24 +10,17 @@
 | Log-in | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-plant-shop-e08318b823f1.herokuapp.com%2Faccounts%2Flogin%2F) | ![screenshot](documentation/vali-html-login.png) | No Error ||
 | Log-out | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fhealthy-food-c44b0f8f09a5.herokuapp.com%2Faccounts%2Flogout%2F) | ![screenshot](documentation/vali-html-logout.png) | No Error |
 | Products list | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-plant-shop-e08318b823f1.herokuapp.com%2Fproducts%2F) | ![screenshot](documentation/vali-html-products.png) | No Error |
-| Products detail | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-plant-shop-e08318b823f1.herokuapp.com%2Fproducts%2Fpachyveria-corvus) | ![screenshot]() | Error |
+| Products detail | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-plant-shop-e08318b823f1.herokuapp.com%2Fproducts%2Fpachyveria-corvus) | ![screenshot](documentation/vali-html-detail.png) | No Error |
 | FAQ | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-plant-shop-e08318b823f1.herokuapp.com%2Ffaq%2F%3Fcategory%3D1) | ![screenshot](documentation/vali-html-faq.png) | No Error |
-| Reviews | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-plant-shop-e08318b823f1.herokuapp.com%2Fproducts%2Freview%2F) | ![screenshot]() | Error |
-| About us | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-plant-shop-e08318b823f1.herokuapp.com%2Fabout%2F) | ![screenshot]() | Error |
+| Reviews | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-plant-shop-e08318b823f1.herokuapp.com%2Fproducts%2Freview%2F) | ![screenshot](documentation/vali-html-review.png) | No Error |
+| About us | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-plant-shop-e08318b823f1.herokuapp.com%2Fabout%2F) | ![screenshot](documentation/vali-html-about.png) | No Error |
 | Shopping bag | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-plant-shop-e08318b823f1.herokuapp.com%2Fbag%2F) | ![screenshot]() | Error |
 | Checkout | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-plant-shop-e08318b823f1.herokuapp.com%2Fcheckout%2F) | ![screenshot]() | Error |
 | Checkout success | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-plant-shop-e08318b823f1.herokuapp.com%2Fcheckout%2Fcheckout_success%2FA3CEB167CDEA4CAA8BC9A6F35FFB6440) | ![screenshot]() | No Error |
-| Profile | [W3C - Validated By Input](https://validator.w3.org/#validate_by_input) | ![screenshot]() | Error |
+| Profile | [W3C - Validated By Input](https://validator.w3.org/#validate_by_input) | ![screenshot](documentation/vali-html-profile.png) | Error |
 | Newsletter | [W3C - Validated By Input]() | ![screenshot](documentation/vali-html-newsletter.png) | No Error |
 | Privacy Policy | [W3C - Validated By Input](https://validator.w3.org/#validate_by_input) | ![screenshot]() | Error |
-
-
-| page | [W3C - Validated By Input](https://validator.w3.org/#validate_by_input) | ![screenshot]() | Error |
-| page | [W3C - Validated By Input](https://validator.w3.org/#validate_by_input) | ![screenshot]() | Error |
-| page | [W3C - Validated By Input](https://validator.w3.org/#validate_by_input) | ![screenshot]() | Error |
-| page | [W3C - Validated By Input](https://validator.w3.org/#validate_by_input) | ![screenshot]() | Error |
-| page | [W3C - Validated By Input](https://validator.w3.org/#validate_by_input) | ![screenshot]() | Error |
-| page | [W3C - Validated By Input](https://validator.w3.org/#validate_by_input) | ![screenshot]() | Error |
+--
 
 ### CSS
 | File | Jigsaw URL | Screenshot | Notes |
@@ -168,14 +161,19 @@ I've tested my deployed project on multiple devices.
 
 I've tested my deployed project using the Lighthouse Audit tool.
 
-### Mobile Testing
+### PC Testing
 | Page | Size | Screenshot | Notes |
 | --- | --- | --- | --- |
 | Home | Mobile | ![screenshot]() | warnings |
 | Product list | Mobile | ![screenshot]() | warnings |
 | Product detail | Mobile | ![screenshot]() | warnings |
 
-
+### Mobile Testing
+| Page | Size | Screenshot | Notes |
+| --- | --- | --- | --- |
+| Home | Mobile | ![screenshot]() | warnings |
+| Product list | Mobile | ![screenshot]() | warnings |
+| Product detail | Mobile | ![screenshot]() | warnings |
 
 ## User story Testing
 | Epic | User Story ID | AS A/AN | I WANT TO BE ABLE TO ... | SO THAT I CAN ... |
