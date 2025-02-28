@@ -398,6 +398,11 @@ input:checked + label.fa-star {
     width: 100%;
     max-width: 250px;
 }
+/* --------------------------------------------Privacy policy */
+#privacy-contents a {
+    color: var(--a-hover);
+}
+
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/  FAQ */
 .arrow-up {
