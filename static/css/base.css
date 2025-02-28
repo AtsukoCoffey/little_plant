@@ -113,6 +113,15 @@ h3 {
     font-weight: 800;
 }
 
+/* Change Bootstrap breadcrumbs */
+.breadcrumb {
+    background-color: var(--white);
+}
+.breadcrumb-item {
+    color: var(--dark-color);
+}
+
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -347,6 +356,7 @@ input:checked + label.fa-star {
 }
 
 .review-modal {
+    width: 95%;
     background-color: var(--light-orange);
     padding: 1rem;
     border-radius: 6px;
@@ -428,6 +438,9 @@ input:checked + label.fa-star {
         padding-top: 138px;
         padding-bottom: 3px;
     }
+    .review-modal {
+        width: 90%;
+    }
 }
 
 /* Screen size Medium (md) 769px (Bootstrap) */
@@ -443,6 +456,9 @@ input:checked + label.fa-star {
 
     .mobile {
         margin-right: 1.5rem;
+    }
+    .review-modal {
+        width: 80%;
     }
     
 }
@@ -472,6 +488,9 @@ input:checked + label.fa-star {
     #delivery-banner {
         padding-top: 135px;
     }
+    .review-modal {
+        width: 70%;
+    }
 
 }
 
@@ -487,6 +506,9 @@ input:checked + label.fa-star {
 
     #delivery-banner {
         padding-bottom: 4px;
+    }
+    .review-modal {
+        width: 50%;
     }
 
 }

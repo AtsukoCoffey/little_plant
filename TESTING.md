@@ -164,15 +164,15 @@ I've tested my deployed project using the Lighthouse Audit tool.
 ### PC Testing
 | Page | Size | Screenshot | Notes |
 | --- | --- | --- | --- |
-| Home | Mobile | ![screenshot]() | warnings |
-| Product list | Mobile | ![screenshot]() | warnings |
+| Home | Mobile | ![screenshot](documentation/vali-light-top-d.png) | warnings |
+| Product list | Mobile | ![screenshot](documentation/vali-light-products-d.png) | warnings |
 | Product detail | Mobile | ![screenshot]() | warnings |
 
 ### Mobile Testing
 | Page | Size | Screenshot | Notes |
 | --- | --- | --- | --- |
-| Home | Mobile | ![screenshot]() | warnings |
-| Product list | Mobile | ![screenshot]() | warnings |
+| Home | Mobile | ![screenshot](documentation/vali-light-top-m.png) | warnings |
+| Product list | Mobile | ![screenshot](documentation/vali-light-products-m.png) | warnings |
 | Product detail | Mobile | ![screenshot]() | warnings |
 
 ## Defensive Programming
@@ -181,17 +181,28 @@ Defensive programming was manually tested with the below user acceptance testing
 
 | Home Page | User Action | Expected Result | Pass/Fail | Comments |
 | --- | --- | --- | --- | --- |
-| Nav links | Click on Logo | Redirection to Home page | Pass | <ul><li>-[]</li></ul> |
-| | Click on Home Recipes link in navbar | Redirection to Home page | Pass | |
-| | Click on Posts link in navbar | Redirection to Posts page | Pass | |
-| | Hover on New link in navbar  | Display dropdown list | Pass | |
-| Authenticated user only | Click on Create Recipe - in dropdown list | Redirection to Create Recipe page | Pass | |
-| Authenticated user only | Click on Create Post - in dropdown list | Redirection to Create Post page | Pass | |
-| Not authenticated user only | Click on Create Recipe - in dropdown list | Redirection to Log-in page | Pass | |
-| Not authenticated user only | Click on Create Post - in dropdown list | Redirection to Log-in page | Pass | |
-| Not authenticated user only | Click on Sign-up link in navbar | Redirection to Sign-up page | Pass | |
-| Not authenticated user only | Click on Log-in link in navbar | Redirection to Log-in page | Pass | |
-| Authenticated user only | Click on Logout link in navbar | Redirection to Logout page | Pass | |  
+| Nav links | Click on Logo | Redirection to Home page | Pass | |
+| | Click on Profile icon in navbar  | Display dropdown list | Pass | |
+| | Click on Register | Redirection to Sign in page | Pass | |
+| | Click on Login | Redirection to Login page | Pass | |
+| | Click on Product management | Redirection to Product add page | Pass | |
+| | Click on My profile | Redirection to Profile page | Pass | |
+| | Click on Logout | Redirection to Logout page | Pass | |
+| | Click on Bag icon  | Redirection to shopping bag page | Pass | |
+| | Hover on links  | shows hover color | Pass | |
+| Authenticated user only | under the profile icon | User name is displayed under | Pass | |
+| | Click on SHOP PLANTS | Display dropdown list | Pass | |
+| | Click on All Products | Redirection to products page | Pass | |
+| | Click on each category name | Filtered products with each category | Pass | |
+| | Click on SPECIAL OFFER | Filtered with sale_price has valid price | Pass | |
+| | Click on FAQ | Display dropdown list | Pass | |
+| | Click on FAQ each category | Filtered FAQ with each category | Pass | |
+| | Click on REVIEWS  | Display dropdown list | Pass | |
+| | Click on REVIEWS All Products | Redirection to Review page | Pass | |
+| | Click on REVIEWS each category | Filtered with each category | Pass | |
+
+
+
 
 ## User story Testing
 | Epic | User Story ID | AS A/AN | I WANT TO BE ABLE TO ... | SO THAT I CAN ... |

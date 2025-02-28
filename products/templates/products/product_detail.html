@@ -43,7 +43,7 @@
             </div>
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="product-details-container mb-3 mt-md-5">
-                    <h4 class="mb-0">{{ product.name }}</h4>
+                    <h2 class="mb-0">{{ product.name }}</h2>
                     <p class="mb-1">{{ product.scientific_name }}</p>
                     {% if product.sale_price %}
                         <p class="lead mb-0 text-left font-weight-bold text-danger">€{{ product.sale_price }}<s class="small text-muted ml-2">€{{ product.price }}</s></p>
@@ -88,7 +88,7 @@
                                         <!-- Prepend quantity -->
                                         <div class="input-group-prepend">
                                             <button class="decrement-qty btn btn-black" 
-                                                data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
+                                                data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}" aria-label="decrement button">
                                                 <span class="icon">
                                                     <i class="fas fa-minus"></i>
                                                 </span>
@@ -97,11 +97,11 @@
                                         <input class="form-control qty_input" type="number"
                                             name="quantity" value="1" min="1" max="99"
                                             data-item_id="{{ product.id }}"
-                                            id="id_qty_{{ product.id }}">
+                                            id="id_qty_{{ product.id }}" aria-label="quantity">
                                         <!-- Append quantity -->
                                         <div class="input-group-append">
                                             <button class="increment-qty btn btn-black"
-                                                data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
+                                                data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}" aria-label="increment button">
                                                 <span class="icon">
                                                     <i class="fas fa-plus"></i>
                                                 </span>
@@ -131,16 +131,16 @@
     <article class="container-fluid">
         <div class="row">
             <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 mt-3 position-relative">
-                <h4 class="mb-0"><i class="fa-solid fa-comment-dots"></i> Reviews </h4>
+                <h3 class="mb-0"><i class="fa-solid fa-comment-dots"></i> Reviews </h3>
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-warning position-absolute" style="right: 0; top: 0;" data-target="#review-container" id="review-input-button" aria-label="button for review" title="button for review">
+                <button type="button" class="btn btn-warning position-absolute" style="right: 0; top: 25px;" data-target="#review-container" id="review-input-button" aria-label="button for review" title="button for review">
                     Contribute your review!<i class="fa-solid fa-magnifying-glass"></i>
                 </button>
                 <hr>                
                 <!-- Modal body -->
                 <div id="review-overlay">                        
                     <div class="container-fluid" id="review-container" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
-                        <div class="w-50 bg-light review-modal text-right p-5">
+                        <div class="bg-light review-modal text-right p-5">
                             <button type="button" class="review-btn-close ml-auto border-0" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                             <div class="text-left">
                                 <h4 id="reviewModalLabel"><i class="fa-solid fa-comment-dots"></i> Contribute your review!</h4><hr>
@@ -203,7 +203,7 @@
                     <div class="col-12 col-sm-6 col-lg-4 col-xl-3 py-3 px-3 align-items-stretch">
                         <div class="card h-100 shadow">
                             <div class="card-body"> 
-                                <a href="{% url 'product_detail' review.product.slug %}"><h5 class="card-title">{{ review.product|truncatechars:20 }} </h5></a>
+                                <a href="{% url 'product_detail' review.product.slug %}"><h4 class="card-title h5">{{ review.product|truncatechars:20 }} </h4></a>
                                 <span class="small">{{ review.created_on|date:"d b, Y" }}</span> 
                                 <p class="rating" title="Average rating value: {{ review.rating }}">
                                     <span class="fa fa-star {% if review.rating > 0 %} checked {% endif %}"></span>
