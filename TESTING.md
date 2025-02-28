@@ -164,16 +164,44 @@ I've tested my deployed project using the Lighthouse Audit tool.
 ### PC Testing
 | Page | Size | Screenshot | Notes |
 | --- | --- | --- | --- |
-| Home | Mobile | ![screenshot](documentation/vali-light-top-d.png) | warnings |
-| Product list | Mobile | ![screenshot](documentation/vali-light-products-d.png) | warnings |
-| Product detail | Mobile | ![screenshot]() | warnings |
+| Home | Desktop | ![screenshot](documentation/vali-light-top-d.png) |  |
+| Product list | Desktop | ![screenshot](documentation/vali-light-products-d.png) |  |
+| Product detail | Desktop | ![screenshot](documentation/vali-light-detail-d.png.png) |  |
+| FAQ | Desktop | ![screenshot](documentation/vali-light-faq-d.png) |  |
+| Reviews | Desktop | ![screenshot](documentation) |  |
+| About us | Desktop | ![screenshot](documentation/vali-light-about-d.png) |  |
+| Privacy policy | Desktop | ![screenshot](documentation/vali-light-) |  |
+| Profile | Desktop | ![screenshot](documentation/vali-light-profile-d.png) |  |
+| Profile success | Desktop | ![screenshot](documentation) |  |
+
+| Product add | Desktop | ![screenshot](documentation/va) |  |
+| Product edit | Desktop | ![screenshot](documentation) |  |
+| Shopping bag | Desktop | ![screenshot](documentation) |  |
+
+| Check out | Desktop | ![screenshot](documentation) |  |
+| Check out success | Desktop | ![screenshot](documentation) |  |
+
+* error details
+![Error](documentation/vali-light-error-link-no-crawl.png)  
+
+
 
 ### Mobile Testing
 | Page | Size | Screenshot | Notes |
 | --- | --- | --- | --- |
-| Home | Mobile | ![screenshot](documentation/vali-light-top-m.png) | warnings |
-| Product list | Mobile | ![screenshot](documentation/vali-light-products-m.png) | warnings |
-| Product detail | Mobile | ![screenshot]() | warnings |
+| Home | Mobile | ![screenshot](documentation/vali-light-top-m.png) |  |
+| Product list | Mobile | ![screenshot](documentation/vali-light-products-m.png) |  |
+| Product detail | Mobile | ![screenshot](documentation/vali-light-detail-m.png) |  |
+| FAQ | Mobile | ![screenshot](documentation) |  |
+| Reviews | Mobile | ![screenshot](documentation) |  |
+| About us | Mobile | ![screenshot](documentation) |  |
+| Privacy policy | Mobile | ![screenshot](documentation/vali-light-) |  |
+| Profile | Mobile | ![screenshot](documentation/vali-light-profile-m.png) |  |
+| Profile success | Mobile | ![screenshot](documentation) |  |
+
+| Product add | Mobile | ![screenshot](documentation/va) |  |
+| Product edit | Mobile | ![screenshot](documentation) |  |
+| Shopping bag | Mobile | ![screenshot](documentation) |  |
 
 ## Defensive Programming
 

@@ -290,6 +290,11 @@ input[name='q']::placeholder {
     border-color: #dc3545;
     border-radius: 0;
 }
+/* ----------------------------------------------------details page layour */
+
+image-container>a>img {
+    max-width: 400px;
+}
 
 /*---------------------------------------------------------- Star rating */
 /* Average rating */

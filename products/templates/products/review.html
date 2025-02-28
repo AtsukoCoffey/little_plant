@@ -34,7 +34,7 @@
                         <div class="card h-100 shadow">
                             <div class="card-body"> 
                                 <a href="{% url 'product_detail' review.product.slug %}">
-                                    <h5 class="card-title">{{ review.product|truncatechars:20 }} </h5>
+                                    <h4 class="card-title">{{ review.product|truncatechars:20 }} </h4>
                                 </a>
                                 <span class="small">{{ review.created_on|date:"d b, Y" }}</span> 
                                 <p class="rating" title="Average rating value: {{ review.rating }}">
