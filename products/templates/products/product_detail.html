@@ -36,7 +36,7 @@
                         </a>
                         {% else %}
                         <a href="">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.webp" alt="{{ product.name }}">
                         </a>
                     {% endif %}
                 </div>
@@ -218,9 +218,9 @@
                                 </div>
                                 <div class="mb-2">
                                     {% if review.image %}
-                                        <img class="card-img-top" src="{{ review.image.url }}" alt="{{ review.reviewer }}" width="100">
+                                        <img class="card-img-top" src="{{ review.image.url }}" alt="{{ review.reviewer }}">
                                     {% else %}
-                                        <img class="card-img-top" src="{{ MEDIA_URL }}placeholder.png" alt="{{ review.reviewer }}" width="96">
+                                        <img class="card-img-top" src="{{ MEDIA_URL }}placeholder.webp" alt="{{ review.reviewer }}">
                                     {% endif %}
                                 </div>
                                 {% if user.is_authenticated and request.user == review.reviewer %}

@@ -166,7 +166,7 @@ I've tested my deployed project using the Lighthouse Audit tool.
 | --- | --- | --- | --- |
 | Home | Desktop | ![screenshot](documentation/vali-light-top-d.png) |  |
 | Product list | Desktop | ![screenshot](documentation/vali-light-products-d.png) | SEO: Back to top link - Skip to content so not addressed [error1](#back-to-content) |
-| Product detail | Desktop | ![screenshot](documentation/vali-light-detail-d.png.png) |  |
+| Product detail | Desktop | ![screenshot](documentation/vali-light-detail-d.png) |  |
 | FAQ | Desktop | ![screenshot](documentation/vali-light-faq-d.png) |  |
 | Reviews | Desktop | ![screenshot](documentation) |  |
 | About us | Desktop | ![screenshot](documentation/vali-light-about-d.png) |  |
