@@ -348,7 +348,7 @@ input:checked + label.fa-star {
 /* --------------------------------- reviews layout */
 #review-input-button {
     position:absolute;
-    right: 0;
+    right: 15px;
     top: 25px;
 }
 .review-card {

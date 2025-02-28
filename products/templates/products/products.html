@@ -95,12 +95,10 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="card-footer pt-1 border-0 text-left rounded">
+                                <div class="card-footer pt-3 d-flex justify-content-around">
                                     {% if request.user.is_superuser %}
-                                        <div class="w-100 d-flex justify-content-center">
-                                            <a class="btn btn-edit btn-b-success mx-2" href="{% url 'edit_product' product.id %}">Edit</a>
-                                            <a class="btn btn-delete btn-b-danger mx-2" data-product-id="{{ product.id }}" href="#">Delete</a>
-                                        </div>
+                                        <a class="btn btn-edit btn-b-success" href="{% url 'edit_product' product.id %}">Edit</a>
+                                        <a class="btn btn-delete btn-b-danger" data-product-id="{{ product.id }}" href="#">Delete</a>
                                     {% endif %}
                                 </div>
                             </div>

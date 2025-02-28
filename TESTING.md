@@ -161,7 +161,7 @@ I've tested my deployed project on multiple devices.
 
 I've tested my deployed project using the Lighthouse Audit tool.
 
-### PC Testing
+### Desktop
 | Page | Size | Screenshot | Notes |
 | --- | --- | --- | --- |
 | Home | Desktop | ![screenshot](documentation/vali-light-top-d.png) |  |
@@ -183,13 +183,7 @@ I've tested my deployed project using the Lighthouse Audit tool.
 | Check out | Desktop | ![screenshot](documentation) |  |
 | Check out success | Desktop | ![screenshot](documentation) |  |
 
-<a id="back-to-content"></a>
-* error details
-![Error](documentation/vali-light-error-link-no-crawl.png)  
-
-
-
-### Mobile Testing
+### Mobile  
 | Page | Size | Screenshot | Notes |
 | --- | --- | --- | --- |
 | Home | Mobile | ![screenshot](documentation/vali-light-top-m.png) |  |
