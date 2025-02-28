@@ -165,14 +165,14 @@ I've tested my deployed project using the Lighthouse Audit tool.
 | Page | Size | Screenshot | Notes |
 | --- | --- | --- | --- |
 | Home | Desktop | ![screenshot](documentation/vali-light-top-d.png) |  |
-| Product list | Desktop | ![screenshot](documentation/vali-light-products-d.png) |  |
+| Product list | Desktop | ![screenshot](documentation/vali-light-products-d.png) | SEO: Back to top link - Skip to content so not addressed [error1](#back-to-content) |
 | Product detail | Desktop | ![screenshot](documentation/vali-light-detail-d.png.png) |  |
 | FAQ | Desktop | ![screenshot](documentation/vali-light-faq-d.png) |  |
 | Reviews | Desktop | ![screenshot](documentation) |  |
 | About us | Desktop | ![screenshot](documentation/vali-light-about-d.png) |  |
 | Privacy policy | Desktop | ![screenshot](documentation/vali-light-) |  |
 | Profile | Desktop | ![screenshot](documentation/vali-light-profile-d.png) |  |
-| Profile success | Desktop | ![screenshot](documentation) |  |
+| Profile success | Desktop | ![screenshot](documentation/vali-light-profile-suc-d.png) |  |
 
 | Product add | Desktop | ![screenshot](documentation/va) |  |
 | Product edit | Desktop | ![screenshot](documentation) |  |
@@ -181,6 +181,7 @@ I've tested my deployed project using the Lighthouse Audit tool.
 | Check out | Desktop | ![screenshot](documentation) |  |
 | Check out success | Desktop | ![screenshot](documentation) |  |
 
+<a id="back-to-content"></a>
 * error details
 ![Error](documentation/vali-light-error-link-no-crawl.png)  
 
@@ -197,7 +198,7 @@ I've tested my deployed project using the Lighthouse Audit tool.
 | About us | Mobile | ![screenshot](documentation) |  |
 | Privacy policy | Mobile | ![screenshot](documentation/vali-light-) |  |
 | Profile | Mobile | ![screenshot](documentation/vali-light-profile-m.png) |  |
-| Profile success | Mobile | ![screenshot](documentation) |  |
+| Profile success | Mobile | ![screenshot](documentation/vali-light-profile-suc-m.png) |  |
 
 | Product add | Mobile | ![screenshot](documentation/va) |  |
 | Product edit | Mobile | ![screenshot](documentation) |  |

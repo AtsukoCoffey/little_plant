@@ -44,7 +44,7 @@ select option {
 }
 select:invalid,
 select option[value=""] {
-    color: rgba(205, 214, 175, 0.7) !important;
+    color: 737862 !important;
 }
 
 #loading-overlay {
