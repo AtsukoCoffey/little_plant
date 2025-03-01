@@ -26,6 +26,9 @@
 | File | Jigsaw URL | Screenshot | Notes |
 | --- | --- | --- | --- |
 | style.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Flittle-plant-shop.s3.eu-west-1.amazonaws.com%2Fstatic%2Fcss%2Fbase.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![screenshot]() |  |
+| checkout.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Flittle-plant-shop.s3.eu-west-1.amazonaws.com%2Fstatic%2Fcheckout%2Fcss%2Fcheckout.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![screenshot]() | Error |
+| faq-style.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Flittle-plant-shop.s3.eu-west-1.amazonaws.com%2Fstatic%2Ffaq%2Fcss%2Ffaq-style.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![screenshot]() |  |
+| profile.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Flittle-plant-shop.s3.eu-west-1.amazonaws.com%2Fstatic%2Fprofiles%2Fcss%2Fprofile.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![screenshot]() |  |
 
 ### JavaScript
 | File | Screenshot | Notes |
@@ -43,6 +46,7 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 | asgi.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-config-asgi.png) | No Error |
 | settings.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-config-settings.png) | No Error |
 | urls.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-config-urls.png) | No Error |
+| views.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-config-views.png) | No Error |  
 | wsgi.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-config-wsgi.png) | No Error |  
 
 **About us App**  
@@ -58,78 +62,76 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 **Bag App**  
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- |  
-| apps.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-bag-apps.png) | Error |
-| contexts.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-bag-contexts.png) | Error |
-| urls.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-bag-urls.png) | Error |
-| views.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-bag-views.png) | Error |
-| templatetags/bag_tools.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-bag-tag-tools.png) | Error |
+| apps.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-bag-apps.png) | No Error |
+| contexts.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-bag-contexts.png) | No Error |
+| urls.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-bag-urls.png) | No Error |
+| views.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-bag-views.png) | No Error |
+| templatetags/bag_tools.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-bag-tag-tools.png) | No Error |
 
 
 **Checkout App**  
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| admin.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-checkout-admin.png) | Error |
-| apps.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-checkout-apps.png) | Error |
-| forms.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-checkout-forms.png) | Error |
-| models.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-checkout-models.png) | Error |
-| signals.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-checkout-signals.png) | Error |
-| urls.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-checkout-urls.png) | Error |
-| views.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-checkout-views.png) | Error |
-| webhook_handler.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-checkout-wh-handler.png) | Error |
-| webhooks.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-checkout-wh.png) | Error |
+| admin.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-checkout-admin.png) | No Error |
+| apps.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-checkout-apps.png) | No Error |
+| forms.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-checkout-forms.png) | No Error |
+| models.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-checkout-models.png) | No Error |
+| signals.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-checkout-signals.png) | No Error |
+| urls.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-checkout-urls.png) | No Error |
+| views.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-checkout-views.png) | No Error |
+| webhook_handler.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-checkout-wh-handler.png) | No Error |
+| webhooks.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-checkout-wh.png) | No Error |
 
 **FAQ App**  
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- |  
-| admin.py | [PEP8 CI] | ![screenshot]() | Error |
-| apps.py | [PEP8 CI] | ![screenshot]() | Error |
-| models.py | [PEP8 CI] | ![screenshot]() | Error |
-| urls.py | [PEP8 CI] | ![screenshot]() | Error |
-| views.py | [PEP8 CI] | ![screenshot]() | Error |
+| admin.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-faq-admin.png) | No Error |
+| apps.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-faq-apps.png) | No Error |
+| models.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-faq-models.png) | No Error |
+| urls.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-faq-urls.png) | No Error |
+| views.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-faq-views.png) | No Error |
 
 **Home App**  
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- |  
-| admin.py | [PEP8 CI] | ![screenshot]() | Error |
-| apps.py | [PEP8 CI] | ![screenshot]() | Error |
-| models.py | [PEP8 CI] | ![screenshot]() | Error |
-| urls.py | [PEP8 CI] | ![screenshot]() | Error |
-| views.py | [PEP8 CI] | ![screenshot]() | Error |
+| apps.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-home-apps.png) | No Error |
+| urls.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-home-urls.png) | No Error |
+| views.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-home-views.png) | No Error |
 
 **Newsletter App**  
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- |  
-| admin.py | [PEP8 CI] | ![screenshot]() | Error |
-| apps.py | [PEP8 CI] | ![screenshot]() | Error |
-| forms.py | [PEP8 CI] | ![screenshot]() | Error |
-| models.py | [PEP8 CI] | ![screenshot]() | Error |
-| urls.py | [PEP8 CI] | ![screenshot]() | Error |
-| views.py | [PEP8 CI] | ![screenshot]() | Error |
+| admin.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-news-admin.png) | No Error |
+| apps.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-news-apps.png) | No Error |
+| forms.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-news-forms.png) | No Error |
+| models.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-news-models.png) | No Error |
+| urls.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-news-urls.png) | No Error |
+| views.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-news-views.png) | No Error |
 
 **Products App**  
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- |  
-| admin.py | [PEP8 CI] | ![screenshot]() | Error |
-| apps.py | [PEP8 CI] | ![screenshot]() | Error |
-| forms.py | [PEP8 CI] | ![screenshot]() | Error |
-| models.py | [PEP8 CI] | ![screenshot]() | Error |
-| urls.py | [PEP8 CI] | ![screenshot]() | Error |
-| views.py | [PEP8 CI] | ![screenshot]() | Error |
-| widgets.py | [PEP8 CI] | ![screenshot]() | Error |  
+| admin.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-prod-admin.png) | No Error |
+| apps.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-prod-apps.png) | No Error |
+| forms.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-prod-forms.png) | No Error |
+| models.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-prod-models.png) | No Error |
+| urls.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-prod-urls.png) | No Error |
+| views.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-prod-views.png) | No Error |
+| widgets.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-prod-widgets.png) | No Error |  
 
 **Profile App**  
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- |  
-| admin.py | [PEP8 CI] | ![screenshot]() | Error |
-| apps.py | [PEP8 CI] | ![screenshot]() | Error |
-| forms.py | [PEP8 CI] | ![screenshot]() | Error |
-| models.py | [PEP8 CI] | ![screenshot]() | Error |
-| urls.py | [PEP8 CI] | ![screenshot]() | Error |
-| views.py | [PEP8 CI] | ![screenshot]() | Error |
+| admin.py | [PEP8 CI] | ![screenshot]() | No Error |
+| apps.py | [PEP8 CI] | ![screenshot]() | No Error |
+| forms.py | [PEP8 CI] | ![screenshot]() | No Error |
+| models.py | [PEP8 CI] | ![screenshot]() | No Error |
+| urls.py | [PEP8 CI] | ![screenshot]() | No Error |
+| views.py | [PEP8 CI] | ![screenshot]() | No Error |
 
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- | 
-| custom_storages.py | [PEP8 CI] | ![screenshot]() | Error |
+| custom_storages.py | [PEP8 CI] | ![screenshot]() | No Error |
 
 
 ## Browser Compatibility
@@ -138,11 +140,11 @@ I've tested my deployed project on multiple browsers.
 
 | Browser | Screenshot | Notes |
 | --- | --- | --- |
-| Chrome | ![screenshot]() | Errors |
-| Firefox | ![screenshot]() | Errors |
-| Edge | ![screenshot]() | Errors |
-| Safari | ![screenshot]() | Errors |
-| Opera | ![screenshot]() | Errors |  
+| Chrome | ![screenshot]() | No Errors |
+| Firefox | ![screenshot]() | No Errors |
+| Edge | ![screenshot]() | No Errors |
+| Safari | ![screenshot]() | No Errors |
+| Opera | ![screenshot]() | No Errors |  
 
 ## Responsiveness
 
@@ -150,11 +152,11 @@ I've tested my deployed project on multiple devices.
 
 | Device | Screenshot | Notes |
 | --- | --- | --- |
-| Mobile | ![screenshot]() | Errors | 
-| Tablet (DevTools) | ![screenshot]() | Errors | 
-| Laptop 16" | ![screenshot]() | Errors | 
-| Desktop 21.5" | ![screenshot]() | Errors | 
-| 4K Monitor 40" | ![screenshot]() | Errors |   
+| Mobile | ![screenshot]() | No Errors | 
+| Tablet (DevTools) | ![screenshot]() | No Errors | 
+| Laptop 16" | ![screenshot]() | No Errors | 
+| Desktop 21.5" | ![screenshot]() | No Errors | 
+| 4K Monitor 40" | ![screenshot]() | No Errors |   
 
 
 ## Lighthouse Audit
