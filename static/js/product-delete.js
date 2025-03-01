@@ -1,8 +1,10 @@
 /**
- * Admin Product & Site user Review - deletion function
- */
-// Delete functions - Open Delete modal and submit
-// Identify the data for products or for reviews
+ * Deletion function
+ * This is used for Admin's product delete & users review delete function
+ * 1. Identify the data for products or for reviews
+ * 2. Open Delete modal
+ * 3. Submit - delete
+ */ 
 const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
 const deleteButtons = document.getElementsByClassName("btn-delete");
 const deleteConfirm = document.getElementById("deleteConfirm");

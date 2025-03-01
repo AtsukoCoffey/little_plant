@@ -22,8 +22,8 @@
 | Checkout success | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-plant-shop-e08318b823f1.herokuapp.com%2Fcheckout%2Fcheckout_success%2FA3CEB167CDEA4CAA8BC9A6F35FFB6440) | ![screenshot](documentation/vali-html-checkout-suc.png) | No Error |
 | Profile | [W3C - Validated By Input](https://validator.w3.org/#validate_by_input) | ![screenshot](documentation/vali-html-profile.png) | No Error |
 | Profile success | [W3C - Validated By Input](https://validator.w3.org/#validate_by_input) | ![screenshot](documentation/vali-html-profile-suc.png) | No Error |
-| Products add | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-plant-shop-e08318b823f1.herokuapp.com%2Fabout%2Fprivacy-policy) | ![screenshot](documentation/vali-html-privacy.png) | No Error |
-| Products edit | [W3C]() |  | No Error |
+| Products add | [W3C - Validated By Input](https://validator.w3.org/#validate_by_input) | ![screenshot](documentation/vali-html-product-add.png) | No Error |
+| Products edit | [W3C - Validated By Input](https://validator.w3.org/#validate_by_input) | ![screenshot](documentation/vali-html-product-edit.png) | No Error |
 | Newsletter | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-plant-shop-e08318b823f1.herokuapp.com%2Fnewsletter%2F) | ![screenshot](documentation/vali-html-newsletter.png) | No Error |
 | Confirm email | [W3C - Validated By Input]() | ![screenshot](documentation/vali-html-confirm-email.png) | No Error |
 --
@@ -31,7 +31,7 @@
 ### CSS
 | File | Jigsaw URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| style.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Flittle-plant-shop.s3.eu-west-1.amazonaws.com%2Fstatic%2Fcss%2Fbase.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![screenshot](documentation/vali-css-base.png) | No Error |
+| base.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Flittle-plant-shop.s3.eu-west-1.amazonaws.com%2Fstatic%2Fcss%2Fbase.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![screenshot](documentation/vali-css-base.png) | No Error |
 | checkout.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Flittle-plant-shop.s3.eu-west-1.amazonaws.com%2Fstatic%2Fcheckout%2Fcss%2Fcheckout.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![screenshot](documentation/vali-css-checkout.png) | No Error |
 | faq-style.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Flittle-plant-shop.s3.eu-west-1.amazonaws.com%2Fstatic%2Ffaq%2Fcss%2Ffaq-style.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![screenshot](documentation/vali-css-faq-style.png) |  |
 | profile.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Flittle-plant-shop.s3.eu-west-1.amazonaws.com%2Fstatic%2Fprofiles%2Fcss%2Fprofile.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![screenshot](documentation/vali-css-profile.png) |  |
@@ -39,9 +39,11 @@
 ### JavaScript
 | File | Screenshot | Notes |
 | --- | --- | --- |
-| static/product-functions.js | ![screenshot](documentation/vali-jshint-root-js.png) | --- |
+| static/js/product-delete.js | ![screenshot](documentation/vali-jshint-static-product-delete.png) | --- |
+| static/js/product-reviews-create-edit.js | ![screenshot](documentation/vali-jshint-static-product-review.png) | --- |
 | checkout/stripe_elements.js | ![screenshot](documentation/vali-jshint-checkout-stripe.png) | --- |
 | faq/accordion.js | ![screenshot](documentation/vali-jshint-accordion.png) | --- |
+| profile/country.js | ![screenshot](documentation/vali-jshint-profile-country.png) | --- |
 | --- | --- | --- |
 
 ### Python
@@ -129,16 +131,15 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 **Profile App**  
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- |  
-| admin.py | [PEP8 CI] | ![screenshot]() | No Error |
-| apps.py | [PEP8 CI] | ![screenshot]() | No Error |
-| forms.py | [PEP8 CI] | ![screenshot]() | No Error |
-| models.py | [PEP8 CI] | ![screenshot]() | No Error |
-| urls.py | [PEP8 CI] | ![screenshot]() | No Error |
-| views.py | [PEP8 CI] | ![screenshot]() | No Error |
+| apps.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-profiles-apps.png) | No Error |
+| forms.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-profiles-forms.png) | No Error |
+| models.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-profiles-models.png) | No Error |
+| urls.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-profiles-urls.png) | No Error |
+| views.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-profiles-views.png) | No Error |
 
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- | 
-| custom_storages.py | [PEP8 CI] | ![screenshot]() | No Error |
+| custom_storages.py | [PEP8 CI] | ![screenshot](documentation/vali-pep8-customstorage.png) | No Error |
 
 
 ## Browser Compatibility
