@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path, include
-from .views import handler404
+from .views import handler404, handler400, handler403, handler500
 
 
 urlpatterns = [
@@ -35,3 +35,6 @@ urlpatterns = [
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler404 = 'config.views.handler404'
+handler400 = 'config.views.handler400'
+handler403 = 'config.views.handler403'
+handler500 = 'config.views.handler500'

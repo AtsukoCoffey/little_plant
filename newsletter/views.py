@@ -45,6 +45,8 @@ def NewsLetterCreateView(request):
             })
         except UserProfile.DoesNotExist:
             form = NewsLetterForm()
+    else:
+        form = NewsLetterForm()
 
     # User submit POSt
     if request.method == 'POST':
