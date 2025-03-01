@@ -165,12 +165,12 @@ I've tested my deployed project using the Lighthouse Audit tool.
 | Page | Size | Screenshot | Notes |
 | --- | --- | --- | --- |
 | Home | Desktop | ![screenshot](documentation/vali-light-top-d.png) |  |
-| Product list | Desktop | ![screenshot](documentation/vali-light-products-d.png) | SEO: Back to top link - Skip to content so not addressed [error1](#back-to-content) |
+| Product list | Desktop | ![screenshot](documentation/vali-light-products-d.png) |  |
 | Product detail | Desktop | ![screenshot](documentation/vali-light-detail-d.png) |  |
 | FAQ | Desktop | ![screenshot](documentation/vali-light-faq-d.png) |  |
-| Reviews | Desktop | ![screenshot](documentation) |  |
+| Reviews | Desktop | ![screenshot](documentation/vali-light-review-d.png) |  |
 | About us | Desktop | ![screenshot](documentation/vali-light-about-d.png) |  |
-| Privacy policy | Desktop | ![screenshot](documentation/vali-light-) |  |
+| Privacy policy | Desktop | ![screenshot](documentation/vali-light-privacy-d.png) |  |
 | Profile | Desktop | ![screenshot](documentation/vali-light-profile-d.png) |  |
 | Profile success | Desktop | ![screenshot](documentation/vali-light-profile-suc-d.png) |  |
 | Shopping bag | Desktop | ![screenshot](documentation) |  |
@@ -190,9 +190,9 @@ I've tested my deployed project using the Lighthouse Audit tool.
 | Product list | Mobile | ![screenshot](documentation/vali-light-products-m.png) |  |
 | Product detail | Mobile | ![screenshot](documentation/vali-light-detail-m.png) |  |
 | FAQ | Mobile | ![screenshot](documentation/vali-light-faq-m.png) |  |
-| Reviews | Mobile | ![screenshot](documentation) |  |
+| Reviews | Mobile | ![screenshot](documentation/vali-light-review-m.png) |  |
 | About us | Mobile | ![screenshot](documentation/vali-light-about-m.png) |  |
-| Privacy policy | Mobile | ![screenshot](documentation/vali-l) |  |
+| Privacy policy | Mobile | ![screenshot](documentation/vali-light-privacy-m.png) |  |
 | Profile | Mobile | ![screenshot](documentation/vali-light-profile-m.png) |  |
 | Profile success | Mobile | ![screenshot](documentation/vali-light-profile-suc-m.png) |  |
 | Shopping bag | Mobile | ![screenshot](documentation) |  |

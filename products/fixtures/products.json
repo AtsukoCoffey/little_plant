@@ -1,92 +1,182 @@
 [
-    {
-       "pk":1,
-       "model":"products.plantitem",
-       "fields":{
-          "name":"Echeveria lilacina",
-          "scientific_name":"Echeveria lila china",
-          "slug":"echeveria-lilacina",
-          "category":1,
-          "description":"Echeveria lilacina is has bluish grey upwardly curving, spoon-shaped leaves which have a lilac tinge in full sun. This rosette forming succulent",
-          "image_url":"https://www.gardens4you.ie/media/amasty/webp/catalog/product/cache/3a7af0a8e0e317723249dc9098669163/f/d/fd17902wh_jpg.webp",
-          "image":"products/succulent-echeveria-lilacina.webp",
-          "price":5.20,
-          "sale_price":0
-       }
-    },
-    {
-       "pk":2,
-       "model":"products.plantitem",
-       "fields":{
-          "name":"Tillandsia Stricta 'Green' Hybrid Air Plant - Collector's Variety",
-          "scientific_name":"Tillandsia stricta",
-          "slug":"tillandsia-stricta-green-hybrid-air-plant-col",
-          "category":2,
-          "description":"Stricta Hybrid have bright green, silvery, or deep purple leaves. These leaves are stiff that will cascade down from a stacked center. They make a great gift but order one for yourself as well so you won/'t be jealous of your friend",
-          "image_url":"https://airplantshop.com/cdn/shop/files/tillandsia_strict_green_bloom_air_plants-min.jpg?v=1722970581&width=1800",
-          "image":"products/air-tillandsia_strict_green.webp",
-          "price":11.95,
-          "sale_price":9.90
-       }
-    },
-    {
-        "pk":3,
-        "model":"products.plantitem",
-        "fields":{
-           "name":"Tillandsia Palacea X Tectorum 'Sweet Isabel' Air Plant Clump",
-           "scientific_name":"Tillandsia paleacea",
-           "slug":"tillandsia-palacea-x-tectorum-sweet-isabel-ai",
-           "category":2,
-           "description":"Tillandsia Palacea X Tectorum 'Sweet Isabel' is a vigorous clumping plant with gray-green leaves. When in bloom, purple blossoms will appear in every direction to put on a spectacular show. Divide your plants as they mature, our continue to let them make a clump and you will have a specimen plant in no time.",
-           "image_url":"https://airplantshop.com/collections/shop-air-plants/products/tillandsia-sweet-isabel",
-           "image":"products/air-tillandsia_paleacea-sweet-isabel.webp",
-           "price":36.05,
-           "sale_price":0
-        }
-     },
-     {
-        "pk":4,
-        "model":"products.plantitem",
-        "fields":{
-           "name":"Pachyveria corvus",
-           "scientific_name":"Pachyveria corvus",
-           "slug":"pachyveria-corvus",
-           "category":1,
-           "description":"Pachyveria corvus is an attractive succulent with thick fleshy light green cylindrical shaped leaves flushed with purple tips. It produces red buds which open to a yellow flower. Pachyveria plants are a hybrid cross between Pachyphytum and Echeveria. Easily propagated by dropping leaves, which then sprout new plants. A plant that just keeps on giving.",
-           "image_url":"https://www.gardens4you.ie/media/amasty/webp/catalog/product/cache/3a7af0a8e0e317723249dc9098669163/f/d/fd17920wh_jpg.webp",
-           "image":"products/succulent-pachyveria-corvus.webp",
-           "price":5.95,
-           "sale_price":3.90
-        }
-     },
-     {
-        "pk":5,
-        "model":"products.plantitem",
-        "fields":{
-           "name":"Ficus benjamina Twilight",
-           "scientific_name":"Ficus benjamina Twilight",
-           "slug":"ficus-benjamina-twilight",
-           "category":3,
-           "description":"icus benjamina Twilight also known as the &apos;Weeping Fig&apos; is one of the most popular house trees available. Prized for its glossy variegated foliage, this beautiful ornamental tree is very adaptable in terms of light; soil and weather growing with minimal care both indoors and out in warm climates. As an added bonus it filters toxins, purifying the air.",
-           "image_url":"https://www.gardens4you.ie/media/amasty/webp/catalog/product/cache/3a7af0a8e0e317723249dc9098669163/f/d/fd16239wh_jpg.webp",
-           "image":"products/ficus-benjamina-twilight.webp",
-           "price":5.20,
-           "sale_price":3.90
-        }
-     },
-     {
-        "pk":6,
-        "model":"products.plantitem",
-        "fields":{
-           "name":"Ficus elastica Rubber Plant Abijan",
-           "scientific_name":"Ficus Elastica Abidjan",
-           "slug":"ficus-elastica-abidjan",
-           "category":3,
-           "description":"Ficus elastica is also known as the Rubber Plant. Prized for its luscious foliage, this beautiful ornamental houseplant is very easy to grow. &apos;Abidjan&apos; has dark green leaves with a hint of burgundy. As an added bonus, this is one of the most effective plants for filtering the air.",
-           "image_url":"https://www.gardens4you.ie/media/amasty/webp/catalog/product/cache/3a7af0a8e0e317723249dc9098669163/f/d/fd19274-1-wh_jpg.webp",
-           "image":"products/ficus-elastica-abidjan.webp",
-           "price":14.95,
-           "sale_price":0
-        }
-     }
+   {
+      "pk":1,
+      "model":"products.plantitem",
+      "fields":{
+         "name":"Echeveria lilacina",
+         "scientific_name":"Echeveria lila china",
+         "slug":"echeveria-lilacina",
+         "category":1,
+         "description":"Echeveria lilacina is has bluish grey upwardly curving, spoon-shaped leaves which have a lilac tinge in full sun. This rosette forming succulent",
+         "image_url":"https://www.gardens4you.ie/media/amasty/webp/catalog/product/cache/3a7af0a8e0e317723249dc9098669163/f/d/fd17902wh_jpg.webp",
+         "image":"products/succulent-echeveria-lilacina.webp",
+         "price":5.20,
+         "sale_price":0
+      }
+   },
+   {
+      "pk":2,
+      "model":"products.plantitem",
+      "fields":{
+         "name":"Tillandsia Stricta 'Green' Hybrid Air Plant - Collector's Variety",
+         "scientific_name":"Tillandsia stricta",
+         "slug":"tillandsia-stricta-green-hybrid-air-plant-col",
+         "category":2,
+         "description":"Stricta Hybrid have bright green, silvery, or deep purple leaves. These leaves are stiff that will cascade down from a stacked center. They make a great gift but order one for yourself as well so you won/'t be jealous of your friend",
+         "image_url":"https://airplantshop.com/cdn/shop/files/tillandsia_strict_green_bloom_air_plants-min.jpg?v=1722970581&width=1800",
+         "image":"products/air-tillandsia_strict_green.webp",
+         "price":11.95,
+         "sale_price":9.90
+      }
+   },
+   {
+      "pk":3,
+      "model":"products.plantitem",
+      "fields":{
+         "name":"Tillandsia Palacea X Tectorum 'Sweet Isabel' Air Plant Clump",
+         "scientific_name":"Tillandsia paleacea",
+         "slug":"tillandsia-palacea-x-tectorum-sweet-isabel-ai",
+         "category":2,
+         "description":"Tillandsia Palacea X Tectorum 'Sweet Isabel' is a vigorous clumping plant with gray-green leaves. When in bloom, purple blossoms will appear in every direction to put on a spectacular show. Divide your plants as they mature, our continue to let them make a clump and you will have a specimen plant in no time.",
+         "image_url":"https://airplantshop.com/collections/shop-air-plants/products/tillandsia-sweet-isabel",
+         "image":"products/air-tillandsia_paleacea-sweet-isabel.webp",
+         "price":36.05,
+         "sale_price":0
+      }
+   },
+   {
+      "pk":4,
+      "model":"products.plantitem",
+      "fields":{
+         "name":"Pachyveria corvus",
+         "scientific_name":"Pachyveria corvus",
+         "slug":"pachyveria-corvus",
+         "category":1,
+         "description":"Pachyveria corvus is an attractive succulent with thick fleshy light green cylindrical shaped leaves flushed with purple tips. It produces red buds which open to a yellow flower. Pachyveria plants are a hybrid cross between Pachyphytum and Echeveria. Easily propagated by dropping leaves, which then sprout new plants. A plant that just keeps on giving.",
+         "image_url":"https://www.gardens4you.ie/media/amasty/webp/catalog/product/cache/3a7af0a8e0e317723249dc9098669163/f/d/fd17920wh_jpg.webp",
+         "image":"products/succulent-pachyveria-corvus.webp",
+         "price":5.95,
+         "sale_price":3.90
+      }
+   },
+   {
+      "pk":5,
+      "model":"products.plantitem",
+      "fields":{
+         "name":"Ficus benjamina Twilight",
+         "scientific_name":"Ficus benjamina Twilight",
+         "slug":"ficus-benjamina-twilight",
+         "category":3,
+         "description":"icus benjamina Twilight also known as the &apos;Weeping Fig&apos; is one of the most popular house trees available. Prized for its glossy variegated foliage, this beautiful ornamental tree is very adaptable in terms of light; soil and weather growing with minimal care both indoors and out in warm climates. As an added bonus it filters toxins, purifying the air.",
+         "image_url":"https://www.gardens4you.ie/media/amasty/webp/catalog/product/cache/3a7af0a8e0e317723249dc9098669163/f/d/fd16239wh_jpg.webp",
+         "image":"products/ficus-benjamina-twilight.webp",
+         "price":5.20,
+         "sale_price":3.90
+      }
+   },
+   {
+      "pk":6,
+      "model":"products.plantitem",
+      "fields":{
+         "name":"Ficus elastica Rubber Plant Abijan",
+         "scientific_name":"Ficus Elastica Abidjan",
+         "slug":"ficus-elastica-abidjan",
+         "category":3,
+         "description":"Ficus elastica is also known as the Rubber Plant. Prized for its luscious foliage, this beautiful ornamental houseplant is very easy to grow. &apos;Abidjan&apos; has dark green leaves with a hint of burgundy. As an added bonus, this is one of the most effective plants for filtering the air.",
+         "image_url":"https://www.gardens4you.ie/media/amasty/webp/catalog/product/cache/3a7af0a8e0e317723249dc9098669163/f/d/fd19274-1-wh_jpg.webp",
+         "image":"products/ficus-elastica-abidjan.webp",
+         "price":14.95,
+         "sale_price":0
+      }
+   },
+   {
+      "pk":7,
+      "model":"products.plantitem",
+      "fields":{
+         "name":"Dieffenbachia Camilla 9 cm",
+         "scientific_name":"Dieffenbachia Camilla",
+         "slug":"",
+         "category":3,
+         "description":"Dieffenbachia, commonly known as Dumbcane, is a wonderful tropical edition to your home. The striking leaves have a beautiful mix of green, white and yellow colours. It's a good airpurifying plant An easy care plant for home and office.",
+         "image_url":"https://www.gardens4you.ie/media/amasty/webp/catalog/product/cache/3a7af0a8e0e317723249dc9098669163/f/d/fd23165-1-wh_jpg.webp",
+         "image":"",
+         "price":3.95,
+         "sale_price":0
+      }
+   },
+   {
+      "pk":8,
+      "model":"products.plantitem",
+      "fields":{
+         "name":"Ctenanthe Amagris",
+         "scientific_name":"Ctenanthe Amagris",
+         "slug":"",
+         "category":3,
+         "description":"The bottom of the Ctenanthe Amagris has silvery green leaves and a purple color. Ctenanthe Amagris is related to the Calathea, Ctenanthe Amagris pulls up its leaves in the evening, during the day it lowers its leaves again.",
+         "image_url":"https://www.gardens4you.ie/media/amasty/webp/catalog/product/cache/3a7af0a8e0e317723249dc9098669163/f/d/fd23490wh_jpg.webp",
+         "image":"",
+         "price":9.95,
+         "sale_price":8.15
+      }
+   },
+   {
+      "pk":9,
+      "model":"products.plantitem",
+      "fields":{
+         "name":"Aloe Humilis",
+         "scientific_name":"Aloe Humilis",
+         "slug":"",
+         "category":1,
+         "description":"Aloe Humilis makes a great low maintenance houseplant!",
+         "image_url":"https://www.gardens4you.ie/media/amasty/webp/catalog/product/cache/3a7af0a8e0e317723249dc9098669163/f/d/fd22684wh_jpg.webp",
+         "image":"",
+         "price":6.20,
+         "sale_price":0
+      }
+   },
+   {
+      "pk":10,
+      "model":"products.plantitem",
+      "fields":{
+         "name":"Echeveria Pearl van Neurenberg",
+         "scientific_name":"Echeveria gibbiflora 'Metallica')",
+         "slug":"",
+         "category":1,
+         "description":"Echeveria Pearl van Neurenberg is a striking succulent with rosettes of deep rosy pink on its inside, of the rounded petal shaped leaves which overlap. It develops a short stem with age and can produce light-red flowers in spring.",
+         "image_url":"https://www.gardens4you.ie/media/amasty/webp/catalog/product/cache/3a7af0a8e0e317723249dc9098669163/f/d/fd17903wh_jpg.webp",
+         "image":"",
+         "price":4.95,
+         "sale_price":0
+      }
+   },
+   {
+      "pk":11,
+      "model":"products.plantitem",
+      "fields":{
+         "name":"Hanging Glass Bauble with Airplant",
+         "scientific_name":"Tillandsia ionantha",
+         "slug":"",
+         "category":2,
+         "description":"Introduce a touch of nature into your home with our Hanging Glass Bauble featuring a beautiful airplant. This unique decoration not only adds a touch of greenery to your space, but also purifies the air. Expertly crafted, it makes for a stylish and functional addition to any room.",
+         "image_url":"https://www.plantstore.ie/cdn/shop/files/glassbauble.webp?v=1731432855&width=1100",
+         "image":"",
+         "price":24.99,
+         "sale_price":0
+      }
+   },
+   {
+      "pk":12,
+      "model":"products.plantitem",
+      "fields":{
+         "name":"Tillandsia usneoides - Spanish Moss",
+         "scientific_name":"Tillandsia usneoides",
+         "slug":"",
+         "category":2,
+         "description":"The 'Tillandsia Air Plant' is the biggest genus in the bromeliad family, representing roughly 550 of the more than 2,500 types of bromeliads. They are endemic to the hotter atmospheres of the Americas. Generically known as air plants, they are found from wilderness to rain forest to dry desert conditions - from sea level to high mountain locales.",
+         "image_url":"https://www.plantstore.ie/cdn/shop/products/Tillandsia-usneoides.jpg?v=1540422723&width=1100",
+         "image":"",
+         "price":22,
+         "sale_price":0
+      }
+   }
 ]

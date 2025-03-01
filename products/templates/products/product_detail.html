@@ -137,7 +137,7 @@
                 <!-- Modal body -->
                 <div id="review-overlay">                        
                     <div class="container-fluid" id="review-container" tabindex="-1" aria-labelledby="reviewModalLabel">
-                        <div class="bg-light review-modal text-right p-5">
+                        <div class="bg-light review-modal text-right">
                             <button type="button" class="review-btn-close ml-auto border-0" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                             <div class="text-left">
                                 <h4 id="reviewModalLabel"><i class="fa-solid fa-comment-dots"></i> Contribute your review!</h4><hr>
@@ -180,13 +180,18 @@
                                             <button type="button" class="btn btn-b-secondary review-btn-close">Close</button>
                                             <button id="submitButton" type="submit" class="btn btn-black btn-warning ml-auto">Submit</button>
                                         </div>
-                                        </form>
+                                    </form>
                                 <!-- Login links for non authenticated users -->
                                 {% else %}
                                     <p>Log in to leave a review?</p>
-                                    <p><a href="/accounts/login" class="btn btn-b-success p-1 mb-1" aria-label="Log-in link" title="Log-in"><i
-                                                class="fa-solid fa-right-to-bracket"></i> Log-in</a> to rate this product, or <a
-                                            href="/accounts/signup" class="btn btn-b-success p-1 mb-1" aria-label="Sign-Up link" title="Sign-up"><i class="fa-solid fa-user-pen"></i> Sign-up</a></p>
+                                    <p>
+                                        <a href="/accounts/login" class="btn btn-b-success mb-1" aria-label="Log-in link" title="Log-in">
+                                        <i class="fa-solid fa-right-to-bracket"></i> Log-in
+                                        </a> to rate this product, or 
+                                        <a href="/accounts/signup" class="btn btn-b-success p-1 mb-1" aria-label="Sign-Up link" title="Sign-up">
+                                            <i class="fa-solid fa-user-pen"></i> Sign-up
+                                        </a>
+                                    </p>
                                 {% endif %}
                             </div>
                         </div>
@@ -197,7 +202,7 @@
             <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 mt-3">
                 <div class="d-flex flex-wrap">
                     {% for review in reviews %}
-                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <div class="col-12 col-sm-6 col-xl-4">
                         <div class="card shadow align-items-stretch pt-4 pb-2 px-4">
                             <a href="{% url 'product_detail' review.product.slug %}">
                                 <h4 class="card-title h5">{{ review.product|truncatechars:20 }} </h4>
@@ -217,9 +222,9 @@
                                 </div>
                                 <div class="mb-1">
                                     {% if review.image %}
-                                        <img class="card-img-top" src="{{ review.image.url }}" alt="{{ review.reviewer }}">
+                                        <img class="card-img-top review-image" src="{{ review.image.url }}" alt="{{ review.reviewer }}">
                                     {% else %}
-                                        <img class="card-img-top" src="{{ MEDIA_URL }}placeholder.webp" alt="{{ review.reviewer }}">
+                                        <img class="card-img-top review-image" src="{{ MEDIA_URL }}placeholder.webp" alt="{{ review.reviewer }}">
                                     {% endif %}
                                 </div>
                             </div>
