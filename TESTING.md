@@ -16,31 +16,32 @@
 | About us | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-plant-shop-e08318b823f1.herokuapp.com%2Fabout%2F) | ![screenshot](documentation/vali-html-about.png) | No Error |
 | Privacy Policy | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-plant-shop-e08318b823f1.herokuapp.com%2Fabout%2Fprivacy-policy) | ![screenshot](documentation/vali-html-privacy.png) | No Error |
 | Profile | [W3C - Validated By Input](https://validator.w3.org/#validate_by_input) | ![screenshot](documentation/vali-html-profile.png) | No Error |
-| Profile success | [W3C - Validated By Input](https://validator.w3.org/#validate_by_input) | ![screenshot]() | No Error |
+| Profile success | [W3C - Validated By Input](https://validator.w3.org/#validate_by_input) | ![screenshot](documentation/vali-html-profile-suc.png) | No Error |
 | Shopping bag | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-plant-shop-e08318b823f1.herokuapp.com%2Fbag%2F) | ![screenshot](documentation/vali-html-bag.png) | No Error |
 | Checkout | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-plant-shop-e08318b823f1.herokuapp.com%2Fcheckout%2F) | ![screenshot](documentation/vali-html-checkout.png) | No Error |
 | Checkout success | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-plant-shop-e08318b823f1.herokuapp.com%2Fcheckout%2Fcheckout_success%2FA3CEB167CDEA4CAA8BC9A6F35FFB6440) | ![screenshot](documentation/vali-html-checkout-suc.png) | No Error |
 | Profile | [W3C - Validated By Input](https://validator.w3.org/#validate_by_input) | ![screenshot](documentation/vali-html-profile.png) | No Error |
-| Newsletter | [W3C - Validated By Input]() | ![screenshot](documentation/vali-html-newsletter.png) | No Error |
+| Profile success | [W3C - Validated By Input](https://validator.w3.org/#validate_by_input) | ![screenshot](documentation/vali-html-profile-suc.png) | No Error |
 | Products add | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-plant-shop-e08318b823f1.herokuapp.com%2Fabout%2Fprivacy-policy) | ![screenshot](documentation/vali-html-privacy.png) | No Error |
-| Products edit | [W3C]() | No Error |
-| Newsletter | [W3C]() | No Error |
-| Confirm email | [W3C]() | No Error |
+| Products edit | [W3C]() |  | No Error |
+| Newsletter | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-plant-shop-e08318b823f1.herokuapp.com%2Fnewsletter%2F) | ![screenshot](documentation/vali-html-newsletter.png) | No Error |
+| Confirm email | [W3C - Validated By Input]() | ![screenshot](documentation/vali-html-confirm-email.png) | No Error |
 --
 
 ### CSS
 | File | Jigsaw URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| style.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Flittle-plant-shop.s3.eu-west-1.amazonaws.com%2Fstatic%2Fcss%2Fbase.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![screenshot]() |  |
-| checkout.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Flittle-plant-shop.s3.eu-west-1.amazonaws.com%2Fstatic%2Fcheckout%2Fcss%2Fcheckout.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![screenshot]() | Error |
-| faq-style.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Flittle-plant-shop.s3.eu-west-1.amazonaws.com%2Fstatic%2Ffaq%2Fcss%2Ffaq-style.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![screenshot]() |  |
-| profile.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Flittle-plant-shop.s3.eu-west-1.amazonaws.com%2Fstatic%2Fprofiles%2Fcss%2Fprofile.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![screenshot]() |  |
+| style.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Flittle-plant-shop.s3.eu-west-1.amazonaws.com%2Fstatic%2Fcss%2Fbase.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![screenshot](documentation/vali-css-base.png) | No Error |
+| checkout.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Flittle-plant-shop.s3.eu-west-1.amazonaws.com%2Fstatic%2Fcheckout%2Fcss%2Fcheckout.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![screenshot](documentation/vali-css-checkout.png) | No Error |
+| faq-style.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Flittle-plant-shop.s3.eu-west-1.amazonaws.com%2Fstatic%2Ffaq%2Fcss%2Ffaq-style.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![screenshot](documentation/vali-css-faq-style.png) |  |
+| profile.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Flittle-plant-shop.s3.eu-west-1.amazonaws.com%2Fstatic%2Fprofiles%2Fcss%2Fprofile.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![screenshot](documentation/vali-css-profile.png) |  |
 
 ### JavaScript
 | File | Screenshot | Notes |
 | --- | --- | --- |
 | static/product-functions.js | ![screenshot](documentation/vali-jshint-root-js.png) | --- |
 | checkout/stripe_elements.js | ![screenshot](documentation/vali-jshint-checkout-stripe.png) | --- |
+| faq/accordion.js | ![screenshot](documentation/vali-jshint-accordion.png) | --- |
 | --- | --- | --- |
 
 ### Python
