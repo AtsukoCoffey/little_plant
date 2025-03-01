@@ -130,7 +130,7 @@
             <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 px-4 mt-3 position-relative">
                 <h3 class="mb-0"><i class="fa-solid fa-comment-dots"></i> Reviews </h3>
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-warning" data-target="#review-container" id="review-input-button" aria-label="button for review" title="button for review">
+                <button type="button" class="btn btn-warning" data-target="#review-container" id="review-input-button" aria-label="button for review" title="button for review" {% if user in reviews.reviewer %}data-id="{{ review.id }}"{% endif %}>
                     Contribute your review!<i class="fa-solid fa-magnifying-glass"></i>
                 </button>
                 <hr>                

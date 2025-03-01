@@ -9,16 +9,6 @@ from .models import PlantItem, Category, ReviewRating
 from .forms import ProductForm, ReviewForm
 
 
-# For update the result anytime - independent function
-def get_user_rating(user, product):
-    if user.is_authenticated:
-        rating = ReviewRating.objects.get(
-            product=product, reviewer=user)
-        return rating.rating if rating else 0
-    else:
-        return 0
-
-
 def all_products(request):
     """
     A view to show all products
@@ -155,6 +145,7 @@ def product_detail(request, slug):
                 'product': product,
                 'reviews': reviews,
                 "review_form": review_form,
+                'personal_rate': personal_rate,
             })
         else:
             messages.add_message(
@@ -322,7 +313,7 @@ def review_delete(request, slug, review_id):
 def review(request):
 
     context = {
-        'reviews': ReviewRating.objects.all(),
+        'reviews': ReviewRating.objects.all().order_by("-created_on"),
         'all_categories': Category.objects.all(),
     }
 
