@@ -14,12 +14,12 @@
 | FAQ | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-plant-shop-e08318b823f1.herokuapp.com%2Ffaq%2F%3Fcategory%3D1) | ![screenshot](documentation/vali-html-faq.png) | No Error |
 | Reviews | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-plant-shop-e08318b823f1.herokuapp.com%2Fproducts%2Freview%2F) | ![screenshot](documentation/vali-html-review.png) | No Error |
 | About us | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-plant-shop-e08318b823f1.herokuapp.com%2Fabout%2F) | ![screenshot](documentation/vali-html-about.png) | No Error |
-| Shopping bag | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-plant-shop-e08318b823f1.herokuapp.com%2Fbag%2F) | ![screenshot]() | Error |
-| Checkout | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-plant-shop-e08318b823f1.herokuapp.com%2Fcheckout%2F) | ![screenshot]() | Error |
-| Checkout success | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-plant-shop-e08318b823f1.herokuapp.com%2Fcheckout%2Fcheckout_success%2FA3CEB167CDEA4CAA8BC9A6F35FFB6440) | ![screenshot]() | No Error |
-| Profile | [W3C - Validated By Input](https://validator.w3.org/#validate_by_input) | ![screenshot](documentation/vali-html-profile.png) | Error |
+| Shopping bag | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-plant-shop-e08318b823f1.herokuapp.com%2Fbag%2F) | ![screenshot](documentation/vali-html-bag.png) | No Error |
+| Checkout | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-plant-shop-e08318b823f1.herokuapp.com%2Fcheckout%2F) | ![screenshot](documentation/vali-html-checkout.png) | No Error |
+| Checkout success | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-plant-shop-e08318b823f1.herokuapp.com%2Fcheckout%2Fcheckout_success%2FA3CEB167CDEA4CAA8BC9A6F35FFB6440) | ![screenshot](documentation/vali-html-checkout-suc.png) | No Error |
+| Profile | [W3C - Validated By Input](https://validator.w3.org/#validate_by_input) | ![screenshot](documentation/vali-html-profile.png) | No Error |
 | Newsletter | [W3C - Validated By Input]() | ![screenshot](documentation/vali-html-newsletter.png) | No Error |
-| Privacy Policy | [W3C - Validated By Input](https://validator.w3.org/#validate_by_input) | ![screenshot]() | Error |
+| Privacy Policy | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-plant-shop-e08318b823f1.herokuapp.com%2Fabout%2Fprivacy-policy) | ![screenshot](documentation/vali-html-privacy.png) | No Error |
 --
 
 ### CSS
@@ -173,15 +173,15 @@ I've tested my deployed project using the Lighthouse Audit tool.
 | Privacy policy | Desktop | ![screenshot](documentation/vali-light-privacy-d.png) |  |
 | Profile | Desktop | ![screenshot](documentation/vali-light-profile-d.png) |  |
 | Profile success | Desktop | ![screenshot](documentation/vali-light-profile-suc-d.png) |  |
-| Shopping bag | Desktop | ![screenshot](documentation) |  |
+| Shopping bag | Desktop | ![screenshot](documentation/vali-light-bag-d.png) |  |
 | Checkout | Desktop | ![screenshot](documentation/vali-light-checkout-d.png) |  |
 | Checkout success | Desktop | ![screenshot](documentation/vali-light-checkout-suc-d.png) |  |
-| Product add | Desktop | ![screenshot](documentation/va) |  |
+| Product add | Desktop | ![screenshot](documentation/vali-light-product-add-d.png) |  |
 | Product edit | Desktop | ![screenshot](documentation) |  |
-| Shopping bag | Desktop | ![screenshot](documentation) |  |
-
-| Check out | Desktop | ![screenshot](documentation) |  |
-| Check out success | Desktop | ![screenshot](documentation) |  |
+| Sign in | Mobile | ![screenshot](documentation/vali-light-login-m.png) |  |
+| Sign out | Mobile | ![screenshot](documentation/vali-light-signout-d.png) |  |
+| Register | Mobile | ![screenshot](documentation/vali-light-sign-up-d.png) |  |
+| Confirm mail | Mobile | ![screenshot](documentation/vali-light-confirm-email-d.png) |  |
 
 ### Mobile  
 | Page | Size | Screenshot | Notes |
@@ -195,12 +195,15 @@ I've tested my deployed project using the Lighthouse Audit tool.
 | Privacy policy | Mobile | ![screenshot](documentation/vali-light-privacy-m.png) |  |
 | Profile | Mobile | ![screenshot](documentation/vali-light-profile-m.png) |  |
 | Profile success | Mobile | ![screenshot](documentation/vali-light-profile-suc-m.png) |  |
-| Shopping bag | Mobile | ![screenshot](documentation) |  |
+| Shopping bag | Mobile | ![screenshot](documentation/vali-light-bag-m.png) |  |
 | Checkout | Mobile | ![screenshot](documentation/vali-light-checkout-m.png) |  |
 | Checkout success | Mobile | ![screenshot](documentation/vali-light-checkout-suc-m.png) |  |
-| Product add | Mobile | ![screenshot](documentation/va) |  |
+| Product add | Mobile | ![screenshot](documentation/vali-light-product-add-m.png) |  |
 | Product edit | Mobile | ![screenshot](documentation) |  |
-
+| Sign in | Mobile | ![screenshot](documentation/vali-light-login-m.png) |  |
+| Sign out | Mobile | ![screenshot](documentation/vali-light-signout-m.png) |  |
+| Register | Mobile | ![screenshot](documentation/vali-light-sign-up-m.png) |  |
+| Confirm mail | Mobile | ![screenshot](documentation/vali-light-confirm-email-m.png) |  |
 
 ## Defensive Programming
 
