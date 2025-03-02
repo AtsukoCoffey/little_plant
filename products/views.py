@@ -4,6 +4,7 @@ from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
+from django.db.models import Subquery, OuterRef, Avg
 
 from .models import PlantItem, Category, ReviewRating
 from .forms import ProductForm, ReviewForm
@@ -37,7 +38,17 @@ def all_products(request):
                 # Added lower_name field in the Prouct
             if sortkey == 'category':
                 sortkey = 'category__name'
-
+            if sortkey == 'rating':
+                sortkey = 'avg_rating'
+                # create new 'average_rating' field in the model
+                products = products.annotate(
+                    avg_rating=Subquery(
+                        ReviewRating.objects.filter(product=OuterRef('pk'))
+                        .values('product')
+                        .annotate(avg=Avg('rating'))
+                        .values('avg')
+                    )
+                )
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':

@@ -31,6 +31,7 @@
         <div class="row">
             <div class="product-container col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 mt-3">
                 <div class="d-flex w-100">
+                    <!-- Display current sorting and result numbers -->
                     <h3 class="small text-muted">
                     {% if search_term or current_category or current_sorting != 'None_None' %}
                         <a href="{% url 'products' %}">Products Home</a> | Filterd by 
@@ -41,6 +42,7 @@
                         Products Home
                     {% endif %}
                     </h3>
+                    <!-- Sorting dropdpwn list -->
                     <div class="dropdown ml-auto">
                         <select id="sort-selector" aria-label="Sort selector" class="custom-select custom-select-sm border border-{% if current_sorting != 'None_None' %}info{% else %}secondary{% endif %}" >
                             <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
@@ -55,6 +57,7 @@
                         </select>
                     </div>
                 </div>
+                <!-- Products card list display from here -->
                 <div class="row mt-2 mb-2">
                     {% for product in products %}
                         <div class="col-sm-6 col-xl-4 px-4 py-4">
