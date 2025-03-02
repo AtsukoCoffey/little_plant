@@ -67,7 +67,20 @@ h1 {
 h3 {
     font-size: 1.5rem;
 }
+footer ul li{
+    list-style: none;
+    line-height: 90%;
+    padding: 0;
+    margin: 0;
+}
 
+
+footer {
+    line-height: 90%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    z-index: 99999;
+}
 
 /* Base button text etc class */
 
@@ -303,11 +316,6 @@ a.category-badge > span.badge:hover {
     border-color: #dc3545;
     border-radius: 0;
 }
-/* ----------------------------------------------------details page layour */
-
-image-container>a>img {
-    max-width: 400px;
-}
 
 /*---------------------------------------------------------- Star rating */
 /* Average rating */
@@ -417,7 +425,11 @@ input:checked + label.fa-star {
     justify-content: space-evenly;
     list-style-type: none;
     width: 100%;
-    max-width: 250px;
+    padding-bottom: 0;
+    line-height: 80%;
+}
+.h6 {
+    margin-bottom: 0;
 }
 /* --------------------------------------------Privacy policy */
 #privacy-contents a {
@@ -489,6 +501,11 @@ input:checked + label.fa-star {
     h1 {
         font-size: 2.2rem;
         margin-top: 5px;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
     }
 
     .mobile {
