@@ -1,0 +1,17 @@
+Hi {{ form.user_name }} !  
+  
+Thank you for submitting the contact form!
+
+Usually, we will reply to you within a few days after reviewing the contents.
+
+Below is the content of the submission.
+----------------------------------------------- 
+Sender: {{ form.user_name }}
+email: {{ form.email }}
+Date: {{ date }}
+Purpose: {{ form.purpose }}
+Message: {{ form.message }}
+-----------------------------------------------
+
+Thank you,
+LITTLE PLANT shop

@@ -160,11 +160,11 @@ I've tested my deployed project on multiple devices.
 
 | Device | Screenshot | Notes |
 | --- | --- | --- |
-| Mobile | ![screenshot]() | No Errors | 
-| Tablet (DevTools) | ![screenshot]() | No Errors | 
-| Laptop 16" | ![screenshot]() | No Errors | 
-| Desktop 21.5" | ![screenshot]() | No Errors | 
-| 4K Monitor 40" | ![screenshot]() | No Errors |   
+| Mobile | ![screenshot](documentation/respon-mobile-xperia.png) | No Errors | 
+| Tablet (DevTools) | ![screenshot](documentation/respon-tablet-dev.png) | No Errors | 
+| Laptop 16" | ![screenshot](documentation/respon-laptop16.png) | No Errors | 
+| Desktop 21.5" | ![screenshot](documentation/respon-desktop21.5.png) | No Errors | 
+| 4K Monitor 40" | ![screenshot](documentation/respon-4kmonitor-40.png) | No Errors |   
 
 
 ## Lighthouse Audit
@@ -175,47 +175,49 @@ I've tested my deployed project using the Lighthouse Audit tool.
 | Page | Size | Screenshot | Notes |
 | --- | --- | --- | --- |
 | Home | Desktop | ![screenshot](documentation/vali-light-top-d.png) |  |
-| Register | Desktop | ![screenshot](documentation/vali-light-sign-up-d.png) |  |
-| Sign in | Desktop | ![screenshot](documentation/vali-light-login-d.png) |  |
-| Sign out | Desktop | ![screenshot](documentation/vali-light-signout-d.png) |  |
+| Sign up | Desktop | ![screenshot](documentation/vali-light-sign-up-d.png) | Headings are not sequential order |
+| Sign in | Desktop | ![screenshot](documentation/vali-light-login-d.png) | Headings are not sequential order |
+| Sign out | Desktop | ![screenshot](documentation/vali-light-signout-d.png) | Headings are not sequential order |
 | Product list | Desktop | ![screenshot](documentation/vali-light-products-d.png) |  |
 | Product detail | Desktop | ![screenshot](documentation/vali-light-detail-d.png) |  |
 | FAQ | Desktop | ![screenshot](documentation/vali-light-faq-d.png) |  |
 | Reviews | Desktop | ![screenshot](documentation/vali-light-review-d.png) |  |
 | About us | Desktop | ![screenshot](documentation/vali-light-about-d.png) |  |
-| Privacy policy | Desktop | ![screenshot](documentation/vali-light-privacy-d.png) |  |
+| Privacy policy | Desktop | ![screenshot](documentation/vali-light-privacy-d.png) | Headings are not sequential order and text colour |
 | Profile | Desktop | ![screenshot](documentation/vali-light-profile-d.png) |  |
 | Profile success | Desktop | ![screenshot](documentation/vali-light-profile-suc-d.png) |  |
-| Shopping bag | Desktop | ![screenshot](documentation/vali-light-bag-d.png) |  |
+| Shopping bag | Desktop | ![screenshot](documentation/vali-light-bag-d.png) | Headings is not sequential order |
 | Checkout | Desktop | ![screenshot](documentation/vali-light-checkout-d.png) |  |
-| Checkout success | Desktop | ![screenshot](documentation/vali-light-checkout-suc-d.png) |  |
+| Checkout success | Desktop | ![screenshot](documentation/vali-light-checkout-suc-d.png) | Headings is not sequential order |
 | Product add | Desktop | ![screenshot](documentation/vali-light-product-add-d.png) |  |
 | Product edit | Desktop | ![screenshot](documentation/vali-light-product-edit-d.png) |  |
 | Newsletter | Desktop | ![screenshot](documentation/vali-light-news-d.png) |  |
-| Confirm mail | Desktop | ![screenshot](documentation/vali-light-confirm-email-d.png) |  |
+| Confirm mail | Desktop | ![screenshot](documentation/vali-light-confirm-email-d.png) | Headings is not sequential order |
+* Headings is not sequential order  
+Most of the pages with this issue, fixed to create or change headings though, I didn't have time to do all the pages to adjust this issue.  
 
 ### Mobile  
 | Page | Size | Screenshot | Notes |
 | --- | --- | --- | --- |
 | Home | Mobile | ![screenshot](documentation/vali-light-top-m.png) |  |
-| Register | Mobile | ![screenshot](documentation/vali-light-sign-up-m.png) |  |
-| Sign in | Mobile | ![screenshot](documentation/vali-light-login-m.png) |  |
-| Sign out | Mobile | ![screenshot](documentation/vali-light-signout-m.png) |  |
+| Register | Mobile | ![screenshot](documentation/vali-light-sign-up-m.png) | Headings order |
+| Sign in | Mobile | ![screenshot](documentation/vali-light-login-m.png) | Headings order |
+| Sign out | Mobile | ![screenshot](documentation/vali-light-signout-m.png) | Headings order |
 | Product list | Mobile | ![screenshot](documentation/vali-light-products-m.png) |  |
 | Product detail | Mobile | ![screenshot](documentation/vali-light-detail-m.png) |  |
 | FAQ | Mobile | ![screenshot](documentation/vali-light-faq-m.png) |  |
 | Reviews | Mobile | ![screenshot](documentation/vali-light-review-m.png) |  |
 | About us | Mobile | ![screenshot](documentation/vali-light-about-m.png) |  |
-| Privacy policy | Mobile | ![screenshot](documentation/vali-light-privacy-m.png) |  |
+| Privacy policy | Mobile | ![screenshot](documentation/vali-light-privacy-m.png) | Headings order and color |
 | Profile | Mobile | ![screenshot](documentation/vali-light-profile-m.png) |  |
 | Profile success | Mobile | ![screenshot](documentation/vali-light-profile-suc-m.png) |  |
-| Shopping bag | Mobile | ![screenshot](documentation/vali-light-bag-m.png) |  |
-| Checkout | Mobile | ![screenshot](documentation/vali-light-checkout-m.png) |  |
-| Checkout success | Mobile | ![screenshot](documentation/vali-light-checkout-suc-m.png) |  |
+| Shopping bag | Mobile | ![screenshot](documentation/vali-light-bag-m.png) | Headings order |
+| Checkout | Mobile | ![screenshot](documentation/vali-light-checkout-m.png) | Stripe's performance |
+| Checkout success | Mobile | ![screenshot](documentation/vali-light-checkout-suc-m.png) | Headings order |
 | Product add | Mobile | ![screenshot](documentation/vali-light-product-add-m.png) |  |
 | Product edit | Mobile | ![screenshot](documentation/vali-light-product-edit-m.png) |  |
 | Newsletter | Mobile | ![screenshot](documentation/vali-light-news-m.png) |  |
-| Confirm mail | Mobile | ![screenshot](documentation/vali-light-confirm-email-m.png) |  |
+| Confirm mail | Mobile | ![screenshot](documentation/vali-light-confirm-email-m.png) | Headings order |
 
 ## Defensive Programming
 
@@ -244,7 +246,25 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Click on REVIEWS each category | Filtered with each category | Pass | |
 | | Click on ABOUT US | Redirection to about us page | Pass | |
 |Search bar input| Input keyword | Filter products that contain in name and description | Pass | |
-| | submit with no keyword | Toast :  | Pass | |
+| | submit with no keyword | Toast : worning | Pass | |
+|main| Click on FIND ONE! button | Redirection to All products page  | Pass | |
+|Carousel-Bootstrap| Click on Each pictures | Redirection to product's each category page | Pass | |
+|footer| Click on Newsletter btton | Redirection to Newsletter page | Pass | |
+| | Click on About & Contact | Redirection to About us page | Pass | |
+| | Click on Privacy policy | Redirection to Privacy policy page | Pass | |
+| | Click on Returning | Redirection to FAQ Returning page | Pass | |
+| | Click on each SNS link | Redirection to each page with new tab | Pass | |
+
+| Home Page | User Action | Expected Result | Pass/Fail | Comments |
+| --- | --- | --- | --- | --- |
+|Category quick link | Click on those category | Redirection to that pages and display which category and how many results | Pass | |
+| | Click on  | Redirection to  | Pass | |
+| | Click on  | Redirection to  | Pass | |
+| | Click on  | Redirection to  | Pass | |
+| | Click on  | Redirection to  | Pass | |
+| | Click on  | Redirection to  | Pass | |
+| | Click on  | Redirection to  | Pass | |
+| | Click on  | Redirection to  | Pass | |
 
 
 ## User story Testing

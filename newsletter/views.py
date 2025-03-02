@@ -31,6 +31,8 @@ def _send_confirmation_email(request):
 def NewsLetterCreateView(request):
     """
     Renders the Newsletter subscriotion Page
+    Send email with "confirmation_emails"
+    Reused from Checkout app
     """
     success_message = 'Thanks for subscribing to our newsletter! '\
         'We have sent an email to your address. '\
