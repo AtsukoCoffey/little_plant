@@ -227,38 +227,106 @@ Defensive programming was manually tested with the below user acceptance testing
 | --- | --- | --- | --- | --- |
 | Nav links | Click on Logo | Redirection to Home page | Pass | |
 | | Click on Profile icon in navbar  | Display dropdown list | Pass | |
-| | Click on Register | Redirection to Sign in page | Pass | |
-| | Click on Login | Redirection to Login page | Pass | |
-| | Click on Product management | Redirection to Product add page | Pass | |
-| | Click on My profile | Redirection to Profile page | Pass | |
-| | Click on Logout | Redirection to Logout page | Pass | |
+| | Click on `Register` | Redirection to Sign up page | Pass | |
+| | Click on `Login` | Redirection to Login page | Pass | |
 | | Click on Bag icon  | Redirection to shopping bag page | Pass | |
 | | Hover on links  | shows hover color | Pass | |
-| Authenticated user only | under the profile icon | User name is displayed under | Pass | |
-| | Click on SHOP PLANTS | Display dropdown list | Pass | |
-| | Click on All Products | Redirection to products page | Pass | |
+| | Click on `SHOP PLANTS` | Display dropdown list | Pass | |
+| | Click on `All Products` | Redirection to products page | Pass | |
 | | Click on each category name | Filtered products with each category | Pass | |
-| | Click on SPECIAL OFFER | Filtered with sale_price has valid price | Pass | |
-| | Click on FAQ | Display dropdown list | Pass | |
-| | Click on FAQ each category | Filtered FAQ with each category | Pass | |
-| | Click on REVIEWS  | Display dropdown list | Pass | |
-| | Click on REVIEWS All Products | Redirection to Review page | Pass | |
-| | Click on REVIEWS each category | Filtered with each category | Pass | |
-| | Click on ABOUT US | Redirection to about us page | Pass | |
+| | Click on `SPECIAL OFFER` | Filtered with sale_price has valid price | Pass | |
+| | Click on `FAQ` | Display dropdown list | Pass | |
+| | Click on `FAQ` each category | Filtered FAQ with each category | Pass | |
+| | Click on `REVIEWS`  | Display dropdown list | Pass | |
+| | Click on `REVIEWS` All Products | Redirection to Review page | Pass | |
+| | Click on `REVIEWS` each category | Filtered with each category | Pass | |
+| | Click on `ABOUT US` | Redirection to about us page | Pass | |
 |Search bar input| Input keyword | Filter products that contain in name and description | Pass | |
 | | submit with no keyword | Toast : worning | Pass | |
-|main| Click on FIND ONE! button | Redirection to All products page  | Pass | |
+|Main section| Click on `FIND ONE!` button | Redirection to All products page  | Pass | |
 |Carousel-Bootstrap| Click on Each pictures | Redirection to product's each category page | Pass | |
-|footer| Click on Newsletter btton | Redirection to Newsletter page | Pass | |
-| | Click on About & Contact | Redirection to About us page | Pass | |
-| | Click on Privacy policy | Redirection to Privacy policy page | Pass | |
-| | Click on Returning | Redirection to FAQ Returning page | Pass | |
+|footer| Click on `Newsletter` | Redirection to Newsletter page | Pass | |
+| | Click on `About & Contact` | Redirection to About us page | Pass | |
+| | Click on `Privacy policy` | Redirection to Privacy policy page | Pass | |
+| | Click on `Returning` | Redirection to FAQ Returning page | Pass | |
 | | Click on each SNS link | Redirection to each page with new tab | Pass | |
+|Authenticated  only | under the profile icon | User name is displayed under | Pass | |
+|Authenticated  only | Click on `My profile` | Redirection to Profile page | Pass | |
+|Authenticated  only | Showed and click on `Logout` | Redirection to Logout page | Pass | |
+| Administrator only| Showed and click on `Product management` | Redirection to Product add page | Pass | |
+--
 
-| Home Page | User Action | Expected Result | Pass/Fail | Comments |
+| Product Page | User Action | Expected Result | Pass/Fail | Comments |
 | --- | --- | --- | --- | --- |
-|Category quick link | Click on those category | Redirection to that pages and display which category and how many results | Pass | |
-| | Click on  | Redirection to  | Pass | |
+|Category quick link | Click on those categories | Redirection to those pages and display which category and how many results | Pass | |
+| | Click on sorthing dropdown | sorting the products by sort key | Pass | price, name, category |
+| | Click on sorthing dropdown | sorting the products by sort key | Not Pass | rating |
+| | Click on each card of product | Redirection to product details page | Pass |  |
+|Administrator only | Click on Edit button on product | Redirection to edit page | Pass | |
+| | Click on Delet button | Open delete modal to confirm to delete | Pass | |
+--
+
+| Product details Page | User Action | Expected Result | Pass/Fail | Comments |
+| --- | --- | --- | --- | --- |
+|Breadcrumb | Click on `Home` | Redirection to Home | Pass | |
+| | Click on `All products` | Redirection to All products | Pass | |
+| | Click on category tag | Redirection to category filtered products list | Pass | |
+| | Click on Add quantity | Add number  | Pass | |
+| | Click on more than 99 | Not add anymore | Pass | |
+| | Click on reduce quantity | Reduce number | Pass | |
+| | Click on less than 1 | Not Reduce number anymore | Pass | |
+| | Input on textbox more than 99 | Add to bag button warning | Pass | |
+| | Delete the number in textbox | expect  Add to bag button warning | Not Pass | 500 error |
+| | Click on `KEEP SHOPPING` | Redirection to All products | Pass | |
+| | Click on `ADD TO BAG` 1-99 | the product and quantity went in bag and toast notified  | Pass | |
+| | Click on `GO to SECURE CHECKOUT` in toast notification | Redirection to shopping bag page | Pass | |
+| | Click on close button `x` in toast notification | Close the notification | Pass | |
+|Authenticated only | Click on `Contribute your review` | Open the review modal and empty form with default star value 1| Pass | |
+|Authenticated only| Click on `Close` `x` button | Close the modal | Pass | |
+|Authenticated only| Hove over and Click on star rating | Select the rating value | Pass | |
+|Authenticated only | Click on `submit` without fill any text | warning to fill text | Pass | |
+|Authenticated only| Click on `submit`with chooseing image file | Update comment, rating, and image file | Pass | |
+|Authenticated only | Review submission trigger toast notified | Notified but It should be no shopping bags to show | Not Pass | |
+|Authenticated and own review | Click on edit button | Opens the edit modal with filled own rating | Pass | *BuUpdate pwn value, rating and file | Redirection to  | Pass | |
+|Authenticated and own review| Click on `Close``x` | Close the modal  | Pass | |
+|Authenticated and own review| Click on  | Redirection to  | Pass | |
+|Authenticated and own review | Click on `Delete` | Delete confirmation modal open | Pass | |
+|Authenticated and own review | Click on `Close``x` | Close the modal | Pass | |
+|Authenticated and own review | Click on `Delete`in delete modal | Delete the review | Pass | |
+|Authenticated and own review | Click on `Contribute your review` secondtime or already wrote | Prevent new form create and fill the own review data & rating  | Pass | |
+|Administrator only | Click on Product's `Edit` | Redirection to Products Management page | Pass | |
+|Administrator only | Click on Product's `Delete` | Delete confirmation modal open  | Pass | |
+|Administrator only | Click on `Close``x` | Close the modal | Pass | |
+|Administrator only | Click on `Delete`in delete modal | Delete the review | Pass | |
+--
+
+| FAQ Page | User Action | Expected Result | Pass/Fail | Comments |
+| --- | --- | --- | --- | --- |
+|Category quick link | Click on those categories | Rebuild the FAQ contents by selected category(filter) | Pass | |
+| | Click on Questions | open up the accordion box and show answer  | Pass | |
+--
+
+| About Contact Page | User Action | Expected Result | Pass/Fail | Comments |
+| --- | --- | --- | --- | --- |
+| | Click on submit button without fill | warning to fill | Pass | |
+| | inpput non email format text to email field  | warning to fill email address | Pass | |
+| | Empty user name | waring to fill | Pass | |
+| | No select purpose | waring to select purpose | Pass | |
+| | Empty message  | waring to fill message | Pass | |
+| | Input all valid text and submit | Toast notified success and I can receive the email | Pass | |
+|Authenticated only| When access this page | Mail field is prefilled | Pass | |
+
+
+| Newsletter Page | User Action | Expected Result | Pass/Fail | Comments |
+| --- | --- | --- | --- | --- |
+| | Click on submit button without fill | warning to fill | Pass | |
+| | inpput non email format text to email field  | warning to fill email address | Pass | |
+| | Input all valid text and submit | Toast notified success and I can receive the email | Pass | |
+|Authenticated only| When access this page | Mail field is prefilled | Pass | |
+
+
+| Profile Page | User Action | Expected Result | Pass/Fail | Comments |
+| --- | --- | --- | --- | --- |
 | | Click on  | Redirection to  | Pass | |
 | | Click on  | Redirection to  | Pass | |
 | | Click on  | Redirection to  | Pass | |
