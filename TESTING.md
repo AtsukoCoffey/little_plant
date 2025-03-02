@@ -148,11 +148,11 @@ I've tested my deployed project on multiple browsers.
 
 | Browser | Screenshot | Notes |
 | --- | --- | --- |
-| Chrome | ![screenshot]() | No Errors |
-| Firefox | ![screenshot]() | No Errors |
-| Edge | ![screenshot]() | No Errors |
-| Safari | ![screenshot]() | No Errors |
-| Opera | ![screenshot]() | No Errors |  
+| Chrome | ![screenshot](documentation/brows-chrom.png) | No Errors |
+| Firefox | ![screenshot](documentation/brows-firefox.png) | No Errors |
+| Edge | ![screenshot](documentation/brows-edge.png) | No Errors |
+| Safari | ![screenshot](documentation/brows-safari.png) | No Errors |
+| Opera | ![screenshot](documentation/brows-opera.png) | No Errors |  
 
 ## Responsiveness
 
@@ -190,8 +190,8 @@ I've tested my deployed project using the Lighthouse Audit tool.
 | Checkout | Desktop | ![screenshot](documentation/vali-light-checkout-d.png) |  |
 | Checkout success | Desktop | ![screenshot](documentation/vali-light-checkout-suc-d.png) |  |
 | Product add | Desktop | ![screenshot](documentation/vali-light-product-add-d.png) |  |
-| Product edit | Desktop | ![screenshot](documentation) |  |
-| Newsletter | Desktop | ![screenshot](documentation/vali-light-) |  |
+| Product edit | Desktop | ![screenshot](documentation/vali-light-product-edit-d.png) |  |
+| Newsletter | Desktop | ![screenshot](documentation/vali-light-news-d.png) |  |
 | Confirm mail | Desktop | ![screenshot](documentation/vali-light-confirm-email-d.png) |  |
 
 ### Mobile  
@@ -213,8 +213,8 @@ I've tested my deployed project using the Lighthouse Audit tool.
 | Checkout | Mobile | ![screenshot](documentation/vali-light-checkout-m.png) |  |
 | Checkout success | Mobile | ![screenshot](documentation/vali-light-checkout-suc-m.png) |  |
 | Product add | Mobile | ![screenshot](documentation/vali-light-product-add-m.png) |  |
-| Product edit | Mobile | ![screenshot](documentation) |  |
-| Newsletter | Mobile | ![screenshot](documentation/vali-light-) |  |
+| Product edit | Mobile | ![screenshot](documentation/vali-light-product-edit-m.png) |  |
+| Newsletter | Mobile | ![screenshot](documentation/vali-light-news-m.png) |  |
 | Confirm mail | Mobile | ![screenshot](documentation/vali-light-confirm-email-m.png) |  |
 
 ## Defensive Programming
@@ -242,6 +242,9 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Click on REVIEWS  | Display dropdown list | Pass | |
 | | Click on REVIEWS All Products | Redirection to Review page | Pass | |
 | | Click on REVIEWS each category | Filtered with each category | Pass | |
+| | Click on ABOUT US | Redirection to about us page | Pass | |
+|Search bar input| Input keyword | Filter products that contain in name and description | Pass | |
+| | submit with no keyword | Toast :  | Pass | |
 
 
 ## User story Testing

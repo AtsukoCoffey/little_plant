@@ -145,6 +145,9 @@ h3 {
 
 
 /* Header Navigation and Delivery section style */
+li.nav-item>.text-black:hover {
+    text-decoration:#faa907 underline;
+}
 
 .main-logo-link {
     width: fit-content;
@@ -197,11 +200,13 @@ input[name='q']::placeholder {
 .catch-copy {
     color: var(--dark-color);
     font-weight: 500;
+    font-size: 200%;
+    line-height: 150%;
+}
+.lead-text{
     font-size: 150%;
     line-height: 150%;
-    font-style: italic;
 }
-
 .hero-image {
     height: 85%;
 }

@@ -136,10 +136,10 @@
                 <hr>                
                 <!-- Modal body -->
                 <div id="review-overlay">                        
-                    <div class="container-fluid" id="review-container" tabindex="-1" aria-labelledby="reviewModalLabel">
-                        <div class="bg-light review-modal text-right">
+                    <div class="container mx-auto" id="review-container" tabindex="-1" aria-labelledby="reviewModalLabel">
+                        <div class="bg-light review-modal text-right p-5">
                             <button type="button" class="review-btn-close ml-auto border-0" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            <div class="text-left">
+                            <div class="text-left p-1">
                                 <h4 id="reviewModalLabel"><i class="fa-solid fa-comment-dots"></i> Contribute your review!</h4><hr>
                                 <!-- Rating and Reviewing - Authenticated user only -->
                                 {% if user.is_authenticated %}

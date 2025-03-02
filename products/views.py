@@ -40,8 +40,9 @@ def all_products(request):
                 sortkey = 'category__name'
             if sortkey == 'rating':
                 sortkey = 'avg_rating'
-                # create new 'average_rating' field in the model
+                # create new 'avg_rating' field in the model
                 products = products.annotate(
+                # Subquery, OuterRef to get rating value from ReviewRating
                     avg_rating=Subquery(
                         ReviewRating.objects.filter(product=OuterRef('pk'))
                         .values('product')
