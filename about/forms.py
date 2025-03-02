@@ -23,7 +23,7 @@ class ContactUsForm(forms.ModelForm):
     purpose = forms.ModelChoiceField(
         queryset=ContactPurpose.objects.all(),
         empty_label="Select a purpose",
-        required=False
+        required=True
     )
 
     class Meta:
