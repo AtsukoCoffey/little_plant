@@ -375,10 +375,49 @@ To manage/organize data freely for user, there is no required field or validatio
 ## User story Testing
 | Epic | User Story ID | AS A/AN | I WANT TO BE ABLE TO ... | SO THAT I CAN ... |
 |-|-|-|-|-|
-| Environment Configuration	| Create project structure | Developer | Create the project structure | Start develop this project |
-|-| Install crispy and other modules | Developer | Set up other useful modules | Use forms and images easily |
-|-| Connect CI database | Developer | Set up Database - SQLite3 and PosgreSQL | Prepare to use both in case testings or problems |
-| Home app | Create homepage app and index template | Developer | Create homepage app and template | Runserver to check the page in browser preview|
+| 1 Page templates and navigations	| User Story - Create project structure [#1](https://github.com/AtsukoCoffey/little_plant/issues/1) | Developer | Create the project structure | Start develop this project |
+|-| Create navigation bar and footer [#2](https://github.com/AtsukoCoffey/little_plant/issues/2) |Site user| Find the site content's links instinctively | Easily navigate through to find contents |
+|-| Create homepage app and index template [#6](https://github.com/AtsukoCoffey/little_plant/issues/6) | Developer | Create homepage app and template |  Run server to check the page in browser |
+|-| Connect CI database [#3](https://github.com/AtsukoCoffey/little_plant/issues/3) | Developer | Set up Database - SQLite3 and PosgreSQ | Prepare to use both in case of problems|
+|-|Preparing for Deployment [#5](https://github.com/AtsukoCoffey/little_plant/issues/5) | Developer | prepare for deployment | up load to Heroku and can be seen publicly |
+|2 User Authentication | User registration and other pages layout [#14](https://github.com/AtsukoCoffey/little_plant/issues/14) | Site user | use the same navigation design in authentication pages | avoid the confusion |
+|-| Reset Password [#12](https://github.com/AtsukoCoffey/little_plant/issues/12) | Site user | Easily recover my password in case I forget it | Recover access to my account |
+|-| User Registration [#10](https://github.com/AtsukoCoffey/little_plant/issues10/) | New site user | Register an account |  Store my personal information for easier shopping next time |
+|-| User Log in / Log out [#11](https://github.com/AtsukoCoffey/little_plant/issues/11) | Site user | Easily login or logout | Access my personal account information |
+|-| Email confirm - Registration [#13](https://github.com/AtsukoCoffey/little_plant/issues/13) | Site user | Receive an email confirmation after registering | Verify that my account registration |
+|-| The current login status is reflected to status mention [#8](https://github.com/AtsukoCoffey/little_plant/issues/8) | Site user | See my logging-in account name | Aware of my account logging in status |
+|3 Site Products| Prepare products [#15](https://github.com/AtsukoCoffey/little_plant/issues/15) | Developer | prepare the products app | start to add some products |
+|-| Product detail view [#16](https://github.com/AtsukoCoffey/little_plant/issues/16) | Site user | View the specific product's information | Inspect the details before purchasing it |
+|-|  Category filtering [#20](https://github.com/AtsukoCoffey/little_plant/issues/20) | Site user | filter the specific category of product | Find the best product in a specific category |
+|-| Product search bar [#21](https://github.com/AtsukoCoffey/little_plant/issues/21) | Site user | Search for a product by name or description | Find a specific product that I'm looking for |
+|-| Sorting dropdown in product list view [#22](https://github.com/AtsukoCoffey/little_plant/issues/22) | Site user | Easily see what I've searched for and the number of results | Quickly decide whether the product I want is available |
+|-| Sort the product list by categories and sale [#7](https://github.com/AtsukoCoffey/little_plant/issues/7) | Site user | Quickly identify categories and special offers | Take advantage of special savings on products I'd like to purchase |
+|-| Product create [#17](https://github.com/AtsukoCoffey/little_plant/issues/17) | Administrator | Create the new product | It will be added to the list page |
+|-| Product edit [#18](https://github.com/AtsukoCoffey/little_plant/issues/18) | Administrator | Edit the product | Manage the products |
+|-| Product delete [#19](https://github.com/AtsukoCoffey/little_plant/issues/19) | Administrator | Delete the product | Manage the products |
+|-| For Site owner there are EDIT and DELETE button [#32](https://github.com/AtsukoCoffey/little_plant/issues/32) | - | - | - |
+|-| Product CRUD extra security [#38](https://github.com/AtsukoCoffey/little_plant/issues/38) | Developer | Set the extra security on those CRUD pages | prevent the access from not permitted person |
+|-| Maybe JavaScript for confirmation? From #19 [#42](https://github.com/AtsukoCoffey/little_plant/issues/42) | Site owner | Another one step to delete the product |  prevent my operation mistake, make sure to delete the data. |
+|-| [#](https://github.com/AtsukoCoffey/little_plant/issues/) | - | - | - |
+|-| [#](https://github.com/AtsukoCoffey/little_plant/issues/) | - | - | - |
+|-| [#](https://github.com/AtsukoCoffey/little_plant/issues/) | - | - | - |
+|-| [#](https://github.com/AtsukoCoffey/little_plant/issues/) | - | - | - |
+|-| [#](https://github.com/AtsukoCoffey/little_plant/issues/) | - | - | - |
+|-| [#](https://github.com/AtsukoCoffey/little_plant/issues/) | - | - | - |
+|-| [#](https://github.com/AtsukoCoffey/little_plant/issues/) | - | - | - |
+|-| [#](https://github.com/AtsukoCoffey/little_plant/issues/) | - | - | - |
+|-| [#](https://github.com/AtsukoCoffey/little_plant/issues/) | - | - | - |
+|-| [#](https://github.com/AtsukoCoffey/little_plant/issues/) | - | - | - |
+|-| [#](https://github.com/AtsukoCoffey/little_plant/issues/) | - | - | - |
+|-| [#](https://github.com/AtsukoCoffey/little_plant/issues/) | - | - | - |
+|-| [#](https://github.com/AtsukoCoffey/little_plant/issues/) | - | - | - |
+
+
+
+
+
+
+
 |-| Create Navigation bar and footer | Site User | Find the site content's links instinctively | Easily navigate through to find contents |
 |-| Sort the product list by categories and sale | Site User | Quickly identify categories and special offers | Take advantage of special savings on products I'd like to purchase |
 |-| The current login status is reflected to status mention area | Site User | See my logging-in account name | Aware of my account logging in status |
