@@ -276,7 +276,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Click on reduce quantity | Reduce number | Pass | |
 | | Click on less than 1 | Not Reduce number anymore | Pass | |
 | | Input on textbox more than 99 | Add to bag button warning | Pass | |
-| | Delete the number in textbox | expect  Add to bag button warning | Not Pass | 500 error |
+| | Delete the number in textbox | expect  Add to bag button warning | Not Pass | Server 500 error |
 | | Click on `KEEP SHOPPING` | Redirection to All products | Pass | |
 | | Click on `ADD TO BAG` 1-99 | the product and quantity went in bag and toast notified  | Pass | |
 | | Click on `GO to SECURE CHECKOUT` in toast notification | Redirection to shopping bag page | Pass | |
@@ -315,7 +315,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Empty message  | waring to fill message | Pass | |
 | | Input all valid text and submit | Toast notified success and I can receive the email | Pass | |
 |Authenticated only| When access this page | Mail field is prefilled | Pass | |
-
+--
 
 | Newsletter Page | User Action | Expected Result | Pass/Fail | Comments |
 | --- | --- | --- | --- | --- |
@@ -323,17 +323,54 @@ Defensive programming was manually tested with the below user acceptance testing
 | | inpput non email format text to email field  | warning to fill email address | Pass | |
 | | Input all valid text and submit | Toast notified success and I can receive the email | Pass | |
 |Authenticated only| When access this page | Mail field is prefilled | Pass | |
-
+--
 
 | Profile Page | User Action | Expected Result | Pass/Fail | Comments |
 | --- | --- | --- | --- | --- |
-| | Click on  | Redirection to  | Pass | |
-| | Click on  | Redirection to  | Pass | |
-| | Click on  | Redirection to  | Pass | |
-| | Click on  | Redirection to  | Pass | |
-| | Click on  | Redirection to  | Pass | |
-| | Click on  | Redirection to  | Pass | |
+| |Input any number charactor or mark and `UPDATE INFORMATION` | Update the data and Toast notified | Pass | |
+| | Delete the formaer data and `UPDATE INFORMATION` | Update the data and Toast notified the past order page | Pass | |
+| | Click on past order number | Redirection to past order details page and toast notifide  | Pass | |
+| | Click on `BACK TO PROFILE` | Redirection to Profile page | Pass | |
+|If data exists | Each individual field | Prefill the data | Pass | |
+--
+To manage/organize data freely for user, there is no required field or validation
 
+
+| Shopping Page | User Action | Expected Result | Pass/Fail | Comments |
+| --- | --- | --- | --- | --- |
+| | Quantity button increase, when input over 99 | stop adding | Pass | |
+| | Quantity button decrease, when input become 1 | stop rducing | Pass | |
+| | `Update` button with any number | Update the shopping bag | Pass | |
+| | remove number or no number input `Update` | Server 500 error | Pass | |
+| | `remove` button | Remove the product and Toast notified | Pass | |
+| | `SECURE CHECKOUT` | Redirection to Checkout page | Pass | |
+--
+
+| Checkout Page | User Action | Expected Result | Pass/Fail | Comments |
+| --- | --- | --- | --- | --- |
+| | Full name field required, without filling `Complese Order` | Warning to fill Full name | Pass | |
+| | email field required, without filling `Complese Order` | Warning to fill email name | Pass | |
+| | Phone number field required, without filling `Complese Order` | Warning to fill Phone number | Pass | |
+| | Street address field required, without filling `Complese Order` | Warning to fill Street address | Pass | |
+| | Town address field required, without filling `Complese Order` | Warning to fill Town address | Pass | |
+| | Country field required, without choose any country `Complese Order` | Warning to choose country | Pass | |
+| | Invalid credit card number  | Warning beloe | Pass | |
+| | Click on `Adjust Bag` | Redirection to Bag page | Pass | |
+| | Click on `Complese Order` | Redirection to success page and Toast notified | Pass | |
+| | Click on `NOW CHECKOUT THE SPECIAL OFFER` | Redirection to product on sale product | Pass | |
+--
+| SNS link | User Action | Expected Result | Pass/Fail | Comments |
+| --- | --- | --- | --- | --- |
+| | Click on Facebook | Redirection to Facebook in new tub | Pass | |
+| | Click on Twitter/X | Redirection to Twitter/X in new tub | Pass | |
+| | Click on Youtube | Redirection to Youtube in new tub | Pass | |
+| | Click on instagram | Redirection to Facinstagram in new tub | Pass | |
+
+
+<!-- | | Click on  | Redirection to  | Pass | |
+| | Click on  | Redirection to  | Pass | |
+| | Click on  | Redirection to  | Pass | |
+| | Click on  | Redirection to  | Pass | | -->
 
 ## User story Testing
 | Epic | User Story ID | AS A/AN | I WANT TO BE ABLE TO ... | SO THAT I CAN ... |
