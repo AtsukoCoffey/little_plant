@@ -26,7 +26,7 @@
 | Products edit | [W3C - Validated By Input](https://validator.w3.org/#validate_by_input) | ![screenshot](documentation/vali-html-product-edit.png) | No Error |
 | Newsletter | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-plant-shop-e08318b823f1.herokuapp.com%2Fnewsletter%2F) | ![screenshot](documentation/vali-html-newsletter.png) | No Error |
 | Confirm email | [W3C - Validated By Input]() | ![screenshot](documentation/vali-html-confirm-email.png) | No Error |
---
+---
 
 ### CSS
 | File | Jigsaw URL | Screenshot | Notes |
@@ -254,7 +254,7 @@ Defensive programming was manually tested with the below user acceptance testing
 |Authenticated  only | Click on `My profile` | Redirection to Profile page | Pass | |
 |Authenticated  only | Showed and click on `Logout` | Redirection to Logout page | Pass | |
 | Administrator only| Showed and click on `Product management` | Redirection to Product add page | Pass | |
---
+---
 
 | Product Page | User Action | Expected Result | Pass/Fail | Comments |
 | --- | --- | --- | --- | --- |
@@ -264,7 +264,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Click on each card of product | Redirection to product details page | Pass |  |
 |Administrator only | Click on Edit button on product | Redirection to edit page | Pass | |
 | | Click on Delet button | Open delete modal to confirm to delete | Pass | |
---
+---
 
 | Product details Page | User Action | Expected Result | Pass/Fail | Comments |
 | --- | --- | --- | --- | --- |
@@ -298,13 +298,13 @@ Defensive programming was manually tested with the below user acceptance testing
 |Administrator only | Click on Product's `Delete` | Delete confirmation modal open  | Pass | |
 |Administrator only | Click on `Close``x` | Close the modal | Pass | |
 |Administrator only | Click on `Delete`in delete modal | Delete the review | Pass | |
---
+---
 
 | FAQ Page | User Action | Expected Result | Pass/Fail | Comments |
 | --- | --- | --- | --- | --- |
 |Category quick link | Click on those categories | Rebuild the FAQ contents by selected category(filter) | Pass | |
 | | Click on Questions | open up the accordion box and show answer  | Pass | |
---
+---
 
 | About Contact Page | User Action | Expected Result | Pass/Fail | Comments |
 | --- | --- | --- | --- | --- |
@@ -315,7 +315,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Empty message  | waring to fill message | Pass | |
 | | Input all valid text and submit | Toast notified success and I can receive the email | Pass | |
 |Authenticated only| When access this page | Mail field is prefilled | Pass | |
---
+---
 
 | Newsletter Page | User Action | Expected Result | Pass/Fail | Comments |
 | --- | --- | --- | --- | --- |
@@ -323,7 +323,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | | inpput non email format text to email field  | warning to fill email address | Pass | |
 | | Input all valid text and submit | Toast notified success and I can receive the email | Pass | |
 |Authenticated only| When access this page | Mail field is prefilled | Pass | |
---
+---
 
 | Profile Page | User Action | Expected Result | Pass/Fail | Comments |
 | --- | --- | --- | --- | --- |
@@ -332,7 +332,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Click on past order number | Redirection to past order details page and toast notifide  | Pass | |
 | | Click on `BACK TO PROFILE` | Redirection to Profile page | Pass | |
 |If data exists | Each individual field | Prefill the data | Pass | |
---
+---
 To manage/organize data freely for user, there is no required field or validation
 
 
@@ -344,7 +344,7 @@ To manage/organize data freely for user, there is no required field or validatio
 | | remove number or no number input `Update` | Server 500 error | Pass | |
 | | `remove` button | Remove the product and Toast notified | Pass | |
 | | `SECURE CHECKOUT` | Redirection to Checkout page | Pass | |
---
+---
 
 | Checkout Page | User Action | Expected Result | Pass/Fail | Comments |
 | --- | --- | --- | --- | --- |
@@ -358,7 +358,7 @@ To manage/organize data freely for user, there is no required field or validatio
 | | Click on `Adjust Bag` | Redirection to Bag page | Pass | |
 | | Click on `Complese Order` | Redirection to success page and Toast notified | Pass | |
 | | Click on `NOW CHECKOUT THE SPECIAL OFFER` | Redirection to product on sale product | Pass | |
---
+---
 | SNS link | User Action | Expected Result | Pass/Fail | Comments |
 | --- | --- | --- | --- | --- |
 | | Click on Facebook | Redirection to Facebook in new tub | Pass | |
@@ -367,10 +367,11 @@ To manage/organize data freely for user, there is no required field or validatio
 | | Click on instagram | Redirection to Facinstagram in new tub | Pass | |
 
 
-<!-- | | Click on  | Redirection to  | Pass | |
-| | Click on  | Redirection to  | Pass | |
-| | Click on  | Redirection to  | Pass | |
-| | Click on  | Redirection to  | Pass | | -->
+## Automation Python testing
+I really didn't have time so I could do only Review model testing.
+The testing file is in products app. /products/test.py
+![Review model testing](documentation/test-products.png)
+
 
 ## User story Testing
 | Epic | User Story ID | AS A/AN | I WANT TO BE ABLE TO ... | SO THAT I CAN ... |
@@ -402,8 +403,7 @@ To manage/organize data freely for user, there is no required field or validatio
 |-| Adjust the shopping bag contents [#24](https://github.com/AtsukoCoffey/little_plant/issues/24) | Site user | change the quantity of products | manage easily |
 |-| Calculate special offer price [#25](https://github.com/AtsukoCoffey/little_plant/issues/25) | Site owner | display the total with special offer products | let customers know the reduction total price on the site |
 |-| Notification from all the action [#26](https://github.com/AtsukoCoffey/little_plant/issues/26) | Site user | have notifications for feedback | ensure that my action is valid |
-|5 Checkout & Purchase| [#](https://github.com/AtsukoCoffey/little_plant/issues/) | - | - | - |
-|-| Create checkout app [#27](https://github.com/AtsukoCoffey/little_plant/issues27/) | Developer  | create the checkout app and install modules | use the checkout page |
+|5 Checkout & Purchase| Create checkout app [#27](https://github.com/AtsukoCoffey/little_plant/issues27/) | Developer  | create the checkout app and install modules | use the checkout page |
 |-| Order form with card payment [#28](https://github.com/AtsukoCoffey/little_plant/issues/28) | Site user | pay with my credit card | complete ordering and payment easily |
 |-| Back up user's order : data redundancy [#29](https://github.com/AtsukoCoffey/little_plant/issues/29) | Site owner | back up the user's order even if the procedure didn't complete properly, | I won't lose the order |
 |-| Prevent to duplicate the order [#30](https://github.com/AtsukoCoffey/little_plant/issues/30) | Site owner | determine the same order has been made already or not  | prevent to duplicate the order |
@@ -422,13 +422,11 @@ To manage/organize data freely for user, there is no required field or validatio
 |-| Set app About us app [#47](https://github.com/AtsukoCoffey/little_plant/issues/47) | Developer | prepare the app and base page | start coding |
 |-| Contact form function [#49](https://github.com/AtsukoCoffey/little_plant/issues/49) | Site user | send the message from website | get some responses |
 |-| About us contents [#48](https://github.com/AtsukoCoffey/little_plant/issues/48) | - | clearly convey who we are |  Give users a sense of trust and confidence |
+|-| Mail sending function [#65](https://github.com/AtsukoCoffey/little_plant/issues/65) | Site user  | Receive the confirmation email | make sure my contact form was sent properly |
 |9 FAQ & Newsletter| Newsletter's form - subscribe [#9](https://github.com/AtsukoCoffey/little_plant/issues/9) | - | - | - |
 |-| [#](https://github.com/AtsukoCoffey/little_plant/issues/) | Site user | Find Newsletter form and submit it |  Join the newsletter |
 |-|Set up FAQ app [#50](https://github.com/AtsukoCoffey/little_plant/issues/50) | Developer | prepare the app and base page  |  start coding |
 |-| FAQ pages are created by filtering data [#51](https://github.com/AtsukoCoffey/little_plant/issues/51) | Developer | set up FAQ pages created by filtering  | the site owner can create and manage those FAQ from admin page |
 |10 Other | Breadcrumb [#52](https://github.com/AtsukoCoffey/little_plant/issues/52) | Site user |  know where I am now and how to go back to other pages | freely move around to the desired pages |
 |-| Category access link instead of breadcrumb [#58](https://github.com/AtsukoCoffey/little_plant/issues/58) | Site user |  Category access link instead of breadcrumb | don't have to go up to navigation bar to see other categories |
-|-| [#](https://github.com/AtsukoCoffey/little_plant/issues/) | - | - | - |
-|-| [#](https://github.com/AtsukoCoffey/little_plant/issues/) | - | - | - |
-|-| [#](https://github.com/AtsukoCoffey/little_plant/issues/) | - | - | - |
-|-| [#](https://github.com/AtsukoCoffey/little_plant/issues/) | - | - | - |
+---
