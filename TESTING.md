@@ -398,52 +398,37 @@ To manage/organize data freely for user, there is no required field or validatio
 |-| For Site owner there are EDIT and DELETE button [#32](https://github.com/AtsukoCoffey/little_plant/issues/32) | - | - | - |
 |-| Product CRUD extra security [#38](https://github.com/AtsukoCoffey/little_plant/issues/38) | Developer | Set the extra security on those CRUD pages | prevent the access from not permitted person |
 |-| Maybe JavaScript for confirmation? From #19 [#42](https://github.com/AtsukoCoffey/little_plant/issues/42) | Site owner | Another one step to delete the product |  prevent my operation mistake, make sure to delete the data. |
+|4 Shopping Basket| Add products to Shopping Bag [#23](https://github.com/AtsukoCoffey/little_plant/issues/23) | Site user | store the products as many as I want | purchase few products at once |
+|-| Adjust the shopping bag contents [#24](https://github.com/AtsukoCoffey/little_plant/issues/24) | Site user | change the quantity of products | manage easily |
+|-| Calculate special offer price [#25](https://github.com/AtsukoCoffey/little_plant/issues/25) | Site owner | display the total with special offer products | let customers know the reduction total price on the site |
+|-| Notification from all the action [#26](https://github.com/AtsukoCoffey/little_plant/issues/26) | Site user | have notifications for feedback | ensure that my action is valid |
+|5 Checkout & Purchase| [#](https://github.com/AtsukoCoffey/little_plant/issues/) | - | - | - |
+|-| Create checkout app [#27](https://github.com/AtsukoCoffey/little_plant/issues27/) | Developer  | create the checkout app and install modules | use the checkout page |
+|-| Order form with card payment [#28](https://github.com/AtsukoCoffey/little_plant/issues/28) | Site user | pay with my credit card | complete ordering and payment easily |
+|-| Back up user's order : data redundancy [#29](https://github.com/AtsukoCoffey/little_plant/issues/29) | Site owner | back up the user's order even if the procedure didn't complete properly, | I won't lose the order |
+|-| Prevent to duplicate the order [#30](https://github.com/AtsukoCoffey/little_plant/issues/30) | Site owner | determine the same order has been made already or not  | prevent to duplicate the order |
+|6 User Profile| Create User Profile app [#31](https://github.com/AtsukoCoffey/little_plant/issues/31) | Developer |  prepare User Profile app | start working |
+|-| Profile page update information form [#34](https://github.com/AtsukoCoffey/little_plant/issues/34) | Site user |  save my personal information  | skip to filling my information next time |
+|-| Profile order history and past order's view [#35](https://github.com/AtsukoCoffey/little_plant/issues/35) | Site user |  see my past order's history and details | check my order went through successfully |
+|-|Save profile info from webhook [#36](https://github.com/AtsukoCoffey/little_plant/issues/36) | Site owner |  have a back up feature from webhook | I won't lose the information |
+|-| Order confirmation email [#37](https://github.com/AtsukoCoffey/little_plant/issues/37) | Site user | receive email confirmation for my order | make sure my order processed |
+|7 Reviews & Ratings| Epic - Rating stars [#41](https://github.com/AtsukoCoffey/little_plant/issues/41) | - | - | - |
+|-| Create reviews functions [#44](https://github.com/AtsukoCoffey/little_plant/issues/44) | Site user |  the rating input window is pop up | see other reviews in more available space |
+|-| Reviews and ratings preparation [#45](https://github.com/AtsukoCoffey/little_plant/issues/45) | Developer |  create new models for reviews and ratings | tart to create views and template |
+|-|Restrict to write reviews to authenticated users only [#54](https://github.com/AtsukoCoffey/little_plant/issues/54) | Site owner | limit review submissions to authenticated users only | show my customer's reviews and avoid irrelevant comments |
+|-|Rating stars in modal - default value [#56](https://github.com/AtsukoCoffey/little_plant/issues/56) | Site owner | the default value rather than 0  |  show some value even when the reviewer forgot to rate |
+|8 About us and Contact form| EPIC: 8 About us and Contact form[#46](https://github.com/AtsukoCoffey/little_plant/issues/) | - | - | - |
+|-| About us model and display [#43](https://github.com/AtsukoCoffey/little_plant/issues/43) | Site user | send a query form from About us page | communicate directly |
+|-| Set app About us app [#47](https://github.com/AtsukoCoffey/little_plant/issues/47) | Developer | prepare the app and base page | start coding |
+|-| Contact form function [#49](https://github.com/AtsukoCoffey/little_plant/issues/49) | Site user | send the message from website | get some responses |
+|-| About us contents [#48](https://github.com/AtsukoCoffey/little_plant/issues/48) | - | clearly convey who we are |  Give users a sense of trust and confidence |
+|9 FAQ & Newsletter| Newsletter's form - subscribe [#9](https://github.com/AtsukoCoffey/little_plant/issues/9) | - | - | - |
+|-| [#](https://github.com/AtsukoCoffey/little_plant/issues/) | Site user | Find Newsletter form and submit it |  Join the newsletter |
+|-|Set up FAQ app [#50](https://github.com/AtsukoCoffey/little_plant/issues/50) | Developer | prepare the app and base page  |  start coding |
+|-| FAQ pages are created by filtering data [#51](https://github.com/AtsukoCoffey/little_plant/issues/51) | Developer | set up FAQ pages created by filtering  | the site owner can create and manage those FAQ from admin page |
+|10 Other | Breadcrumb [#52](https://github.com/AtsukoCoffey/little_plant/issues/52) | Site user |  know where I am now and how to go back to other pages | freely move around to the desired pages |
+|-| Category access link instead of breadcrumb [#58](https://github.com/AtsukoCoffey/little_plant/issues/58) | Site user |  Category access link instead of breadcrumb | don't have to go up to navigation bar to see other categories |
 |-| [#](https://github.com/AtsukoCoffey/little_plant/issues/) | - | - | - |
 |-| [#](https://github.com/AtsukoCoffey/little_plant/issues/) | - | - | - |
 |-| [#](https://github.com/AtsukoCoffey/little_plant/issues/) | - | - | - |
 |-| [#](https://github.com/AtsukoCoffey/little_plant/issues/) | - | - | - |
-|-| [#](https://github.com/AtsukoCoffey/little_plant/issues/) | - | - | - |
-|-| [#](https://github.com/AtsukoCoffey/little_plant/issues/) | - | - | - |
-|-| [#](https://github.com/AtsukoCoffey/little_plant/issues/) | - | - | - |
-|-| [#](https://github.com/AtsukoCoffey/little_plant/issues/) | - | - | - |
-|-| [#](https://github.com/AtsukoCoffey/little_plant/issues/) | - | - | - |
-|-| [#](https://github.com/AtsukoCoffey/little_plant/issues/) | - | - | - |
-|-| [#](https://github.com/AtsukoCoffey/little_plant/issues/) | - | - | - |
-|-| [#](https://github.com/AtsukoCoffey/little_plant/issues/) | - | - | - |
-|-| [#](https://github.com/AtsukoCoffey/little_plant/issues/) | - | - | - |
-
-
-
-
-
-
-
-|-| Create Navigation bar and footer | Site User | Find the site content's links instinctively | Easily navigate through to find contents |
-|-| Sort the product list by categories and sale | Site User | Quickly identify categories and special offers | Take advantage of special savings on products I'd like to purchase |
-|-| The current login status is reflected to status mention area | Site User | See my logging-in account name | Aware of my account logging in status |
-|-| Newsletter's form - footer | Site User | Find Newsletter form | Apply it from all the pages |
-| User Authentication | User Registration |	New Site User | Register an account | Store my personal information for easier shopping next time |
-|-| User Log in / Log out | Site User | Easily login or logout | Access my personal account information |
-|-| Reset Password | Site User | Easily recover my password in case I forget it | Recover access to  my account |
-|-| Email confirm - Registration | Site User | Receive an email confirmation after registering | Verify that my account registration was successful |
-| Product app | Product List view | Site User | View all available products | Find out some products that I can compare and choose |
-|-| Product detail view | Site User | View the specific product's information | Inspect the details before purchasing it |
-|-| Product create | Administrator | Create the new product | it will be added to the list page |
-|-| Product edit | Administrator | Edit the product | To manage the products |
-|-| Product delete | Administrator | Delete the product | To manage the products |
-| Profile app | Store and edit personal information | Site User | Store personal information | Prefill those for my future orders |
-|-| Store my past order records | Site User | Store my past order records | Ensure my new order is sent to the system properly |
-| User Experiense | Clear visual information and title | Site User | clearly understand what services are offered on this website | View the site with a purpose |
-|-| Attractive Carousel | Site Owner | Show some nice contents to attract site users | Guide Site users to visit those pages |
-|-| Toasts notification | Site User | Rceive the notification on screen from my action | Ensure that my action is valid |
-|-| Breadcrumb | Site User | Know where I am now and how to go back to other pages | Freely move around to the desired pages |
-|-| Pagination for the query data | Site User | Use page navigation for query data | View next page of the same query |
-|Product Reviews| Create Reviews, Special-offer and other templates | Developer | Provide templates and views for reviews and special offers | Pages can be created from product filtering |
-| About us app | Create About us app, template | Site Owner | clearly convey who we are	| Give users a sense of trust and confidence |
-|-| About us - Contact form	| Site User | Use the simple easy form | Send my query easily through the contact form |
-|-| Admin - Query list | Administrator | View all queries and select box for change status | manage multiple customer queries |
-|-| Admin - Query detail | Administrator | View indivisual query and reply the message by email	| Change status or delete the query |
-| Sorthing | Category sorting | Site User | Sort the specific category of product | Find the best product in a specific category |
-|-| Product search bar | Site User | Search for a product by name or description | Find a specific product that I'm looking for |
-|-| Search result | Site User | Easily see what I've searched for and the number of results | Quickly decide whether the product I want is available |  
---  
